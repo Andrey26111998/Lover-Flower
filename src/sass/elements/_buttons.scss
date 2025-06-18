@@ -1,0 +1,98 @@
+@use "/src/sass/basic/variables" as *;
+
+.button {
+    display: block;
+    height: 50px;
+    font-family: $font-family;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+
+    &-catalog {
+        padding: 16px 50px;
+        width: 220px;
+        border: none;
+        background-color: $accent-color-1;
+        color: $bg-color;
+
+        &:hover {
+            background-color: $accent-color-2;
+            color: $text-color;
+        }
+
+        &:focus {
+            outline: 1px solid $accent-color-2;
+        }
+
+        &:active {
+            box-shadow: inset 0 0 10px 0 #1b000e;
+            background-color: $accent-color-2;
+            color: $text-color;
+        }
+
+        &:disabled {
+            border: 1px solid #555;
+            background-color: transparent;
+            color: #555;
+        }
+
+        &-progress {
+            //TODO
+        }
+    }
+
+    &-basket {
+        padding: 16px 94px;
+        width: 255px;
+        border: 0.50px solid $text-color;
+        background-color: transparent;
+        color: $text-color;
+
+        &:hover {
+            border: none;
+            background-color: $accent-color-1;
+        }
+
+        &:focus {
+            border: none;
+            outline: 0.50px solid $accent-color-1;
+            color: $text-color;
+        }
+
+        &:active {
+            border: none;
+            box-shadow: inset 0 0 10px 0 #01281f;
+            background-color: $accent-color-1;
+        }
+
+        &:disabled {
+            border-color: #555;
+            color: #555;
+        }
+
+        &-progress {
+            //TODO
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .button {
+        &-catalog {
+            &:hover {
+                background-color: $accent-color-1;
+                color: $bg-color;
+            }
+        }
+
+        &-basket {
+            &:hover {
+                border: 0.50px solid $text-color;
+                background-color: transparent;
+            }
+        }
+    }
+}

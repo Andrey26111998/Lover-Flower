@@ -1,0 +1,16 @@
+@use "/src/sass/basic/variables" as *;
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+
+    span {
+        font-family: $font-family;
+        color: $text-color;
+        font-size: 10px;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+}

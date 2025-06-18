@@ -1,0 +1,25 @@
+@use "/src/sass/basic/variables" as *;
+
+.search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+    text-decoration: none;
+
+
+    &__text {
+        font-family: $font-family;
+        color: $text-color;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        line-height: 21px;
+        text-transform: uppercase;
+    }
+
+    &__img {
+        width: 18px;
+        height: 18px;
+    }
+}

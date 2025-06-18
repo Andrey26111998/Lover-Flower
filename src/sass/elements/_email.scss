@@ -1,0 +1,12 @@
+@use "/src/sass/basic/variables" as *;
+
+.email {
+    font-family: $font-family;
+    color: $accent-color-1;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-decoration: none;
+}

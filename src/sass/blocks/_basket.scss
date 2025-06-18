@@ -1,0 +1,60 @@
+@use "/src/sass/basic/variables" as *;
+
+.basket {
+    &-icon {
+        position: absolute;
+        top: 645px;
+        right: 180px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 3;
+
+        img {
+            width: 100%;
+        }
+
+        &__count {
+            position: absolute;
+            top: -3px;
+            right: -5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            background-color: $accent-color-1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: $font-family;
+            color: #142b2b;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            line-height: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .basket {
+        &-icon {
+            position: fixed;
+            top: 32px;
+            right: 20px;
+            width: 18px;
+            height: 16px;
+
+            &__count {
+                top: -6px;
+                left: 10px;
+                width: 13px;
+                height: 13px;
+                font-size: 8px;
+                line-height: 12px;
+            }
+        }
+    }
+}

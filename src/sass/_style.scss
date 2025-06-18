@@ -1,0 +1,21 @@
+//Basic styles
+@use "/src/sass/basic/base";
+
+//Elements
+@use "/src/sass/elements/logo";
+@use "/src/sass/elements/search";
+@use "/src/sass/elements/email";
+@use "/src/sass/elements/delivery_info";
+@use "/src/sass/elements/address";
+@use "/src/sass/elements/schedule";
+@use "/src/sass/elements/social_links";
+@use "/src/sass/elements/hamburger";
+@use "/src/sass/elements/close";
+@use "/src/sass/elements/titles";
+@use "/src/sass/elements/buttons";
+
+//Blocks
+@use "/src/sass/blocks/basket";
+@use "/src/sass/blocks/menu";
+@use "/src/sass/blocks/header";
+@use "/src/sass/blocks/promo"

@@ -1,0 +1,156 @@
+@use "/src/sass/basic/variables" as *;
+
+.promo {
+    padding-top: 80px;
+    position: relative;
+    min-height: 1244px;
+    background-image: url("/src/img/promo/bg.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+
+    &__title {
+        margin-top: 13px;
+
+        span {
+            display: block;
+
+            &:nth-child(2) {
+                margin-top: -89px;
+            }
+        }
+    }
+
+    &__description {
+        font-family: $font-family;
+        color: $text-color;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    &__button-catalog {
+        margin: 47px auto 0 auto;
+    }
+
+    &__address {
+        position: absolute;
+        top: 6px;
+        right: 0;
+    }
+
+    &__schedule {
+        position: absolute;
+        top: 31px;
+        right: 0;
+    }
+
+    &__social-links {
+        position: absolute;
+        top: 141px;
+        right: -17px;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    &__phone {
+        position: absolute;
+        top: 459px;
+        right: 0;
+        font-family: $font-family;
+        color: $accent-color-1;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        line-height: 24px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    &__button-call {
+        position: absolute;
+        top: 490px;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 6px;
+        padding: 9px 18px;
+        width: 180px;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        backdrop-filter: blur(20px);
+        background: rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+
+        img {
+            width: 16px;
+            height: 16px;
+        }
+
+        span {
+            font-family: $font-family;
+            color: $accent-color-1;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            line-height: 21px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .promo {
+        min-height: 747px;
+        background-image: url("/src/img/promo/bg_mobile.png");
+        background-position: top center;
+        background-size: 320px 485px;
+
+        &__title {
+            margin-top: -53px;
+
+            span {
+                &:nth-child(2) {
+                    margin-top: -10px;
+                }
+            }
+        }
+
+        &__description {
+            margin: 409px auto 0 auto;
+            width: 212px;
+            font-size: 14px;
+            line-height: 21px;
+        }
+
+        &__button-catalog {
+            margin: 20px auto 0 auto;
+        }
+
+        &__address {
+            display: none;
+        }
+
+        &__schedule {
+            display: none;
+        }
+
+        &__social-links {
+            display: none;
+        }
+
+        &__phone {
+            display: none;
+        }
+
+        &__button-call {
+            display: none;
+        }
+    }
+}
