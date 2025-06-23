@@ -1,10 +1,10 @@
 const headerCatalog = document.querySelector(".header__catalog");
-const headerMenu = document.querySelector(".header__menu");
+const headerSubmenu = document.querySelector(".header__submenu");
 
 headerCatalog.addEventListener("mouseenter", () => {
-    headerMenu.classList.add("active");
+    headerSubmenu.classList.toggle("active");
 });
 
 headerCatalog.addEventListener("mouseleave", () => {
-    headerMenu.classList.remove("active");
+    headerSubmenu.classList.toggle("active");
 });

@@ -3,32 +3,32 @@
 .basket {
     &-icon {
         position: absolute;
-        top: 645px;
-        right: 180px;
-        width: 30px;
-        height: 30px;
+        top: 565px;
+        right: 15px;
+        inline-size: 30px;
+        block-size: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        z-index: 3;
+        z-index: 1;
 
         img {
-            width: 100%;
+            inline-size: 100%;
+            block-size: 100%;
         }
 
         &__count {
             position: absolute;
             top: -3px;
             right: -5px;
-            width: 16px;
-            height: 16px;
+            inline-size: 16px;
+            block-size: 16px;
             border-radius: 100%;
             background-color: $accent-color-1;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: $font-family;
             color: #142b2b;
             font-size: 12px;
             font-weight: 400;
@@ -44,14 +44,14 @@
             position: fixed;
             top: 32px;
             right: 20px;
-            width: 18px;
-            height: 16px;
+            inline-size: 18px;
+            block-size: 16px;
 
             &__count {
                 top: -6px;
                 left: 10px;
-                width: 13px;
-                height: 13px;
+                inline-size: 13px;
+                block-size: 13px;
                 font-size: 8px;
                 line-height: 12px;
             }

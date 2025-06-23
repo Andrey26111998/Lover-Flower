@@ -2,18 +2,19 @@
 
 .button {
     display: block;
-    height: 50px;
-    font-family: $font-family;
+    block-size: 50px;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.1em;
     line-height: 18px;
     text-transform: uppercase;
     text-align: center;
+    transition: all 0.3s linear;
 
     &-catalog {
-        padding: 16px 50px;
-        width: 220px;
+        padding-block: 16px;
+        padding-inline: 50px;
+        inline-size: 220px;
         border: none;
         background-color: $accent-color-1;
         color: $bg-color;
@@ -45,8 +46,9 @@
     }
 
     &-basket {
-        padding: 16px 94px;
-        width: 255px;
+        padding-block: 16px;
+        padding-inline: 94px;
+        inline-size: 255px;
         border: 0.50px solid $text-color;
         background-color: transparent;
         color: $text-color;

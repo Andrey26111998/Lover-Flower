@@ -1,9 +1,9 @@
 @use "/src/sass/basic/variables" as *;
 
 .promo {
-    padding-top: 80px;
+    padding-block-start: 80px;
     position: relative;
-    min-height: 1244px;
+    min-block-size: 1244px;
     background-image: url("/src/img/promo/bg.png");
     background-position: center center;
     background-repeat: no-repeat;
@@ -11,19 +11,18 @@
     z-index: 1;
 
     &__title {
-        margin-top: 13px;
+        margin-block-start: 13px;
 
         span {
             display: block;
 
-            &:nth-child(2) {
-                margin-top: -89px;
+            &:last-child {
+                margin-block-start: -89px;
             }
         }
     }
 
     &__description {
-        font-family: $font-family;
         color: $text-color;
         font-size: 20px;
         font-weight: 400;
@@ -33,7 +32,8 @@
     }
 
     &__button-catalog {
-        margin: 47px auto 0 auto;
+        margin-block: 47px 0;
+        margin-inline: auto;
     }
 
     &__address {
@@ -61,7 +61,6 @@
         position: absolute;
         top: 459px;
         right: 0;
-        font-family: $font-family;
         color: $accent-color-1;
         font-size: 16px;
         font-weight: 400;
@@ -79,9 +78,10 @@
         justify-content: center;
         align-items: center;
         column-gap: 6px;
-        padding: 9px 18px;
-        width: 180px;
-        height: 40px;
+        padding-block: 9px;
+        padding-inline: 18px;
+        inline-size: 180px;
+        block-size: 40px;
         border: none;
         border-radius: 10px;
         backdrop-filter: blur(20px);
@@ -89,12 +89,11 @@
         cursor: pointer;
 
         img {
-            width: 16px;
-            height: 16px;
+            inline-size: 16px;
+            block-size: 16px;
         }
 
         span {
-            font-family: $font-family;
             color: $accent-color-1;
             font-size: 14px;
             font-weight: 400;
@@ -107,30 +106,32 @@
 
 @media screen and (max-width: 320px) {
     .promo {
-        min-height: 747px;
+        min-block-size: 747px;
         background-image: url("/src/img/promo/bg_mobile.png");
         background-position: top center;
         background-size: 320px 485px;
 
         &__title {
-            margin-top: -53px;
+            margin-block-start: -53px;
 
             span {
-                &:nth-child(2) {
-                    margin-top: -10px;
+                &:last-child {
+                    margin-block-start: -10px;
                 }
             }
         }
 
         &__description {
-            margin: 409px auto 0 auto;
-            width: 212px;
+            margin-block: 409px 0;
+            margin-inline: auto;
+            inline-size: 212px;
             font-size: 14px;
             line-height: 21px;
         }
 
         &__button-catalog {
-            margin: 20px auto 0 auto;
+            margin-block: 20px 0;
+            margin-inline: auto;
         }
 
         &__address {

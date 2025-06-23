@@ -7,19 +7,17 @@
     column-gap: 10px;
     text-decoration: none;
 
+    &__img {
+        inline-size: 18px;
+        block-size: 18px;
+    }
 
     &__text {
-        font-family: $font-family;
         color: $text-color;
         font-size: 14px;
         font-weight: 400;
         letter-spacing: 0.04em;
         line-height: 21px;
         text-transform: uppercase;
-    }
-
-    &__img {
-        width: 18px;
-        height: 18px;
     }
 }

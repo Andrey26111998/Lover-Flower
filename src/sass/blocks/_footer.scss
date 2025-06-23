@@ -1,0 +1,209 @@
+@use "/src/sass/basic/variables" as *;
+
+.footer {
+    margin-block-end: 64px;
+    background-color: #000;
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        inline-size: 34px;
+        block-size: 75px;
+    }
+
+    &__details {
+        margin-block-start: 83px;
+        inline-size: 244px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 10px;
+    }
+
+    &__description {
+        color: $text-color;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0.04em;
+        line-height: 18px;
+        text-transform: uppercase;
+
+        address {
+            display: inline;
+            font-style: normal;
+        }
+    }
+
+    &__catalog {
+        margin-block-start: 30px;
+        inline-size: 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 10px;
+
+        a {
+            text-decoration: none;
+        }
+
+        &-links {
+            padding-inline-start: 0;
+            list-style-type: none;
+        }
+
+        &-link {
+            color: $text-color;
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 0.04em;
+            line-height: 18px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+
+    &__pages {
+        margin-block-start: 30px;
+        inline-size: 160px;
+
+        &-links {
+            padding-inline-start: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 20px;
+        }
+
+        &-link {
+            color: $accent-color-1;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            line-height: 21px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+
+    &__contacts {
+        margin-block-start: 30px;
+        inline-size: 245px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__delivery {
+        margin-block-start: 6px;
+    }
+
+    &__address {
+        margin-block-start: 20px;
+    }
+
+    &__schedule {
+        margin-block-start: 6px;
+    }
+
+    &__phone {
+        display: block;
+        margin-block-start: 20px;
+        color: $accent-color-1;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        line-height: 21px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    &__call-info {
+        margin-block-start: 6px;
+        color: $text-color;
+        font-size: 10px;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+
+    &__social-links {
+        margin-block-start: 38px;
+        column-gap: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .footer {
+        margin-block-end: 20px;
+
+        &__wrapper {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        &__logo {
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+        &__details {
+            margin-block-start: 40px;
+            inline-size: 100%;
+            align-items: center;
+            order: 4;
+        }
+
+        &__description {
+            font-size: 10px;
+            line-height: 15px;
+            text-transform: capitalize;
+            text-align: center;
+        }
+
+        &__catalog {
+            margin-block-start: 93px;
+            inline-size: 100%;
+            align-items: center;
+            row-gap: 0;
+            order: 1;
+
+            &--shop &-links {
+                display: none;
+            }
+
+            &--bouquet {
+                display: none;
+            }
+        }
+
+        &__pages {
+            margin-block-start: 10px;
+            inline-size: 100%;
+            order: 2;
+
+            &-links {
+                align-items: center;
+                row-gap: 10px;
+            }
+        }
+
+        &__contacts {
+            inline-size: 100%;
+            align-items: center;
+            order: 3;
+        }
+
+        &__social-links {
+            margin-block-start: 20px;
+        }
+    }
+}

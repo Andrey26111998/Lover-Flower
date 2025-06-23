@@ -65,14 +65,10 @@
                 </li>
             </ul>
         </div>
-        <div class="basket-icon">
-            <img src="/src/icons/basket/basket.svg" alt="basket">
-            <div class="basket-icon__count">5</div>
-        </div>
         <header class="header">
             <div class="container">
                 <div class="header__wrapper">
-                    <div class="hamburger">
+                    <div class="hamburger header__hamburger">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -81,25 +77,26 @@
                         <img src="/src/logo/logo.png" alt="logo">
                     </a>
                     <nav>
-                        <ul class="header__links">
+                        <ul class="header__menu">
                             <li class="header__catalog">
                                 <a href="" class="header__link">Каталог</a>
-                                <div class="header__menu">
-                                    <ul class="header__menu-items">
-                                        <li class="header__menu-item"><a href="">Популярное</a></li>
-                                        <li class="header__menu-item"><a href="">Сборны букеты</a></li>
-                                        <li class="header__menu-item"><a href="">монобукеты</a></li>
-                                        <li class="header__menu-item"><a href="">розы</a></li>
-                                        <li class="header__menu-item"><a href="">свадебные</a></li>
-                                        <li class="header__menu-item"><a href="">Композиции из цветов к коробке</a></li>
-                                        <li class="header__menu-item"><a href="">интерьерные композиции</a></li>
-                                        <li class="header__menu-item"><a href="">осенние</a></li>
-                                        <li class="header__menu-item"><a href="">индивидуальный букет</a></li>
-                                        <li class="header__menu-item"><a href="">сухоцветы</a></li>
-                                        <li class="header__menu-item"><a href="">горшечные</a></li>
-                                        <li class="header__menu-item"><a href="">дополнительно</a></li>
+                                <nav class="header__submenu">
+                                    <ul class="header__submenu-items">
+                                        <li class="header__submenu-item"><a href="">Популярное</a></li>
+                                        <li class="header__submenu-item"><a href="">Сборны букеты</a></li>
+                                        <li class="header__submenu-item"><a href="">монобукеты</a></li>
+                                        <li class="header__submenu-item"><a href="">розы</a></li>
+                                        <li class="header__submenu-item"><a href="">свадебные</a></li>
+                                        <li class="header__submenu-item"><a href="">Композиции из цветов к коробке</a>
+                                        </li>
+                                        <li class="header__submenu-item"><a href="">интерьерные композиции</a></li>
+                                        <li class="header__submenu-item"><a href="">осенние</a></li>
+                                        <li class="header__submenu-item"><a href="">индивидуальный букет</a></li>
+                                        <li class="header__submenu-item"><a href="">сухоцветы</a></li>
+                                        <li class="header__submenu-item"><a href="">горшечные</a></li>
+                                        <li class="header__submenu-item"><a href="">дополнительно</a></li>
                                     </ul>
-                                </div>
+                                </nav>
                             </li>
                             <li><a href="" class="header__link">Доставка и оплата</a></li>
                             <li><a href="" class="header__link">О нас</a></li>
@@ -115,6 +112,12 @@
                         <a href="mailto:zakaz@loverflower.by" class="email header__email">zakaz@loverflower.by</a>
                         <div class="delivery-info header__delivery">Доставка 24/7 по договоренности с оператором</div>
                     </div>
+                    <a href="tel:+375291136969" class="header__phone">
+                        <div class="header__phone-img">
+                            <img src="/src/icons/header/phone.svg" alt="phone">
+                        </div>
+                        <span>+375 (29) 113-69-69</span>
+                    </a>
                 </div>
             </div>
         </header>
@@ -153,8 +156,150 @@
                     <img src="/src/icons/promo/phone.svg" alt="phone">
                     <span>заказать звонок</span>
                 </button>
+                <div class="basket-icon">
+                    <img src="/src/icons/basket/basket.svg" alt="basket">
+                    <div class="basket-icon__count">5</div>
+                </div>
             </div>
         </section>
+        <section class="catalog second-section">
+            <div class="container">
+                <h2 class="title title-h2-v1 catalog__title">каталог</h2>
+                <div class="catalog__wrapper">
+                    <div class="catalog__description">
+                        <p>
+                            У нас самый большой выбор цветов, букетов, открыток и подарков.
+                            Мы всегда поможем вам подобрать букет для вашего события, наш менеджер вас проконсультирует
+                            и поможет определиться с выбором
+                        </p>
+                        <span>Ознакомьтесь с нашими разделами каталога</span>
+                    </div>
+                    <div class="catalog__categories">
+                        <h3 class="title title-h3-v1 catalog__categories-title">готовые букеты из сухоцветов</h3>
+                        <ul class="catalog__categories-list">
+                            <li><a href="" class="catalog__categories-link">букеты</a></li>
+                            <li><a href="" class="catalog__categories-link">для интерьера</a></li>
+                            <li><a href="" class="catalog__categories-link">Композиции</a></li>
+                        </ul>
+                        <a href="" class="catalog__link">смотреть каталог</a>
+                    </div>
+                    <div class="catalog__categories">
+                        <h3 class="title title-h3-v1 catalog__categories-title">Цветы</h3>
+                        <ul class="catalog__categories-list">
+                            <li><a href="" class="catalog__categories-link">Сборные букеты</a></li>
+                            <li><a href="" class="catalog__categories-link">Монобукеты</a></li>
+                            <li><a href="" class="catalog__categories-link">Композиции из цветов</a></li>
+                            <li><a href="" class="catalog__categories-link">розы</a></li>
+                            <li><a href="" class="catalog__categories-link">свадебные</a></li>
+                        </ul>
+                        <a href="" class="catalog__link">смотреть каталог</a>
+                    </div>
+                    <div class="catalog__categories">
+                        <h3 class="title title-h3-v1 catalog__categories-title">дополнительно</h3>
+                        <ul class="catalog__categories-list">
+                            <li><a href="" class="catalog__categories-link">шары</a></li>
+                            <li><a href="" class="catalog__categories-link">игрушки</a></li>
+                            <li><a href="" class="catalog__categories-link">открытки</a></li>
+                            <li><a href="" class="catalog__categories-link">упаковка</a></li>
+                        </ul>
+                        <a href="" class="catalog__link">смотреть каталог</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <a href="" class="logo footer__logo">
+                        <img src="/src/logo/logo.png" alt="logo">
+                    </a>
+                    <div class="footer__details">
+                        <h4 class="title title-h4-v1 footer__title">реквизиты</h4>
+                        <div class="footer__description">
+                            ООО «Ловефлове» 220035, <address>Республика Беларусь, г. Минск, ул. Тимирязева д. 67, комн.
+                                112 (пом.11)</address> УНП 193263781, р/с BY55MTBK30120001093300096372 ЗАО «МТБанк», БИК
+                            MTBKBY22 220007, <address>г. Минск, улица Толстого</address>
+                        </div>
+                    </div>
+                    <div class="footer__catalog footer__catalog--shop">
+                        <a href="">
+                            <h4 class="title title-h4-v1 footer__title">Каталог</h4>
+                        </a>
+                        <nav>
+                            <ul class="footer__catalog-links">
+                                <li><a href="" class="footer__catalog-link">Популярное</a></li>
+                                <li><a href="" class="footer__catalog-link">Сухоцветы</a></li>
+                                <li><a href="" class="footer__catalog-link">Букеты роз</a></li>
+                                <li><a href="" class="footer__catalog-link">Композиции из цветов</a></li>
+                                <li><a href="" class="footer__catalog-link">Индивидуальный букет</a></li>
+                                <li><a href="" class="footer__catalog-link">Букет на праздник</a></li>
+                                <li><a href="" class="footer__catalog-link">Упаковка подарков</a></li>
+                                <li><a href="" class="footer__catalog-link">Шары</a></li>
+                                <li><a href="" class="footer__catalog-link">Открытки</a></li>
+                                <li><a href="" class="footer__catalog-link">Конверты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__catalog footer__catalog--bouquet">
+                        <a href="">
+                            <h4 class="title title-h4-v1 footer__title">Букет</h4>
+                        </a>
+                        <nav>
+                            <ul class="footer__catalog-links">
+                                <li><a href="" class="footer__catalog-link">Для девушки</a></li>
+                                <li><a href="" class="footer__catalog-link">Для мужчины</a></li>
+                                <li><a href="" class="footer__catalog-link">Для жены</a></li>
+                                <li><a href="" class="footer__catalog-link">Для мамы</a></li>
+                                <li><a href="" class="footer__catalog-link">Для коллеги</a></li>
+                                <li><a href="" class="footer__catalog-link">Для начальника</a></li>
+                                <li><a href="" class="footer__catalog-link">Для дочки</a></li>
+                                <li><a href="" class="footer__catalog-link">Для детей</a></li>
+                                <li><a href="" class="footer__catalog-link">Для женщины</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__pages">
+                        <nav>
+                            <ul class="footer__pages-links">
+                                <li><a href="" class="footer__pages-link">Доставка и оплата</a></li>
+                                <li><a href="" class="footer__pages-link">О нас</a></li>
+                                <li><a href="" class="footer__pages-link">FAQ</a></li>
+                                <li><a href="" class="footer__pages-link">Контакты</a></li>
+                                <li><a href="" class="footer__pages-link">для корпоративных клиентов</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__contacts">
+                        <a href="mailto:zakaz@loverflower.by" class="email footer__email">zakaz@loverflower.by</a>
+                        <div class="delivery-info footer__delivery">Доставка 24/7 по договоренности с оператором</div>
+                        <address class="address footer__address">ул. Тимирязева 67</address>
+                        <div class="schedule footer__schedule">
+                            <span><time datetime="10:00">10:00</time> до <time datetime="21:00">21:00</time></span>
+                            <span>без выходных</span>
+                        </div>
+                        <a href="tel:+375291136969" class="footer__phone">+375 (29) 113-69-69</a>
+                        <div class="footer__call-info">прием звонков круглосуточно</div>
+                        <ul class="social-links footer__social-links">
+                            <li>
+                                <a href="" class="social-links__item">
+                                    <img src="/src/icons/promo/instagram.svg" alt="instagram">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="social-links__item">
+                                    <img src="/src/icons/promo/whatsapp.svg" alt="whatsapp">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="social-links__item">
+                                    <img src="/src/icons/promo/viber.svg" alt="viber">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
     <script type="module" src="/src/js/script.js"></script>
 </body>

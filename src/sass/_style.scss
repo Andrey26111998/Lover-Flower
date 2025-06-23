@@ -18,4 +18,8 @@
 @use "/src/sass/blocks/basket";
 @use "/src/sass/blocks/menu";
 @use "/src/sass/blocks/header";
-@use "/src/sass/blocks/promo"
+@use "/src/sass/blocks/footer";
+
+//Blocks / Home
+@use "/src/sass/blocks/home/promo";
+@use "/src/sass/blocks/home/catalog";

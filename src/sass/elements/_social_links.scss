@@ -1,5 +1,5 @@
 .social-links {
-    padding-left: 0;
+    padding-inline-start: 0;
     display: flex;
     list-style-type: none;
 
@@ -7,11 +7,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 24px;
-        height: 24px;
+        inline-size: 24px;
+        block-size: 24px;
 
         img {
-            width: 100%;
+            inline-size: 100%;
+            block-size: 100%;
         }
     }
 }
