@@ -37,7 +37,6 @@
         flex-direction: column;
         row-gap: 10px;
         padding-block: 30px 72px;
-        padding-inline: 30px;
         border-radius: 20px;
         backdrop-filter: blur(20px);
         background: rgba(0, 0, 0, 0.2);
@@ -66,17 +65,19 @@
     }
 
     &__categories:nth-child(2) {
+        padding-inline: 50px;
         inline-size: 445px;
     }
 
     &__categories:nth-child(3) {
         margin-block-start: -92px;
+        padding-inline: 50px;
         inline-size: 540px;
     }
 
     &__categories:nth-child(4) {
         margin-block-start: 30px;
-        padding-inline-start: 50px;
+        padding-inline: 70px;
         inline-size: 540px;
     }
 
@@ -119,7 +120,6 @@
             row-gap: 20px;
             width: 100%;
             padding-block: 20px 30px;
-            padding-inline: 20px;
 
             &-title {
                 max-inline-size: 181px;
@@ -140,19 +140,21 @@
 
         &__categories:nth-child(2) {
             order: 2;
+            padding-inline: 20px;
             inline-size: 100%;
         }
 
         &__categories:nth-child(3) {
             order: 1;
             margin-block-start: 0;
+            padding-inline: 20px;
             inline-size: 100%;
         }
 
         &__categories:nth-child(4) {
             order: 3;
             margin-block-start: 0;
-            padding-inline-start: 20px;
+            padding-inline: 20px;
             inline-size: 100%;
         }
 
