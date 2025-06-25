@@ -22,12 +22,17 @@
         line-height: 121px;
     }
 
-    &-h3-v1 {
+    &-h3-v1,
+    &-h3-v2 {
         color: $accent-color-1;
         font-size: 30px;
         font-weight: 700;
         letter-spacing: 0.04em;
         line-height: 44px;
+    }
+
+    &-h3-v2 {
+        color: $accent-color-3;
     }
 
     &-h4-v1 {
