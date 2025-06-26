@@ -1,19 +1,19 @@
 @use "/src/sass/basic/variables" as *;
 
 .button {
-    display: block;
-    block-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 16px;
+    padding-inline: 16px;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.1em;
     line-height: 18px;
     text-transform: uppercase;
-    text-align: center;
     transition: all 0.3s linear;
 
     &-catalog {
-        padding-block: 16px;
-        padding-inline: 50px;
         inline-size: 220px;
         border: none;
         background-color: $accent-color-1;
@@ -46,8 +46,6 @@
     }
 
     &-basket {
-        padding-block: 16px;
-        padding-inline: 16px;
         inline-size: 255px;
         border: 0.50px solid $text-color;
         background-color: transparent;
@@ -79,11 +77,51 @@
             //TODO
         }
     }
+
+    &-bouquet {
+        inline-size: 255px;
+        border: none;
+        background-color: $accent-color-1;
+        color: #000;
+
+        &:hover {
+            background-color: $accent-color-2;
+            color: $text-color;
+        }
+
+        &:focus {
+            outline: 1px solid $accent-color-2;
+        }
+
+        &:active {
+            box-shadow: inset 0 0 10px 0 #1b000e;
+            background-color: $accent-color-2;
+            color: $text-color;
+        }
+
+        &:disabled {
+            border: 1px solid #555;
+            background-color: transparent;
+            color: #555;
+        }
+
+        &-progress {
+            //TODO
+        }
+    }
+}
+
+a.button-catalog,
+a.button-basket,
+a.button-bouquet {
+    text-decoration: none;
 }
 
 @media screen and (max-width: 320px) {
     .button {
-        &-catalog {
+
+        &-catalog,
+        &-bouquet {
             &:hover {
                 background-color: $accent-color-1;
                 color: $bg-color;

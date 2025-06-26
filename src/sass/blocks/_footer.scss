@@ -51,6 +51,11 @@
 
         a {
             text-decoration: none;
+
+            &:hover {
+                color: $accent-color-1;
+                text-decoration: underline;
+            }
         }
 
         &-links {
@@ -89,6 +94,10 @@
             line-height: 21px;
             text-transform: uppercase;
             text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 
@@ -176,6 +185,14 @@
             row-gap: 0;
             order: 1;
 
+            &--shop {
+                a {
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+
             &--shop &-links {
                 display: none;
             }
@@ -193,6 +210,12 @@
             &-links {
                 align-items: center;
                 row-gap: 10px;
+            }
+
+            &-link {
+                &:hover {
+                    text-decoration: none;
+                }
             }
         }
 

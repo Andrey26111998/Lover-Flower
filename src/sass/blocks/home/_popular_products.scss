@@ -99,6 +99,10 @@
         line-height: 30px;
         text-transform: uppercase;
         text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     &__price {
@@ -222,6 +226,12 @@
         &__img {
             inline-size: 100%;
             block-size: 335px;
+        }
+
+        &__name {
+            &:hover {
+                text-decoration: none;
+            }
         }
 
         &__prev,

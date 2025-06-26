@@ -8,4 +8,16 @@
     line-height: 21px;
     text-transform: uppercase;
     text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .email {
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
