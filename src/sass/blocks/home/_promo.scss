@@ -1,13 +1,12 @@
 @use "/src/sass/basic/variables" as *;
 
 .promo {
-    padding-block-start: 80px;
     position: relative;
-    min-block-size: 1244px;
     background-image: url("/src/img/promo/bg.png");
-    background-position: center center;
+    background-position: top center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
+    padding-block: 80px 629px;
     z-index: 1;
 
     &__title {
@@ -110,10 +109,10 @@
 
 @media screen and (max-width: 320px) {
     .promo {
-        min-block-size: 747px;
         background-image: url("/src/img/promo/bg_mobile.png");
         background-position: top center;
-        background-size: 320px 485px;
+        background-size: auto;
+        padding-block-end: 100px;
 
         &__title {
             margin-block-start: -53px;

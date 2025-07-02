@@ -2,10 +2,10 @@
 
 .custom-bouquet {
     background-image: url("/src/img/custom_bouquet/bg.png");
-    background-position: right top;
-    background-size: contain;
+    background-position: right center;
+    background-size: auto;
     background-repeat: no-repeat;
-    min-block-size: 795px;
+    padding-block-end: 160px;
 
     &__header {
         display: flex;
@@ -133,7 +133,8 @@
 @media screen and (max-width: 320px) {
     .custom-bouquet {
         background-image: none;
-        min-block-size: 541px;
+        margin-block-start: -76px;
+        padding-block-end: 84px;
 
         &__header {
             display: block;

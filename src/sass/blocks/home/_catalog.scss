@@ -2,10 +2,10 @@
 
 .catalog {
     background-image: url("/src/img/catalog/bg.png");
-    background-position: center center;
-    background-size: cover;
+    background-position: center 134px;
+    background-size: auto;
     background-repeat: no-repeat;
-    min-block-size: 800px;
+    padding-block: 100px 130px;
 
     &__wrapper {
         display: flex;
@@ -104,7 +104,9 @@
     .catalog {
         background-image: url("/src/img/catalog/bg_mobile.png");
         background-position: center center;
-        min-block-size: 1115px;
+        background-position: center 87px;
+        background-size: auto;
+        padding-block: 0 186px;
 
         &__wrapper {
             flex-direction: column;

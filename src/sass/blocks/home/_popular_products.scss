@@ -2,10 +2,10 @@
 
 .popular-products {
     background-image: url("/src/img/popular_products/bg.png");
-    background-position: center center;
-    background-size: cover;
+    background-position: center 93px;
+    background-size: auto;
     background-repeat: no-repeat;
-    min-block-size: 1360px;
+    padding-block: 70px 368px;
 
     &__title {
         span {
@@ -180,7 +180,10 @@
 
 @media screen and (max-width: 320px) {
     .popular-products {
-        background-image: none;
+        background-image: url("/src/img/popular_products/bg_mobile.png");
+        background-position: right bottom;
+        margin-block-start: -86px;
+        padding-block: 0 276px;
 
         &__title {
             span {

@@ -2,12 +2,15 @@
 
 .order-steps {
     background-image: url("/src/img/order_steps/bg.png");
-    background-position: center center;
+    background-position: -54px top;
     background-size: cover;
     background-repeat: no-repeat;
-    min-block-size: 845px;
+    margin-block-start: -208px;
+    padding-block-end: 160px;
 
     &__title {
+        margin-block-start: -21px;
+
         span {
             display: block;
 
@@ -35,23 +38,27 @@
             block-size: 10px;
             background-color: $accent-color-3;
         }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: -2px;
-            display: block;
-            inline-size: 1px;
-            block-size: 100%;
-            background-color: $accent-color-3;
-        }
     }
 
     &__column {
         inline-size: 265px;
         display: flex;
         justify-content: flex-start;
+    }
+
+    &__column:nth-child(2) {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -106px;
+            display: block;
+            inline-size: 1px;
+            block-size: 100%;
+            background-color: $accent-color-3;
+        }
     }
 
     &__items {
@@ -82,6 +89,11 @@
 
 @media screen and (max-width: 320px) {
     .order-steps {
+        background-image: url("/src/img/order_steps/bg_mobile.png");
+        background-position: center top;
+        margin-block-start: -176px;
+        padding-block-end: 174px;
+
         &__title {
             span {
                 display: block;
@@ -106,10 +118,6 @@
                 transform: translateX(-50%);
                 inline-size: 45px;
             }
-
-            &::after {
-                display: none;
-            }
         }
 
         &__column {
@@ -128,6 +136,12 @@
                     li:nth-child(3) {
                         margin-inline-start: 51px;
                     }
+                }
+            }
+
+            &:nth-child(2) {
+                &::after {
+                    display: none;
                 }
             }
         }

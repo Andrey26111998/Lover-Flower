@@ -78,7 +78,8 @@
         }
     }
 
-    &-bouquet {
+    &-bouquet,
+    &-question {
         inline-size: 255px;
         border: none;
         background-color: $accent-color-1;
@@ -121,7 +122,8 @@ a.button-bouquet {
     .button {
 
         &-catalog,
-        &-bouquet {
+        &-bouquet,
+        &-question {
             &:hover {
                 background-color: $accent-color-1;
                 color: $bg-color;

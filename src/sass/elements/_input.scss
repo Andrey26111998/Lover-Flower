@@ -1,0 +1,61 @@
+@use "/src/sass/basic/variables" as *;
+
+.input {
+    display: block;
+
+    &.filled {
+        color: $text-color;
+        border: 1px solid $text-color;
+
+        &:focus {
+            border: none;
+            outline: 1px solid $text-color;
+        }
+    }
+}
+
+.just-validate-error-label {
+    display: none;
+}
+
+.error {
+    position: relative;
+
+    .input {
+        border: 1px solid #ff3a44;
+
+        &:focus {
+            border: none;
+            outline: 1px solid #ff3a44;
+        }
+
+        &::placeholder {
+            color: #ff3a44;
+            text-transform: none;
+        }
+    }
+
+    &::before {
+        content: "!";
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        right: -10px;
+        transform: translateY(-50%);
+        color: #ff3a44;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .error {
+        &::before {
+            display: none;
+        }
+    }
+}

@@ -13,11 +13,13 @@
 @use "/src/sass/elements/close";
 @use "/src/sass/elements/titles";
 @use "/src/sass/elements/buttons";
+@use "/src/sass/elements/input";
 
 //Blocks
 @use "/src/sass/blocks/basket";
 @use "/src/sass/blocks/menu";
 @use "/src/sass/blocks/header";
+@use "/src/sass/blocks/question-form";
 @use "/src/sass/blocks/footer";
 
 //Blocks / Home
@@ -26,3 +28,4 @@
 @use "/src/sass/blocks/home/popular_products";
 @use "/src/sass/blocks/home/order_steps";
 @use "/src/sass/blocks/home/custom_bouquet";
+@use "/src/sass/blocks/home/question";

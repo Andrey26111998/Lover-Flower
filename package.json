@@ -23,6 +23,7 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
+    "just-validate": "^4.3.0",
     "modern-normalize": "^3.0.1",
     "swiper": "^11.2.8"
   }
