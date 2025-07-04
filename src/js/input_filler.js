@@ -1,22 +1,58 @@
-const inputs = document.querySelectorAll(".input");
-const formInputs = document.querySelectorAll(".form__input");
-
-const originalPlaceholders = {};
-inputs.forEach(input => {
-    originalPlaceholders[input.id] = input.placeholder;
-});
-
-inputs.forEach((input, index) => {
-    input.addEventListener("input", () => {
-        const inputValue = input.value;
-        const inputValueLength = inputValue.length;
-        if (inputValueLength > 0) {
-            input.classList.add("filled");
-            formInputs[index].classList.remove("error");
-            input.placeholder = originalPlaceholders[input.id];
+try {
+    const getPlaceholders = (fields) => {
+        const placeholders = {};
+        for (const field of fields) {
+            const fieldId = field.id;
+            if (!fieldId) {
+                continue;
+            }
+            placeholders[fieldId] = field.placeholder;
         }
-        else {
-            input.classList.remove("filled");
-        }
-    });
-});
+        return placeholders;
+    }
+
+    const inputs = document.querySelectorAll(".input");
+    const originalPlaceholders = getPlaceholders(inputs);
+
+    for (const [index, input] of inputs.entries()) {
+        input.addEventListener("input", () => {
+            try {
+                const inputValue = input.value.trim();
+                const inputValueLength = inputValue.length;
+                console.log(inputValueLength);
+                const hasInputValue = inputValueLength > 0;
+                const formInput = input.closest(".form__input");
+                const formError = input.nextElementSibling;
+                const inputId = input.id;
+                const originalPlaceholder = originalPlaceholders[inputId];
+
+                if (hasInputValue) {
+                    input.classList.add("filled");
+                }
+                else {
+                    input.classList.remove("filled");
+                }
+
+                if (formInput) {
+                    formInput.classList.remove("error");
+                }
+
+                if (formError) {
+                    formError.classList.remove("active");
+                }
+
+                if (hasInputValue && inputId && originalPlaceholder) {
+                    input.placeholder = originalPlaceholder;
+                }
+            }
+            catch (err) {
+                const message = err.message;
+                console.error("Error processing input:", message);
+            }
+        });
+    }
+}
+catch (err) {
+    const message = err.message;
+    console.error("Error during initialization:", message);
+}

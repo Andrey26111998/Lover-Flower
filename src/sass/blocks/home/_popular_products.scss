@@ -1,7 +1,7 @@
 @use "/src/sass/basic/variables" as *;
 
 .popular-products {
-    background-image: url("/src/img/popular_products/bg.png");
+    background-image: url("/src/img/home/popular_products/bg.png");
     background-position: center 93px;
     background-size: auto;
     background-repeat: no-repeat;
@@ -175,6 +175,14 @@
             inline-size: 40px;
             block-size: 6px;
         }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .popular-products {
+        background-position: center center;
+        background-size: cover;
+        //TODO
     }
 }
 

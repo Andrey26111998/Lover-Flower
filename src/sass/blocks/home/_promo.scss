@@ -2,7 +2,7 @@
 
 .promo {
     position: relative;
-    background-image: url("/src/img/promo/bg.png");
+    background-image: url("/src/img/home/promo/bg.png");
     background-position: top center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -107,9 +107,17 @@
     }
 }
 
+@media screen and (min-width: 1920px) {
+    .promo {
+        background-position: center center;
+        background-size: cover;
+        //TODO
+    }
+}
+
 @media screen and (max-width: 320px) {
     .promo {
-        background-image: url("/src/img/promo/bg_mobile.png");
+        background-image: url("/src/img/home/promo/bg_mobile.png");
         background-position: top center;
         background-size: auto;
         padding-block-end: 100px;

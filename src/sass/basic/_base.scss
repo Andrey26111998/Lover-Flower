@@ -55,6 +55,36 @@ main {
     margin-inline: auto;
 }
 
+@media screen and (min-width: 1920px) {
+    .container {
+        max-inline-size: 1478px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-inline-size: 924px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        max-inline-size: 764px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-inline-size: 592px;
+    }
+}
+
+@media screen and (max-width: 592px) {
+    .container {
+        max-inline-size: 456px;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .container {
         inline-size: 100%;

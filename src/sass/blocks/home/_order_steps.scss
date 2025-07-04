@@ -1,9 +1,9 @@
 @use "/src/sass/basic/variables" as *;
 
 .order-steps {
-    background-image: url("/src/img/order_steps/bg.png");
-    background-position: -54px top;
-    background-size: cover;
+    background-image: url("/src/img/home/order_steps/bg.png");
+    background-position: left top;
+    background-size: auto;
     background-repeat: no-repeat;
     margin-block-start: -208px;
     padding-block-end: 160px;
@@ -84,6 +84,14 @@
         letter-spacing: 0.04em;
         line-height: 21px;
         text-transform: uppercase;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .order-steps {
+        background-position: center center;
+        background-size: cover;
+        //TODO
     }
 }
 

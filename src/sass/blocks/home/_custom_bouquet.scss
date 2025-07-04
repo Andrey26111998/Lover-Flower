@@ -1,7 +1,7 @@
 @use "/src/sass/basic/variables" as *;
 
 .custom-bouquet {
-    background-image: url("/src/img/custom_bouquet/bg.png");
+    background-image: url("/src/img/home/custom_bouquet/bg.png");
     background-position: right center;
     background-size: auto;
     background-repeat: no-repeat;
@@ -127,6 +127,14 @@
             width: 255px;
             height: 292px;
         }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .custom-bouquet {
+        background-position: center center;
+        background-size: cover;
+        //TODO
     }
 }
 

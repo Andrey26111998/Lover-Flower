@@ -1,0 +1,12 @@
+.form__error {
+    display: none;
+    margin-block-start: 10px;
+    color: #ff3a44;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+
+    &.active {
+        display: block;
+    }
+}

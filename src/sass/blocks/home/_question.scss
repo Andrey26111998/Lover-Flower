@@ -2,7 +2,7 @@
 
 .question {
     background-color: #0f2222;
-    background-image: url("/src/img/question/bg.png");
+    background-image: url("/src/img/home/question/bg.png");
     background-position: -56px -2px;
     background-size: auto;
     background-repeat: no-repeat;
@@ -16,7 +16,7 @@
         left: 0;
         inline-size: 759px;
         block-size: 1214px;
-        background-image: url("/src/img/question/flower.png");
+        background-image: url("/src/img/home/question/flower.png");
         background-position: 0 0;
         background-size: auto;
         background-repeat: no-repeat;
@@ -75,9 +75,17 @@
     }
 }
 
+@media screen and (min-width: 1920px) {
+    .question {
+        background-position: center center;
+        background-size: cover;
+        //TODO
+    }
+}
+
 @media screen and (max-width: 320px) {
     .question {
-        background-image: url("/src/img/question/bg_mobile.png");
+        background-image: url("/src/img/home/question/bg_mobile.png");
         background-position: center 34px;
         padding-block: 30px 52px;
 
@@ -87,7 +95,7 @@
             right: 0;
             inline-size: 243px;
             block-size: 448px;
-            background-image: url("/src/img/question/flower_mobile.png");
+            background-image: url("/src/img/home/question/flower_mobile.png");
         }
 
         &__header {

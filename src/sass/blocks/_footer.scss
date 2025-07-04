@@ -1,7 +1,7 @@
 @use "/src/sass/basic/variables" as *;
 
 .footer {
-    margin-block-end: 64px;
+    padding-block-end: 64px;
     background-color: #000;
 
     &__wrapper {
@@ -151,7 +151,7 @@
 
 @media screen and (max-width: 320px) {
     .footer {
-        margin-block-end: 20px;
+        padding-block-end: 20px;
 
         &__wrapper {
             flex-direction: column;
