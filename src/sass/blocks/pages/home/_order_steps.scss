@@ -1,7 +1,7 @@
 @use "/src/sass/basic/variables" as *;
 
 .order-steps {
-    background-image: url("/src/img/home/order_steps/bg.png");
+    background-image: url("/src/img/pages/home/order_steps/bg.png");
     background-position: left top;
     background-size: auto;
     background-repeat: no-repeat;
@@ -97,7 +97,7 @@
 
 @media screen and (max-width: 320px) {
     .order-steps {
-        background-image: url("/src/img/order_steps/bg_mobile.png");
+        background-image: url("/src/img/pages/home/order_steps/bg_mobile.png");
         background-position: center top;
         margin-block-start: -176px;
         padding-block-end: 174px;

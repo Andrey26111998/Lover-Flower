@@ -1,7 +1,7 @@
 @use "/src/sass/basic/variables" as *;
 
 .popular-products {
-    background-image: url("/src/img/home/popular_products/bg.png");
+    background-image: url("/src/img/pages/home/popular_products/bg.png");
     background-position: center 93px;
     background-size: auto;
     background-repeat: no-repeat;
@@ -31,14 +31,14 @@
     &__wrapper {
         position: relative;
         inline-size: 100%;
-        max-inline-size: 1120px;
-        margin-block: 76px 0;
+        max-inline-size: 1125px;
+        margin-block: 71px 0;
         margin-inline: auto;
     }
 
     &__slider {
-        padding-block-start: 10px;
-        padding-inline-end: 10px;
+        padding-block-start: 15px;
+        padding-inline-end: 15px;
         inline-size: 100%;
     }
 
@@ -56,8 +56,8 @@
     &__new,
     &__sale {
         position: absolute;
-        top: -10px;
-        right: -10px;
+        top: -15px;
+        right: -15px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -188,7 +188,7 @@
 
 @media screen and (max-width: 320px) {
     .popular-products {
-        background-image: url("/src/img/popular_products/bg_mobile.png");
+        background-image: url("/src/img/pages/home/popular_products/bg_mobile.png");
         background-position: right bottom;
         margin-block-start: -86px;
         padding-block: 0 276px;

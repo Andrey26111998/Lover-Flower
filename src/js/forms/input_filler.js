@@ -1,16 +1,6 @@
-try {
-    const getPlaceholders = (fields) => {
-        const placeholders = {};
-        for (const field of fields) {
-            const fieldId = field.id;
-            if (!fieldId) {
-                continue;
-            }
-            placeholders[fieldId] = field.placeholder;
-        }
-        return placeholders;
-    }
+import { getPlaceholders } from "/src/js/forms/placeholder.js";
 
+try {
     const inputs = document.querySelectorAll(".input");
     const originalPlaceholders = getPlaceholders(inputs);
 
@@ -19,7 +9,6 @@ try {
             try {
                 const inputValue = input.value.trim();
                 const inputValueLength = inputValue.length;
-                console.log(inputValueLength);
                 const hasInputValue = inputValueLength > 0;
                 const formInput = input.closest(".form__input");
                 const formError = input.nextElementSibling;

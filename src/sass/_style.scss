@@ -1,33 +1,53 @@
 //Basic styles
 @use "/src/sass/basic/base";
 
+//Elements / Icons
+@use "/src/sass/elements/icons/hamburger";
+@use "/src/sass/elements/icons/close";
+
 //Elements
-@use "/src/sass/elements/logo";
-@use "/src/sass/elements/search";
-@use "/src/sass/elements/email";
-@use "/src/sass/elements/delivery_info";
-@use "/src/sass/elements/address";
-@use "/src/sass/elements/schedule";
-@use "/src/sass/elements/social_links";
-@use "/src/sass/elements/hamburger";
-@use "/src/sass/elements/close";
-@use "/src/sass/elements/titles";
-@use "/src/sass/elements/buttons";
-@use "/src/sass/elements/input";
-@use "/src/sass/elements/form_error";
+
+//Elements / Info
+@use "/src/sass/elements/info/email";
+@use "/src/sass/elements/info/delivery_info";
+@use "/src/sass/elements/info/address";
+@use "/src/sass/elements//info/schedule";
+
+//Elements / Links
+@use "/src/sass/elements/links/social_links";
+
+//Elements / General
+@use "/src/sass/elements/general/logo";
+@use "/src/sass/elements/general/search";
+@use "/src/sass/elements/general/titles";
+@use "/src/sass/elements/general/buttons";
+
+// Elements / Form elements
+@use "/src/sass/elements/form_elements/input";
+@use "/src/sass/elements/form_elements/error";
+@use "/src/sass/elements/form_elements/info";
 
 //Blocks
-@use "/src/sass/blocks/basket";
-@use "/src/sass/blocks/menu";
-@use "/src/sass/blocks/header";
-@use "/src/sass/blocks/question-form";
-@use "/src/sass/blocks/footer";
 
-//Blocks / Home
-@use "/src/sass/blocks/home/promo";
-@use "/src/sass/blocks/home/catalog";
-@use "/src/sass/blocks/home/popular_products";
-@use "/src/sass/blocks/home/order_steps";
-@use "/src/sass/blocks/home/custom_bouquet";
-@use "/src/sass/blocks/home/question";
-@use "/src/sass/blocks/home/social";
+//Blocks / Forms
+@use "/src/sass/blocks/forms/question-form";
+@use "/src/sass/blocks/forms/call-window-form";
+
+//Blocks / Windows
+@use "/src/sass/blocks/windows/overlay";
+@use "/src/sass/blocks/windows/order-call";
+
+//Blocks / General
+@use "/src/sass/blocks/general/basket";
+@use "/src/sass/blocks/general/menu";
+@use "/src/sass/blocks/general/header";
+@use "/src/sass/blocks/general/footer";
+
+//Blocks / Pages / Home
+@use "/src/sass/blocks/pages/home/promo";
+@use "/src/sass/blocks/pages/home/catalog";
+@use "/src/sass/blocks/pages/home/popular_products";
+@use "/src/sass/blocks/pages/home/order_steps";
+@use "/src/sass/blocks/pages/home/custom_bouquet";
+@use "/src/sass/blocks/pages/home/question";
+@use "/src/sass/blocks/pages/home/social";

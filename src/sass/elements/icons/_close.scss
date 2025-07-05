@@ -2,8 +2,6 @@
 
 .close {
     position: absolute;
-    inline-size: 10px;
-    block-size: 10px;
     cursor: pointer;
 
     span {
@@ -11,9 +9,6 @@
         display: block;
         top: 50%;
         left: 50%;
-        inline-size: 10px;
-        block-size: 1px;
-        background-color: $accent-color-1;
         transform-origin: center;
 
         &:first-child {

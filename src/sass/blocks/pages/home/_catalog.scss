@@ -1,7 +1,7 @@
 @use "/src/sass/basic/variables" as *;
 
 .catalog {
-    background-image: url("/src/img/home/catalog/bg.png");
+    background-image: url("/src/img/pages/home/catalog/bg.png");
     background-position: center 134px;
     background-size: auto;
     background-repeat: no-repeat;
@@ -110,7 +110,7 @@
 
 @media screen and (max-width: 320px) {
     .catalog {
-        background-image: url("/src/img/home/catalog/bg_mobile.png");
+        background-image: url("/src/img/pages/home/catalog/bg_mobile.png");
         background-position: center center;
         background-position: center 87px;
         background-size: auto;

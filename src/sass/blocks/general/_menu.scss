@@ -23,8 +23,16 @@
     }
 
     &__close {
-        top: 14px;
-        right: 14px;
+        top: 10px;
+        right: 10px;
+        inline-size: 18px;
+        block-size: 18px;
+
+        span {
+            inline-size: 10px;
+            block-size: 1px;
+            background-color: $accent-color-1;
+        }
     }
 
     &__search {

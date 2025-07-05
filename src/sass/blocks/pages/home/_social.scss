@@ -1,11 +1,11 @@
 @use "/src/sass/basic/variables" as *;
 
 .social {
-    background-image: url("/src/img/home/social/bg.png");
+    background-image: url("/src/img/pages/home/social/bg.png");
     background-position: center 120px;
     background-size: auto;
     background-repeat: no-repeat;
-    padding-block: 261px 395px;
+    padding-block: 261px 200px;
 
     &__wrapper {
         display: flex;
@@ -35,7 +35,7 @@
             position: absolute;
             top: -60px;
             right: -335px;
-            background-image: url("/src/img/home/social/inscription.png");
+            background-image: url("/src/img/pages/home/social/inscription.png");
             background-position: center center;
             background-size: auto;
             background-repeat: no-repeat;
@@ -74,7 +74,7 @@
 
 @media screen and (max-width: 320px) {
     .social {
-        background-image: url("/src/img/home/social/bg_mobile.png");
+        background-image: url("/src/img/pages/home/social/bg_mobile.png");
         background-position: center bottom;
         padding-block: 67px 100px;
 
@@ -102,7 +102,7 @@
                 top: -133px;
                 right: auto;
                 left: 0;
-                background-image: url("/src/img/home/social/inscription_mobile.png");
+                background-image: url("/src/img/pages/home/social/inscription_mobile.png");
                 inline-size: 133px;
             }
         }
