@@ -161,7 +161,7 @@
             </a>
             <nav>
                 <ul class="header__menu">
-                    <li class="header__catalog">
+                    <li class="header__menu-item header__catalog">
                         <a class="header__link" href="">Каталог</a>
                         <nav class="header__submenu">
                             <ul class="header__submenu-items">
@@ -181,16 +181,19 @@
                             </ul>
                         </nav>
                     </li>
-                    <li><a class="header__link" href="">Доставка и оплата</a></li>
-                    <li><a class="header__link" href="">О нас</a></li>
-                    <li><a class="header__link" href="">Контакты</a></li>
-                    <li><a class="header__link" href="">FAQ</a></li>
+                    <li class="header__menu-item"><a class="header__link" href="">Доставка и оплата</a></li>
+                    <li class="header__menu-item"><a class="header__link" href="">О нас</a></li>
+                    <li class="header__menu-item"><a class="header__link" href="">Контакты</a></li>
+                    <li class="header__menu-item"><a class="header__link" href="">FAQ</a></li>
+                    <li class="header__menu-item">
+                        <a class="search header__search" href="#">
+                            <img alt="search" class="search__img" src="/src/icons/header/search.svg">
+                            <span class="search__text">Поиск</span>
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
-            <a class="search header__search" href="">
-                <img alt="search" class="search__img" src="/src/icons/header/search.svg">
-                <span class="search__text">Поиск</span>
-            </a>
             <div class="header__info">
                 <a class="email header__email" href="mailto:zakaz@loverflower.by">zakaz@loverflower.by</a>
                 <div class="delivery-info header__delivery">Доставка 24/7 по договоренности с оператором</div>
@@ -242,7 +245,7 @@
             </button>
             <button class="basket-button promo__basket-button">
                 <img alt="basket" src="/src/icons/basket/basket.svg">
-                <span class="basket-button__count">5</span>
+                <span class="basket-button__count">0</span>
             </button>
         </div>
     </section>

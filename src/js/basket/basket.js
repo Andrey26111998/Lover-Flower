@@ -1,21 +1,25 @@
 import {addProduct} from "/src/js/basket/add.js";
-import {renderBasketItems, updateBasketSum} from "/src/js/basket/display";
+import {renderBasketItems, updateBasketCount, updateBasketSum} from "/src/js/basket/display";
 import {updateProductQuantity} from "/src/js/basket/edit";
 import {deleteProduct} from "/src/js/basket/delete.js";
 
 const desiredProductButtons = document.querySelectorAll(".desired-product__button");
 const basketButton = document.querySelector(".basket-button");
+const basketButtonCount = document.querySelector(".basket-button__count");
 const body = document.body;
 const overlayBasket = document.querySelector(".overlay-basket");
 const basketCloseButton = document.querySelector(".basket__close");
 const basketItems = document.querySelector(".basket__items");
 const basketResult = document.querySelector(".basket__result-value");
 
+updateBasketCount(basketButtonCount);
+
 for (const desiredProductButton of desiredProductButtons) {
     desiredProductButton.addEventListener("click", () => {
         const desiredProduct = desiredProductButton.closest(".desired-product");
         addProduct(desiredProduct);
         renderBasketItems(basketItems);
+        updateBasketCount(basketButtonCount);
         updateBasketSum(basketResult);
     });
 }
@@ -25,6 +29,7 @@ basketButton.addEventListener("click", () => {
         body.style.overflow = "hidden";
         overlayBasket.classList.add("active");
         renderBasketItems(basketItems);
+        updateBasketCount(basketButtonCount);
         updateBasketSum(basketResult);
 
     } catch (err) {
@@ -45,7 +50,7 @@ basketCloseButton.addEventListener("click", () => {
 
 basketItems.addEventListener("click", (e) => {
     const item = e.target.closest(".basket-item");
-    if (!item) {
+    if (!item || !basketResult) {
         return;
     }
 
@@ -60,6 +65,7 @@ basketItems.addEventListener("click", (e) => {
     if (basketItemQuantityMinus && currentBasketItemQuantityValue > min) {
         basketItemQuantityValue.value = --currentBasketItemQuantityValue;
         updateProductQuantity(basketItemIdentifier, currentBasketItemQuantityValue);
+        updateBasketCount(basketButtonCount);
         updateBasketSum(basketResult);
     }
 
@@ -67,6 +73,7 @@ basketItems.addEventListener("click", (e) => {
     if (basketItemQuantityPlus && currentBasketItemQuantityValue < max) {
         basketItemQuantityValue.value = ++currentBasketItemQuantityValue;
         updateProductQuantity(basketItemIdentifier, currentBasketItemQuantityValue);
+        updateBasketCount(basketButtonCount);
         updateBasketSum(basketResult);
     }
 
@@ -75,6 +82,7 @@ basketItems.addEventListener("click", (e) => {
         deleteProduct(basketItemIdentifier);
         const li = item.closest("li")
         li.remove();
+        updateBasketCount(basketButtonCount);
         updateBasketSum(basketResult);
     }
 });

@@ -7,13 +7,13 @@ export const createBasketItem = (product) => {
     basketItem.classList.add("basket-item", "basket__item");
     basketItem.dataset.id = product.id;
 
-    const basketItemImage = document.createElement("div");
-    basketItemImage.classList.add("basket-item__img");
+    const basketItemImageContainer = document.createElement("div");
+    basketItemImageContainer.classList.add("basket-item__img");
 
-    const basketImage = document.createElement("img");
-    basketImage.src = product.imageSource;
-    basketImage.alt = product.name;
-    basketItemImage.appendChild(basketImage);
+    const basketItemImage = document.createElement("img");
+    basketItemImage.src = product.imageSource;
+    basketItemImage.alt = product.name;
+    basketItemImageContainer.appendChild(basketItemImage);
 
     const basketItemContent = document.createElement("div");
     basketItemContent.classList.add("basket-item-content", "basket-item__content");
@@ -78,7 +78,7 @@ export const createBasketItem = (product) => {
     basketItemContent.appendChild(basketItemContentRow1);
     basketItemContent.appendChild(basketItemContentRow2);
 
-    basketItem.appendChild(basketItemImage);
+    basketItem.appendChild(basketItemImageContainer);
     basketItem.appendChild(basketItemContent);
     li.appendChild(basketItem);
     return li;
@@ -103,4 +103,9 @@ export const updateBasketSum = (sumElement) => {
     }, 0);
 
     sumElement.textContent = `${sum.toFixed(2)} руб.`;
+}
+
+export const updateBasketCount = (countElement) => {
+    const basket = readBasketItems("basket");
+    countElement.textContent = basket.reduce((sum, item) => sum + item.quantity, 0);
 }
