@@ -1,12 +1,12 @@
 try {
     const orderCallButton = document.querySelector(".order-call-button");
-    const orderCallWindowCloseButton = document.querySelector(".order-call-window__close");
-    const orderCallOverlay = document.querySelector(".order-call-overlay");
+    const modalOrderCallCloseButton = document.querySelector(".modal-order-call__close");
+    const overlayOrderCall = document.querySelector(".overlay-order-call");
     const body = document.body;
 
     orderCallButton.addEventListener("click", () => {
         try {
-            orderCallOverlay.classList.add("active");
+            overlayOrderCall.classList.add("active");
             body.style.overflow = "hidden";
         }
         catch (err) {
@@ -15,9 +15,9 @@ try {
         }
     });
 
-    orderCallWindowCloseButton.addEventListener("click", () => {
+    modalOrderCallCloseButton.addEventListener("click", () => {
         try {
-            orderCallOverlay.classList.remove("active");
+            overlayOrderCall.classList.remove("active");
             body.style.overflow = "";
         }
         catch (err) {

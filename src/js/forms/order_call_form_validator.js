@@ -2,9 +2,9 @@ import JustValidate from "just-validate";
 import { showError } from "/src/js/forms/error.js";
 
 try {
-  const questionFormValidator = new JustValidate("#order-call-window-form");
+  const orderCallFormValidator = new JustValidate("#modal-order-call-form");
 
-  questionFormValidator.addField("#call-name", [
+  orderCallFormValidator.addField("#call-name", [
     {
       rule: "required",
       errorMessage: "Поле должно быть заполнено.",
@@ -15,7 +15,8 @@ try {
       errorMessage: "Минимальное количество символов: 2.",
     },
   ]);
-  questionFormValidator.addField("#call-phone", [
+  
+  orderCallFormValidator.addField("#call-phone", [
     {
       rule: "required",
       errorMessage: "Поле должно быть заполнено.",
@@ -26,8 +27,8 @@ try {
       errorMessage: "Формат номера: +7 (XXX) XXX-XX-XX.",
     },
   ]);
-  
-  questionFormValidator.onFail((fields) => {
+
+  orderCallFormValidator.onFail((fields) => {
     showError(fields);
   });
 }

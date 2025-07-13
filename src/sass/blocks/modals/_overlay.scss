@@ -1,0 +1,15 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    inline-size: 100%;
+    block-size: 100vh;
+    display: none;
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 3;
+
+    &.active {
+        display: block;
+    }
+}

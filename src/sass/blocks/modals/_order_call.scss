@@ -1,11 +1,14 @@
 @use "/src/sass/basic/variables" as *;
 
-.order-call-window {
-    background-image: url("/src/img/windows/order_call/ellipses.png");
+.modal-order-call {
+    background-image: url("/src/img/modals/order_call/bg.png");
     background-position: 0 0;
     background-size: auto;
     background-repeat: no-repeat;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #0f2222;
     inline-size: 540px;
     padding-block: 30px;
@@ -41,8 +44,8 @@
 }
 
 @media screen and (max-width: 320px) {
-    .order-call-window {
-        background-image: url("/src/img/windows/order_call/ellipses_mobile.png");
+    .modal-order-call {
+        background-image: url("/src/img/modals/order_call/bg_mobile.png");
         inline-size: 300px;
         padding-block: 40px;
         padding-inline: 10px;

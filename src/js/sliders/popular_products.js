@@ -2,18 +2,7 @@ import Swiper from "swiper";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-
-const getDirection = (threshold) => {
-    try {
-        const windowWidth = window.innerWidth;
-        return windowWidth <= threshold ? "vertical" : "horizontal";
-    }
-    catch (err) {
-        const message = err.message
-        console.error("Error in transmited value:", message);
-        return "horizontal";
-    }
-}
+import { getDirection } from "/src/js/sliders/direction.js";
 
 try {
     const popularProductsSlider = new Swiper(".popular-products__slider", {

@@ -1,0 +1,59 @@
+@use "/src/sass/basic/variables" as *;
+
+.basket-button {
+  padding-block: 15px;
+  padding-inline: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1;
+
+  img {
+    inline-size: 30px;
+    block-size: 30px;
+  }
+
+  &__count {
+    position: absolute;
+    top: 13px;
+    right: 8px;
+    inline-size: 16px;
+    block-size: 16px;
+    border-radius: 100%;
+    background-color: $accent-color-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #142b2b;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .basket-button {
+    padding-block: 12px;
+    padding-inline: 11px;
+
+    img {
+      inline-size: 18px;
+      block-size: 16px;
+    }
+
+    &__count {
+      top: 6px;
+      right: 6px;
+      inline-size: 13px;
+      block-size: 13px;
+      font-size: 8px;
+      line-height: 12px;
+    }
+  }
+}

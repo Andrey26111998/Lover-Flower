@@ -49,11 +49,16 @@
 
     &__social-links {
         position: absolute;
-        top: 141px;
-        right: -17px;
+        top: 121px;
+        right: 0;
         flex-direction: column;
         align-items: center;
         row-gap: 20px;
+        padding-block: 20px;
+        padding-inline: 18px 17px;
+        border-radius: 10px;
+        backdrop-filter: blur(20px);
+        background: rgba(0, 0, 0, 0.2);
     }
 
     &__phone {
@@ -77,33 +82,12 @@
         position: absolute;
         top: 490px;
         right: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 6px;
-        padding-block: 9px;
-        padding-inline: 18px;
-        inline-size: 180px;
-        block-size: 40px;
-        border: none;
-        border-radius: 10px;
-        backdrop-filter: blur(20px);
-        background: rgba(0, 0, 0, 0.2);
-        cursor: pointer;
+    }
 
-        img {
-            inline-size: 16px;
-            block-size: 16px;
-        }
-
-        span {
-            color: $accent-color-1;
-            font-size: 14px;
-            font-weight: 400;
-            letter-spacing: 0.1em;
-            line-height: 21px;
-            text-transform: uppercase;
-        }
+    &__basket-button {
+        position: absolute;
+        top: 550px;
+        right: 0;
     }
 }
 

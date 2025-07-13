@@ -20,25 +20,28 @@
 @use "/src/sass/elements/general/logo";
 @use "/src/sass/elements/general/search";
 @use "/src/sass/elements/general/titles";
+@use "/src/sass/elements/general/order_call_button";
+@use "/src/sass/elements/general/basket-button";
 @use "/src/sass/elements/general/buttons";
 
 // Elements / Form elements
 @use "/src/sass/elements/form_elements/input";
 @use "/src/sass/elements/form_elements/error";
 @use "/src/sass/elements/form_elements/info";
+@use "/src/sass/elements/form_elements/quantity";
 
 //Blocks
 
 //Blocks / Forms
 @use "/src/sass/blocks/forms/question-form";
-@use "/src/sass/blocks/forms/call-window-form";
+@use "/src/sass/blocks/forms/order-call-form";
 
-//Blocks / Windows
-@use "/src/sass/blocks/windows/overlay";
-@use "/src/sass/blocks/windows/order-call";
+//Blocks / Modals
+@use "/src/sass/blocks/modals/overlay";
+@use "/src/sass/blocks/modals/order_call";
+@use "/src/sass/blocks/modals/basket";
 
 //Blocks / General
-@use "/src/sass/blocks/general/basket";
 @use "/src/sass/blocks/general/menu";
 @use "/src/sass/blocks/general/header";
 @use "/src/sass/blocks/general/footer";
