@@ -1,18 +1,18 @@
 .social-links {
-    padding-inline-start: 0;
+  display: flex;
+  padding-inline-start: 0;
+  list-style-type: none;
+
+  &__item {
     display: flex;
-    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    inline-size: 24px;
+    block-size: 24px;
 
-    &__item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        inline-size: 24px;
-        block-size: 24px;
-
-        img {
-            inline-size: 100%;
-            block-size: 100%;
-        }
+    img {
+      inline-size: 100%;
+      block-size: 100%;
     }
+  }
 }

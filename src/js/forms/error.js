@@ -1,36 +1,48 @@
+import ElementHandler from "/src/js/handlers/element_handler.js";
+
 export const showError = (fields) => {
     for (const selector in fields) {
         const input = document.querySelector(selector);
-        if (!input) {
+        const formBlock = input.closest(".form-block");
+        const inputWrapper = input.closest(".input-wrapper");
+        if (!input || !formBlock || !inputWrapper) {
             continue;
         }
 
-        const formInput = input.closest(".form__input");
-        if (!formInput) {
-            continue;
-        }
-
-        const formError = input.nextElementSibling;
-        if (!formError) {
-            continue;
-        }
-
-        const isValid = fields[selector].isValid;
-        const errorMessage = fields[selector].errorMessage;
+        const {isValid, errorMessage} = fields[selector];
         if (isValid) {
             continue;
         }
 
-        const inputValue = input.value.trim();
-        const inputValueLength = inputValue.length;
-        if (inputValueLength > 0) {
-            formError.classList.add("active");
-            formError.textContent = errorMessage;
-        }
-        else {
-            input.value = "";
+        const isFilled = input.value.trim().length > 0;
+        const isSelect = input.type === "select-one";
+        if (isFilled || isSelect) {
+            const formErrorElement = formBlock.querySelector(".form-error");
+            if (!formErrorElement) {
+                const formError = ElementHandler.createElement("div", {
+                    classes: [
+                        "form-error",
+                    ],
+                    properties: {
+                        textContent: errorMessage,
+                    },
+                });
+                formBlock.appendChild(formError);
+            }
+        } else {
             input.placeholder = errorMessage;
         }
-        formInput.classList.add("error");
+
+        const inputErrorSymbol = ElementHandler.createElement("div", {
+            classes: [
+                "input-error-symbol",
+            ],
+            properties: {
+                textContent: "!",
+            },
+        });
+
+        inputWrapper.appendChild(inputErrorSymbol);
+        input.classList.add("input-error");
     }
 }

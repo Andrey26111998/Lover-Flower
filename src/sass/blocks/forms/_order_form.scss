@@ -1,0 +1,294 @@
+@use "/src/sass/basic/variables" as *;
+@use "/src/sass/mixins/custom_radio" as *;
+
+.order-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  inline-size: 100%;
+
+  &__title {
+    inline-size: 100%;
+
+    &:not(:first-child) {
+      margin-block-start: 60px;
+    }
+  }
+
+  &__contact-input,
+  &__delivery-input--big,
+  &__delivery-input--mini,
+  &__promo-code-input {
+    display: flex;
+
+    .input-wrapper {
+      input,
+      textarea,
+      select {
+        padding-block: 19px 20px;
+        padding-inline: 20px;
+        border: 1px solid #555;
+        background-color: $bg-color;
+
+        &,
+        &::placeholder {
+          color: #555;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+          letter-spacing: 0.04em;
+        }
+
+        &:focus {
+          border: none;
+          outline: 1px solid #555;
+        }
+      }
+
+      textarea {
+        resize: none;
+      }
+    }
+  }
+
+  &__contact-input,
+  &__delivery-input--big,
+  &__delivery-input--mini {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 4px;
+    margin-block-start: 20px;
+
+    label {
+      color: $text-color;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0.06em;
+    }
+
+    .input-wrapper {
+      inline-size: 100%;
+
+      input,
+      textarea,
+      select {
+        inline-size: 100%;
+      }
+    }
+  }
+
+  &__contact-input,
+  &__delivery-input--big {
+    inline-size: 100%;
+  }
+
+  &__delivery-input--mini {
+    inline-size: 160px;
+  }
+
+  &__delivery-method-radio,
+  &__payment-method-radio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-block-start: 20px;
+
+    label {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      &.order-custom-radio {
+        @include custom_radio(16px, #353535, $text-color, 20px);
+      }
+
+      &:not(:first-child) {
+        margin-block-start: 20px;
+      }
+    }
+  }
+
+  &__delivery-method-radio {
+    label {
+      color: #353535;
+    }
+  }
+
+  &__payment-method-radio {
+    label {
+      color: #555;
+    }
+  }
+
+  &__delivery-cost {
+    inline-size: 100%;
+    margin-block-start: 20px;
+    color: #555;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    &-value {
+      display: inline;
+    }
+  }
+
+  &__promo-code-input {
+    justify-content: flex-start;
+    inline-size: 251px;
+    margin-block-start: 4px;
+
+    .input-wrapper {
+      input {
+        inline-size: 160px;
+      }
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      inline-size: 191px;
+      padding-block: 20px 19px;
+      padding-inline: 20px;
+      border: 1px solid $accent-color-1;
+      background-color: $bg-color;
+      color: $accent-color-1;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 21px;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+    }
+  }
+
+  &__cost {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    inline-size: 100%;
+    margin-block-start: 60px;
+
+    &-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $accent-color-1;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 44px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    &-discount,
+    &-delivery {
+      color: $text-color;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      &-value {
+        display: inline;
+      }
+    }
+  }
+
+  &__button {
+    margin-block-start: 30px;
+  }
+
+  &__info {
+    position: relative;
+    inline-size: 327px;
+    margin-block-start: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -336px;
+      inline-size: 305px;
+      block-size: 70px;
+      background-image: url("/src/img/pages/order/order/inscription_2.png");
+      background-position: center center;
+      background-size: auto;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .order-form {
+    &__delivery-input--mini {
+      inline-size: 140px;
+    }
+
+    &__promo-code-input {
+      inline-size: 301px;
+
+      .input-wrapper {
+        input {
+          inline-size: 131px;
+        }
+      }
+
+      button {
+        inline-size: 170px;
+      }
+    }
+
+    &__cost {
+      row-gap: 0;
+
+      &-total {
+        font-size: 20px;
+        line-height: 30px;
+
+        &-label {
+          inline-size: 150px;
+        }
+      }
+
+      &-discount,
+      &-delivery {
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      &-discount {
+        margin-block-start: 10px;
+      }
+
+      &-delivery {
+        margin-block-start: 6px;
+      }
+    }
+
+    &__button {
+      margin-block-start: 20px;
+    }
+
+    &__info {
+      inline-size: 287px;
+
+      &::after {
+        top: 19px;
+        right: 5px;
+        inline-size: 101px;
+        block-size: 96px;
+        background-image: url("/src/img/pages/order/order/inscription_2_nobile.png");
+        transform: translateY(0);
+      }
+    }
+  }
+}

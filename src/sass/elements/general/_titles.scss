@@ -8,20 +8,22 @@
     color: $text-color;
     font-size: 200px;
     font-weight: 300;
-    letter-spacing: 0.2em;
     line-height: 242px;
+    letter-spacing: 0.2em;
     text-align: center;
   }
 
   &-h2-v1,
-  &-h2-v2 {
+  &-h2-v2,
+  &-h1-v2 {
     font-family: $second-family;
     color: $text-color;
     font-weight: 400;
     letter-spacing: 0.02em;
   }
 
-  &-h2-v1 {
+  &-h2-v1,
+  &-h1-v2 {
     font-size: 100px;
     line-height: 121px;
   }
@@ -36,8 +38,8 @@
   &-h2-v3 {
     font-size: 30px;
     font-weight: 700;
-    letter-spacing: 0.04em;
     line-height: 44px;
+    letter-spacing: 0.04em;
   }
 
   &-h3-v1,
@@ -49,12 +51,22 @@
     color: $accent-color-3;
   }
 
-  &-h4-v1 {
+  &-h4-v1,
+  &-h3-v3,
+  &-h2-v4 {
     color: $accent-color-1;
     font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.04em;
     line-height: 21px;
+  }
+
+  &-h4-v1 {
+    letter-spacing: 0.04em;
+  }
+
+  &-h3-v3,
+  &-h2-v4 {
+    letter-spacing: 0.06em;
   }
 }
 
@@ -63,11 +75,12 @@
     &-h1-v1 {
       font-size: 50px;
       font-weight: 300;
-      letter-spacing: 0.1em;
       line-height: 61px;
+      letter-spacing: 0.1em;
     }
 
-    &-h2-v1 {
+    &-h2-v1,
+    &-h1-v2 {
       font-size: 40px;
       line-height: 48px;
     }

@@ -1,23 +1,23 @@
 @use "/src/sass/basic/variables" as *;
 
 .email {
-    color: $accent-color-1;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-    line-height: 21px;
-    text-transform: uppercase;
-    text-decoration: none;
+  color: $accent-color-1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 @media screen and (max-width: 320px) {
-    .email {
-        &:hover {
-            text-decoration: none;
-        }
+  .email {
+    &:hover {
+      text-decoration: none;
     }
+  }
 }

@@ -74,14 +74,16 @@
             обстоятельствах не будут переданы третьим лицам.
         </div>
         <form action="#" class="form modal-order-call-form modal-order-call__form" id="modal-order-call-form">
-            <div class="form__input modal-order-call-form__input">
-                <input class="input" id="call-name" name="name" placeholder="Ваше имя" required type="text">
-                <span class="form__error"></span>
+            <div class="form-block modal-order-call-form__input">
+                <div class="input-wrapper">
+                    <input class="input" id="call-name" name="name" placeholder="Ваше имя" required type="text">
+                </div>
             </div>
-            <div class="form__input modal-order-call-form__input">
-                <input class="input" id="call-phone" name="phone" placeholder="+7 (977) 777-77-77" required
-                       type="tel">
-                <span class="form__error"></span>
+            <div class="form-block modal-order-call-form__input">
+                <div class="input-wrapper">
+                    <input class="input" id="call-phone" name="phone" placeholder="+7 (977) 777-77-77" required
+                           type="tel">
+                </div>
             </div>
             <button class="button button-call modal-order-call-form__button">отправить</button>
             <div class="form__info modal-order-call-form__info">Нажимая на кнопку «Отправить», я даю свое согласие на
@@ -89,52 +91,57 @@
         </form>
     </div>
 </div>
-<div class="overlay overlay-basket">
-    <div class="basket">
-        <h2 class="title title-h2-v3 basket__title">Ваша корзина</h2>
-        <div class="close basket__close">
+<div class="overlay overlay-cart">
+    <div class="cart-button-container">
+        <!--Dynamic generation!-->
+    </div>
+    <div class="cart">
+        <h2 class="title title-h2-v3 cart__title">Ваша корзина</h2>
+        <div class="close cart__close">
             <span></span>
             <span></span>
         </div>
-        <ul class="basket__items">
+        <ul class="cart-items cart__items">
             <!--Dynamic generation...!-->
         </ul>
-        <div class="basket-recommendations basket__recommendations">
-            <div class="basket-recommendations__title">Добавьте к заказу <a href="#">Шары:</a></div>
-            <ul class="basket-recommendations__items">
+        <div class="cart-recommendations cart__recommendations">
+            <div class="cart-recommendations__title">Добавьте к заказу <a href="#">Шары</a>:</div>
+            <ul class="cart-recommendations__items">
                 <li>
-                    <div class="basket-recommendations-item basket-recommendations__item desired-product"
+                    <div class="cart-recommendations-item cart-recommendations__item desired-product"
                          data-id="product-5">
-                        <div class="basket-recommendations-item__img desired-product__img">
+                        <div class="cart-recommendations-item__img desired-product__img">
                             <img src="/src/img/modals/basket/img_1.jpg" alt="img 1">
                         </div>
-                        <div class="basket-recommendations-item__content">
-                            <a href="#" class="basket-recommendations-item__name desired-product__name">ШАР “ЗВЕЗДА”</a>
-                            <div class="basket-recommendations-item__price desired-product__price">
-                                <span class="desired-product__price--new">11.00 ₽</span>
+                        <div class="cart-recommendations-item__content">
+                            <a href="#" class="cart-recommendations-item__name desired-product__name">ШАР “ЗВЕЗДА”</a>
+                            <div class="cart-recommendations-item__price">
+                                <span class="price-value desired-product__price">11.00</span>
+                                <span class="price-currency">₽</span>
                             </div>
                             <form action="">
-                                <button class="basket-recommendations-item__button desired-product__button"
-                                        type="button">Добавить
+                                <button class="cart-recommendations-item__button desired-product__button" type="button">
+                                    Добавить
                                 </button>
                             </form>
                         </div>
                     </div>
                 </li>
                 <li>
-                    <div class="basket-recommendations-item basket-recommendations__item desired-product"
+                    <div class="cart-recommendations-item cart-recommendations__item desired-product"
                          data-id="product-6">
-                        <div class="basket-recommendations-item__img desired-product__img">
+                        <div class="cart-recommendations-item__img desired-product__img">
                             <img src="/src/img/modals/basket/img_2.jpg" alt="img 2">
                         </div>
-                        <div class="basket-recommendations-item__content">
-                            <a href="#" class="basket-recommendations-item__name desired-product__name">ШАР “СЕРДЦЕ”</a>
-                            <div class="basket-recommendations-item__price desired-product__price">
-                                <span class="desired-product__price--new">11.00 ₽</span>
+                        <div class="cart-recommendations-item__content">
+                            <a href="#" class="cart-recommendations-item__name desired-product__name">ШАР “СЕРДЦЕ”</a>
+                            <div class="cart-recommendations-item__price">
+                                <span class="price-value desired-product__price">11.00</span>
+                                <span class="price-currency">₽</span>
                             </div>
                             <form action="">
-                                <button class="basket-recommendations-item__button desired-product__button"
-                                        type="button">Добавить
+                                <button class="cart-recommendations-item__button desired-product__button" type="button">
+                                    Добавить
                                 </button>
                             </form>
                         </div>
@@ -142,10 +149,15 @@
                 </li>
             </ul>
         </div>
-        <div class="basket-result basket__result">Предварительный итог: <span class="basket__result-value">0 руб.</span>
+        <div class="cart-result cart__result">
+            Предварительный итог:
+            <div class="cart-result__price">
+                <span class="price-value">0</span>
+                <span class="price-currency">руб</span>.
+            </div>
         </div>
-        <div class="basket__info">Чтобы узнать стоимость доставки, перейдите к оформлению заказа.</div>
-        <a href="#" class="basket__link">Оформить заказ</a>
+        <div class="cart__info">Чтобы узнать стоимость доставки, перейдите к оформлению заказа.</div>
+        <a href="/order" class="cart__link">Оформить заказ</a>
     </div>
 </div>
 <header class="header">
@@ -159,7 +171,7 @@
             <a class="logo header__logo" href="#">
                 <img alt="logo" src="/src/logo/logo.png">
             </a>
-            <nav>
+            <nav class="header__nav">
                 <ul class="header__menu">
                     <li class="header__menu-item header__catalog">
                         <a class="header__link" href="">Каталог</a>
@@ -198,12 +210,21 @@
                 <a class="email header__email" href="mailto:zakaz@loverflower.by">zakaz@loverflower.by</a>
                 <div class="delivery-info header__delivery">Доставка 24/7 по договоренности с оператором</div>
             </div>
-            <a class="header__phone" href="tel:+375291136969">
-                <div class="header__phone-img">
-                    <img alt="phone" src="/src/icons/header/phone.svg">
-                </div>
-                <span>+375 (29) 113-69-69</span>
+            <a href="#" class="header__mobile-logo">
+                <span>lover</span>
+                <span>flower</span>
             </a>
+            <div class="header__addition">
+                <a class="header__phone" href="tel:+375291136969">
+                    <div class="header__phone-img">
+                        <img alt="phone" src="/src/icons/header/phone.svg">
+                    </div>
+                    <span class="header__phone-text">+375 (29) 113-69-69</span>
+                </a>
+                <div class="cart-button-container">
+                    <!--Dynamic generation...!-->
+                </div>
+            </div>
         </div>
     </div>
 </header>
@@ -243,13 +264,12 @@
                 <img alt="phone" src="/src/icons/promo/phone.svg">
                 <span>заказать звонок</span>
             </button>
-            <button class="basket-button promo__basket-button">
-                <img alt="basket" src="/src/icons/basket/basket.svg">
-                <span class="basket-button__count">0</span>
-            </button>
+            <div class="cart-button-container">
+                <!--Dynamic generation...!-->
+            </div>
         </div>
     </section>
-    <section class="catalog second-section">
+    <section class="catalog header-modification-point">
         <div class="container">
             <h2 class="title title-h2-v1 catalog__title">каталог</h2>
             <div class="catalog__wrapper">
@@ -309,8 +329,11 @@
                                 <img alt="img 1" src="/src/img/pages/home/popular_products/img_1.jpg">
                             </div>
                             <a class="popular-products__name desired-product__name" href="">лучший день</a>
-                            <div class="popular-products__price desired-product__price">
-                                <div class="popular-products__price--new desired-product__price--new">167.00 ₽</div>
+                            <div class="popular-products__price">
+                                <div class="popular-products__price--new">
+                                    <span class="price-value desired-product__price">167.00</span>
+                                    <span class="prince-currency">₽</span>
+                                </div>
                             </div>
                             <form action="#">
                                 <button class="button button-basket desired-product__button" type="button">В корзину
@@ -324,8 +347,11 @@
                                 <img alt="img 2" src="/src/img/pages/home/popular_products/img_2.jpg">
                             </div>
                             <a class="popular-products__name desired-product__name" href="">лучший день</a>
-                            <div class="popular-products__price desired-product__price">
-                                <div class="popular-products__price--new desired-product__price--new">167.00 ₽</div>
+                            <div class="popular-products__price">
+                                <div class="popular-products__price--new">
+                                    <span class="price-value desired-product__price">167.00</span>
+                                    <span class="prince-currency">₽</span>
+                                </div>
                             </div>
                             <form action="#">
                                 <button class="button button-basket desired-product__button" type="button">В корзину
@@ -340,9 +366,15 @@
                                 <img alt="img 3" src="/src/img/pages/home/popular_products/img_3.jpg">
                             </div>
                             <a class="popular-products__name desired-product__name" href="">лучший день</a>
-                            <div class="popular-products__price desired-product__price">
-                                <div class="popular-products__price--new desired-product__price--new">167.00 ₽</div>
-                                <div class="popular-products__price--old desired-product__price--old">187.00 ₽</div>
+                            <div class="popular-products__price">
+                                <div class="popular-products__price--new">
+                                    <span class="price-value desired-product__price">167.00</span>
+                                    <span class="prince-currency">₽</span>
+                                </div>
+                                <div class="popular-products__price--old">
+                                    <span class="price-value">187.00</span>
+                                    <span class="prince-currency">₽</span>
+                                </div>
                             </div>
                             <form action="#">
                                 <button class="button button-basket desired-product__button" type="button">В корзину
@@ -356,8 +388,11 @@
                                 <img alt="img 2" src="/src/img/pages/home/popular_products/img_2.jpg">
                             </div>
                             <a class="popular-products__name desired-product__name" href="">лучший день</a>
-                            <div class="popular-products__price desired-product__price">
-                                <div class="popular-products__price--new desired-product__price--new">167.00 ₽</div>
+                            <div class="popular-products__price">
+                                <div class="popular-products__price--new">
+                                    <span class="price-value desired-product__price">167.00</span>
+                                    <span class="prince-currency">₽</span>
+                                </div>
                             </div>
                             <form action="#">
                                 <button class="button button-basket desired-product__button" type="button">В корзину
@@ -483,7 +518,7 @@
             <div class="question__header">
                 <h2 class="title title-h2-v1 question__title">
                     <span>остались</span>
-                    <span>вопросы</span>
+                    <span>вопросы?</span>
                 </h2>
                 <div class="question__description">Отправьте ваш вопрос, заказ, предложение или жалобу через форму
                     обратной связи, и наш специалист свяжется с вами в течение 15 минут.
@@ -491,19 +526,23 @@
             </div>
             <div class="question__wrapper">
                 <form action="#" class="form question-form question__form" id="question-form">
-                    <div class="form__input question-form__input">
-                        <input class="input" id="question-name" name="name" placeholder="Ваше имя" required type="text">
-                        <span class="form__error"></span>
+                    <div class="form-block question-form__input">
+                        <div class="input-wrapper">
+                            <input class="input" id="question-name" name="name" placeholder="Ваше имя" required
+                                   type="text">
+                        </div>
                     </div>
-                    <div class="form__input question-form__input">
-                        <input class="input" id="question-phone" name="phone" placeholder="+7 (977) 777-77-77" required
-                               type="tel">
-                        <span class="form__error"></span>
+                    <div class="form-block question-form__input">
+                        <div class="input-wrapper">
+                            <input class="input" id="question-phone" name="phone" placeholder="+7 (977) 777-77-77"
+                                   required type="tel">
+                        </div>
                     </div>
-                    <div class="form__input question-form__input">
-                        <textarea class="input" id="question-message" name="question" placeholder="Ваш комментарий"
-                                  required></textarea>
-                        <span class="form__error"></span>
+                    <div class="form-block question-form__input">
+                        <div class="input-wrapper">
+                            <textarea class="input" id="question-message" name="question" placeholder="Ваш комментарий"
+                                      required></textarea>
+                        </div>
                     </div>
                     <button class="button button-question question-form__button">отправить</button>
                     <div class="form__info question-form__info">Нажимая на кнопку «Отправить», я даю свое согласие на

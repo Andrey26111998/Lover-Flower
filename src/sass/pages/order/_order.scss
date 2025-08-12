@@ -1,0 +1,125 @@
+@use "/src/sass/mixins/cart_line" as *;
+
+.order {
+  padding-block: 115px 188px;
+  background-image: url("/src/img/pages/order/order/bg.png");
+  background-position: center top;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin-block-start: 60px;
+
+    span {
+      display: block;
+
+      &:last-child {
+        position: relative;
+        max-inline-size: 482px;
+        margin-block-start: -14px;
+        padding-inline-start: 95px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: -365px;
+          inline-size: 305px;
+          block-size: 140px;
+          background-image: url("/src/img/pages/order/order/inscription_1.png");
+          background-position: center center;
+          background-size: auto;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-block-start: 80px;
+  }
+
+  &__column-1,
+  &__column-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__column-1 {
+    row-gap: 40px;
+    inline-size: 540px;
+  }
+
+  &__column-2 {
+    inline-size: 350px;
+  }
+
+  &-resume {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    inline-size: 100%;
+    margin-block-start: 84px;
+
+    &__title {
+      position: relative;
+      @include cart-line(-46px);
+    }
+
+    &__items {
+      max-block-size: 1120px;
+      margin-block-start: 65px;
+    }
+
+    &__result {
+      margin-block-start: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .order {
+    padding-block: 100px 163px;
+    background-image: url("/src/img/pages/order/order/bg_mobile.png");
+
+    &__title {
+      margin-block-start: 20px;
+
+      span {
+        &:last-child {
+          max-inline-size: 285px;
+          margin-block-start: 0;
+          padding-inline-start: 0;
+
+          &::after {
+            right: -18px;
+            inline-size: 138px;
+            block-size: 80px;
+            background-image: url("/src/img/pages/order/order/inscription_1_mobile.png");
+          }
+        }
+      }
+    }
+
+    &__wrapper {
+      margin-block-start: 60px;
+    }
+
+    &__column-1 {
+      row-gap: 0;
+      inline-size: 100%;
+    }
+
+    &__column-2 {
+      display: none;
+    }
+
+    &__subtitle {
+      display: none;
+    }
+  }
+}

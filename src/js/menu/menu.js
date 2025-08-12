@@ -5,28 +5,15 @@ try {
     const body = document.body;
 
     hamburgerButton.addEventListener("click", () => {
-        try {
-            menu.classList.add("active");
-            body.style.overflow = "hidden";
-        }
-        catch (err) {
-            const message = err.message;
-            console.error("Error opening menu:", message);
-        }
+        body.style.overflow = "hidden";
+        menu.classList.add("active");
     });
 
     menuCloseButton.addEventListener("click", () => {
-        try {
-            menu.classList.remove("active");
-            body.style.overflow = "";
-        }
-        catch (err) {
-            const message = err.message;
-            console.error("Error closing menu:", message);
-        }
+        body.style.overflow = "";
+        menu.classList.remove("active");
     });
-}
-catch (err) {
-    const message = err.message;
-    console.error("Error during initialization:", message);
+} catch (error) {
+    const errorMessage = error.message;
+    console.error("Menu error:", errorMessage);
 }

@@ -1,15 +1,15 @@
 @use "/src/sass/basic/variables" as *;
 
 .schedule {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    span {
-        color: $text-color;
-        font-size: 10px;
-        font-weight: 300;
-        letter-spacing: 0.1em;
-        line-height: 15px;
-        text-transform: uppercase;
-    }
+  span {
+    color: $text-color;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 }

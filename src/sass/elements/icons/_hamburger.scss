@@ -1,24 +1,24 @@
 @use "/src/sass/basic/variables" as *;
 
 .hamburger {
-    display: none;
-    flex-direction: column;
-    row-gap: 3px;
-    inline-size: 20px;
-    block-size: 9px;
-    cursor: pointer;
-    z-index: 100;
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  row-gap: 3px;
+  inline-size: 20px;
+  block-size: 9px;
+  cursor: pointer;
 
-    span {
-        display: block;
-        inline-size: 20px;
-        block-size: 1px;
-        background-color: $accent-color-1;
-    }
+  span {
+    display: block;
+    inline-size: 20px;
+    block-size: 1px;
+    background-color: $accent-color-1;
+  }
 }
 
 @media screen and (max-width: 320px) {
-    .hamburger {
-        display: flex;
-    }
+  .hamburger {
+    display: flex;
+  }
 }

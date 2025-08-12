@@ -2,14 +2,22 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 3;
+  display: none;
   inline-size: 100%;
   block-size: 100vh;
-  display: none;
-  backdrop-filter: blur(20px);
   background: rgba(0, 0, 0, 0.2);
-  z-index: 3;
+  backdrop-filter: blur(20px);
 
   &.active {
     display: block;
+  }
+
+  &-cart {
+    .cart-button-container {
+      position: absolute;
+      top: 10px;
+      right: 420px;
+    }
   }
 }

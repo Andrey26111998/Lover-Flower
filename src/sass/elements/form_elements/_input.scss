@@ -1,61 +1,89 @@
 @use "/src/sass/basic/variables" as *;
 
-.input {
+input {
+  &[type="number"] {
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      padding-block: 0;
+      padding-inline: 0;
+      -webkit-appearance: none;
+    }
+  }
+}
+
+.input-wrapper {
+  position: relative;
+
+  .input {
     display: block;
+  }
 
-    &.filled {
-        color: $text-color;
-        border: 1px solid $text-color;
+  input.input.filled,
+  textarea.input.filled {
+    border: 1px solid $text-color;
+    color: $text-color;
 
-        &:focus {
-            border: none;
-            outline: 1px solid $text-color;
-        }
+    &:focus {
+      border: none;
+      outline: 1px solid $text-color;
     }
-}
+  }
 
-.just-validate-error-label {
-    display: none;
-}
+  select.input.filled {
+    border: 1px solid $text-color;
 
-.error {
-    position: relative;
+    &:focus {
+      border: none;
+      outline: 1px solid $text-color;
+    }
+  }
 
-    .input {
-        border: 1px solid #ff3a44;
+  input.input.input-error,
+  textarea.input.input-error {
+    border: 1px solid $error-color;
+    color: $error-color;
 
-        &:focus {
-            border: none;
-            outline: 1px solid #ff3a44;
-        }
-
-        &::placeholder {
-            color: #ff3a44;
-            text-transform: none;
-        }
+    &:focus {
+      border: none;
+      outline: 1px solid $error-color;
     }
 
-    &::before {
-        content: "!";
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 50%;
-        right: -10px;
-        transform: translateY(-50%);
-        color: #ff3a44;
-        font-size: 14px;
-        font-weight: 400;
-        letter-spacing: 0.04em;
-        line-height: 16px;
+    &::placeholder {
+      color: $error-color;
+      text-transform: none;
     }
+  }
+
+  select.input.input-error {
+    border: 1px solid $error-color;
+
+    &:focus {
+      border: none;
+      outline: 1px solid $error-color;
+    }
+  }
+
+  .input-error-symbol {
+    position: absolute;
+    top: 50%;
+    right: -14px;
+    color: $error-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    transform: translateY(-50%);
+  }
 }
 
 @media screen and (max-width: 320px) {
-    .error {
-        &::before {
-            display: none;
-        }
+  .input-wrapper {
+    position: static;
+
+    .input-error-symbol {
+      display: none;
     }
+  }
 }

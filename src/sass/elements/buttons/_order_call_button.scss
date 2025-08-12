@@ -1,0 +1,47 @@
+@use "/src/sass/basic/variables" as *;
+
+.order-call-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 6px;
+  padding-block: 9px 10px;
+  padding-inline: 18px 19px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  cursor: pointer;
+
+  img {
+    inline-size: 16px;
+    block-size: 16px;
+  }
+
+  span {
+    color: $accent-color-1;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .order-call-button {
+    column-gap: 0;
+    padding-block: 18px;
+    padding-inline: 18px;
+    border-radius: 100%;
+
+    img {
+      inline-size: 24px;
+      block-size: 24px;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,145 @@
+@use "/src/sass/basic/variables" as *;
+@use "/src/sass/mixins/cart_line" as *;
+
+.cart-recommendations {
+  position: absolute;
+  bottom: 198px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 13px;
+  inline-size: 360px;
+  transform: translateX(-50%);
+  @include cart-line(-31px);
+
+  &__title {
+    color: $text-color;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    a {
+      color: $accent-color-1;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    inline-size: 100%;
+    padding-inline-start: 0;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    inline-size: 151px;
+
+    &__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      inline-size: 60px;
+      block-size: 60px;
+
+      img {
+        inline-size: 100%;
+        block-size: 100%;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      inline-size: 71px;
+    }
+
+    &__name {
+      color: $text-color;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &__price {
+      margin-block-start: 3px;
+      color: $accent-color-1;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 18px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    &__button {
+      margin-block-start: 6px;
+      padding-block: 0;
+      padding-inline: 0;
+      border: none;
+      background-color: transparent;
+      color: $accent-color-1;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .cart-recommendations {
+    bottom: 140px;
+    row-gap: 10px;
+    inline-size: 239px;
+    @include cart-line(-11px);
+
+    &__title {
+      font-size: 10px;
+      line-height: 15px;
+    }
+
+    &-item {
+      inline-size: 98px;
+
+      &__img {
+        inline-size: 40px;
+        block-size: 40px;
+      }
+
+      &__content {
+        inline-size: 48px;
+      }
+
+      &__name {
+        font-size: 8px;
+        line-height: 12px;
+      }
+
+      &__price {
+        margin-block-start: 0;
+        font-size: 8px;
+        line-height: 12px;
+      }
+
+      &__button {
+        margin-block-start: 4px;
+        font-size: 8px;
+        line-height: 12px;
+      }
+    }
+  }
+}

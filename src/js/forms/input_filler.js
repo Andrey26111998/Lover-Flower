@@ -1,47 +1,31 @@
-import { getPlaceholders } from "/src/js/forms/placeholder.js";
+import ElementHandler from "/src/js/handlers/element_handler.js";
 
-try {
-    const inputs = document.querySelectorAll(".input");
-    const originalPlaceholders = getPlaceholders(inputs);
-
-    for (const [index, input] of inputs.entries()) {
-        input.addEventListener("input", () => {
-            try {
-                const inputValue = input.value.trim();
-                const inputValueLength = inputValue.length;
-                const hasInputValue = inputValueLength > 0;
-                const formInput = input.closest(".form__input");
-                const formError = input.nextElementSibling;
-                const inputId = input.id;
-                const originalPlaceholder = originalPlaceholders[inputId];
-
-                if (hasInputValue) {
-                    input.classList.add("filled");
-                }
-                else {
-                    input.classList.remove("filled");
-                }
-
-                if (formInput) {
-                    formInput.classList.remove("error");
-                }
-
-                if (formError) {
-                    formError.classList.remove("active");
-                }
-
-                if (hasInputValue && inputId && originalPlaceholder) {
-                    input.placeholder = originalPlaceholder;
-                }
-            }
-            catch (err) {
-                const message = err.message;
-                console.error("Error processing input:", message);
-            }
-        });
+export const applyFilledFiledStyle = (input, originalPlaceholders) => {
+    const isFilled = input.value.trim().length > 0;
+    if (isFilled) {
+        input.classList.add("filled");
+    } else {
+        input.classList.remove("filled");
     }
-}
-catch (err) {
-    const message = err.message;
-    console.error("Error during initialization:", message);
+
+    const isError = input.classList.contains("input-error");
+    if (isError) {
+        input.classList.remove("input-error");
+    }
+
+    const inputErrorSymbol = input.nextElementSibling;
+    if (inputErrorSymbol) {
+        ElementHandler.removeElement(inputErrorSymbol);
+    }
+
+    const formError = input.closest(".input-wrapper").nextElementSibling;
+    if (formError) {
+        ElementHandler.removeElement(formError);
+    }
+
+    const inputId = input.id;
+    const originalPlaceholder = originalPlaceholders[inputId];
+    if (isFilled && inputId && originalPlaceholder) {
+        input.placeholder = originalPlaceholder;
+    }
 }

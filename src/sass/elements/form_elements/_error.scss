@@ -1,12 +1,14 @@
-.form__error {
-    display: none;
-    margin-block-start: 10px;
-    color: #ff3a44;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
+@use "/src/sass/basic/variables" as *;
 
-    &.active {
-        display: block;
-    }
+.just-validate-error-label {
+  display: none;
+}
+
+.form-error {
+  margin-block-start: 4px;
+  color: $error-color;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.04em;
 }

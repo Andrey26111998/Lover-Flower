@@ -1,0 +1,258 @@
+@use "/src/sass/basic/variables" as *;
+
+.popular-products {
+  padding-block: 70px 368px;
+  background-image: url("/src/img/pages/home/popular_products/bg.png");
+  background-position: center 93px;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  &__title {
+    span {
+      display: block;
+
+      &:last-child {
+        margin-block-start: -20px;
+        padding-inline-start: 380px;
+      }
+    }
+  }
+
+  &__description {
+    margin-block-start: 10px;
+    color: $text-color;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+
+  &__wrapper {
+    position: relative;
+    inline-size: 100%;
+    max-inline-size: 1125px;
+    margin-block: 71px 0;
+    margin-inline: auto;
+  }
+
+  &__slider {
+    inline-size: 100%;
+    padding-block-start: 15px;
+    padding-inline-end: 15px;
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    form {
+      margin-block-start: 20px;
+    }
+  }
+
+  &__new,
+  &__sale {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: 60px;
+    block-size: 60px;
+    border-radius: 100%;
+    color: $bg-color;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &__new {
+    background-color: $accent-color-3;
+  }
+
+  &__sale {
+    background-color: #31985A;
+  }
+
+  &__img {
+    inline-size: 350px;
+    block-size: 450px;
+
+    img {
+      inline-size: 100%;
+      block-size: 100%;
+    }
+  }
+
+  &__name {
+    margin-block-start: 10px;
+    color: $text-color;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+    margin-block-start: 10px;
+
+    &--new,
+    &--old {
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    &--new {
+      color: $text-color;
+      font-weight: 700;
+    }
+
+    &--old {
+      color: #939393;
+      font-weight: 300;
+      text-decoration: line-through;
+    }
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 50%;
+    inline-size: 80px;
+    block-size: 6px;
+    cursor: pointer;
+    transform: translateY(-50%);
+
+    img {
+      inline-size: 100%;
+      block-size: 100%;
+    }
+  }
+
+  &__prev {
+    left: -100px;
+  }
+
+  &__next {
+    right: -90px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 7px;
+    margin-block-start: 60px;
+    max-inline-size: 201px;
+    color: $accent-color-3;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+
+    img {
+      inline-size: 40px;
+      block-size: 6px;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .popular-products {
+    background-position: center center;
+    background-size: cover;
+    //TODO
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .popular-products {
+    margin-block-start: -86px;
+    padding-block: 0 276px;
+    background-image: url("/src/img/pages/home/popular_products/bg_mobile.png");
+    background-position: right bottom;
+
+    &__title {
+      span {
+        text-align: center;
+
+        &:last-child {
+          margin-block-start: -8px;
+          padding-inline-start: 0;
+        }
+      }
+    }
+
+    &__description {
+      margin-block-start: 0px;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.04em;
+      text-align: right;
+    }
+
+    &__wrapper {
+      block-size: 1553px;
+      margin-block-start: 10px;
+      padding-inline-start: 10px;
+    }
+
+    &__slider {
+      block-size: 100%;
+      padding-block-start: 15px;
+      padding-inline-end: 10px;
+    }
+
+    &__slide {
+      inline-size: 100%;
+    }
+
+    &__new,
+    &__sale {
+      top: -15px;
+      right: -5px;
+    }
+
+    &__img {
+      inline-size: 100%;
+      block-size: 335px;
+    }
+
+    &__name {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &__prev,
+    &__next {
+      display: none;
+    }
+
+    &__link {
+      column-gap: 6px;
+      margin-block-start: 40px;
+    }
+  }
+}

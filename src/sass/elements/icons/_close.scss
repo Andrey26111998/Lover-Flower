@@ -1,22 +1,22 @@
 @use "/src/sass/basic/variables" as *;
 
 .close {
+  position: absolute;
+  cursor: pointer;
+
+  span {
     position: absolute;
-    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    display: block;
+    transform-origin: center;
 
-    span {
-        position: absolute;
-        display: block;
-        top: 50%;
-        left: 50%;
-        transform-origin: center;
-
-        &:first-child {
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-
-        &:last-child {
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
+    &:first-child {
+      transform: translate(-50%, -50%) rotate(45deg);
     }
+
+    &:last-child {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
 }

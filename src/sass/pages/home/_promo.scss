@@ -1,0 +1,152 @@
+@use "/src/sass/basic/variables" as *;
+
+.promo {
+  position: relative;
+  z-index: 1;
+  padding-block: 80px 629px;
+  background-image: url("/src/img/pages/home/promo/bg.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  &__title {
+    margin-block-start: 13px;
+
+    span {
+      display: block;
+
+      &:last-child {
+        margin-block-start: -89px;
+      }
+    }
+  }
+
+  &__description {
+    color: $text-color;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+
+  &__button-catalog {
+    margin-block: 47px 0;
+    margin-inline: auto;
+  }
+
+  &__address {
+    position: absolute;
+    top: 6px;
+    right: 0;
+  }
+
+  &__schedule {
+    position: absolute;
+    top: 31px;
+    right: 0;
+  }
+
+  &__social-links {
+    position: absolute;
+    top: 121px;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding-block: 20px;
+    padding-inline: 18px 17px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+  }
+
+  &__phone {
+    position: absolute;
+    top: 459px;
+    right: 0;
+    color: $accent-color-1;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__button-call {
+    position: absolute;
+    top: 490px;
+    right: 0;
+  }
+
+  .cart-button-container {
+    position: absolute;
+    top: 550px;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .promo {
+    background-position: center center;
+    background-size: cover;
+    //TODO
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .promo {
+    padding-block-end: 100px;
+    background-image: url("/src/img/pages/home/promo/bg_mobile.png");
+    background-position: top center;
+    background-size: auto;
+
+    &__title {
+      margin-block-start: -66px;
+
+      span {
+        &:last-child {
+          margin-block-start: -10px;
+        }
+      }
+    }
+
+    &__description {
+      inline-size: 212px;
+      margin-block: 409px 0;
+      margin-inline: auto;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &__button-catalog {
+      margin-block: 36px 0;
+      margin-inline: auto;
+    }
+
+    &__address {
+      display: none;
+    }
+
+    &__schedule {
+      display: none;
+    }
+
+    &__social-links {
+      display: none;
+    }
+
+    &__phone {
+      display: none;
+    }
+
+    &__button-call {
+      display: none;
+    }
+  }
+}

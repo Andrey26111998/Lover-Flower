@@ -74,14 +74,16 @@
             обстоятельствах не будут переданы третьим лицам.
         </div>
         <form action="#" class="form modal-order-call-form modal-order-call__form" id="modal-order-call-form">
-            <div class="form__input modal-order-call-form__input">
-                <input class="input" id="call-name" name="name" placeholder="Ваше имя" required type="text">
-                <span class="form__error"></span>
+            <div class="form-block modal-order-call-form__input">
+                <div class="input-wrapper">
+                    <input class="input" id="call-name" name="name" placeholder="Ваше имя" required type="text">
+                </div>
             </div>
-            <div class="form__input modal-order-call-form__input">
-                <input class="input" id="call-phone" name="phone" placeholder="+7 (977) 777-77-77" required
-                       type="tel">
-                <span class="form__error"></span>
+            <div class="form-block modal-order-call-form__input">
+                <div class="input-wrapper">
+                    <input class="input" id="call-phone" name="phone" placeholder="+7 (977) 777-77-77" required
+                           type="tel">
+                </div>
             </div>
             <button class="button button-call modal-order-call-form__button">отправить</button>
             <div class="form__info modal-order-call-form__info">Нажимая на кнопку «Отправить», я даю свое согласие на
@@ -89,52 +91,57 @@
         </form>
     </div>
 </div>
-<div class="overlay overlay-basket">
-    <div class="basket">
-        <h2 class="title title-h2-v3 basket__title">Ваша корзина</h2>
-        <div class="close basket__close">
+<div class="overlay overlay-cart">
+    <div class="cart-button-container">
+        <!--Dynamic generation!-->
+    </div>
+    <div class="cart">
+        <h2 class="title title-h2-v3 cart__title">Ваша корзина</h2>
+        <div class="close cart__close">
             <span></span>
             <span></span>
         </div>
-        <ul class="basket__items">
+        <ul class="cart-items cart__items">
             <!--Dynamic generation...!-->
         </ul>
-        <div class="basket-recommendations basket__recommendations">
-            <div class="basket-recommendations__title">Добавьте к заказу <a href="#">Шары:</a></div>
-            <ul class="basket-recommendations__items">
+        <div class="cart-recommendations cart__recommendations">
+            <div class="cart-recommendations__title">Добавьте к заказу <a href="#">Шары</a>:</div>
+            <ul class="cart-recommendations__items">
                 <li>
-                    <div class="basket-recommendations-item basket-recommendations__item desired-product"
+                    <div class="cart-recommendations-item cart-recommendations__item desired-product"
                          data-id="product-5">
-                        <div class="basket-recommendations-item__img desired-product__img">
+                        <div class="cart-recommendations-item__img desired-product__img">
                             <img src="/src/img/modals/basket/img_1.jpg" alt="img 1">
                         </div>
-                        <div class="basket-recommendations-item__content">
-                            <a href="#" class="basket-recommendations-item__name desired-product__name">ШАР “ЗВЕЗДА”</a>
-                            <div class="basket-recommendations-item__price desired-product__price">
-                                <span class="desired-product__price--new">11.00 ₽</span>
+                        <div class="cart-recommendations-item__content">
+                            <a href="#" class="cart-recommendations-item__name desired-product__name">ШАР “ЗВЕЗДА”</a>
+                            <div class="cart-recommendations-item__price">
+                                <span class="price-value desired-product__price">11.00</span>
+                                <span class="price-currency">₽</span>
                             </div>
                             <form action="">
-                                <button class="basket-recommendations-item__button desired-product__button"
-                                        type="button">Добавить
+                                <button class="cart-recommendations-item__button desired-product__button" type="button">
+                                    Добавить
                                 </button>
                             </form>
                         </div>
                     </div>
                 </li>
                 <li>
-                    <div class="basket-recommendations-item basket-recommendations__item desired-product"
+                    <div class="cart-recommendations-item cart-recommendations__item desired-product"
                          data-id="product-6">
-                        <div class="basket-recommendations-item__img desired-product__img">
+                        <div class="cart-recommendations-item__img desired-product__img">
                             <img src="/src/img/modals/basket/img_2.jpg" alt="img 2">
                         </div>
-                        <div class="basket-recommendations-item__content">
-                            <a href="#" class="basket-recommendations-item__name desired-product__name">ШАР “СЕРДЦЕ”</a>
-                            <div class="basket-recommendations-item__price desired-product__price">
-                                <span class="desired-product__price--new">11.00 ₽</span>
+                        <div class="cart-recommendations-item__content">
+                            <a href="#" class="cart-recommendations-item__name desired-product__name">ШАР “СЕРДЦЕ”</a>
+                            <div class="cart-recommendations-item__price">
+                                <span class="price-value desired-product__price">11.00</span>
+                                <span class="price-currency">₽</span>
                             </div>
                             <form action="">
-                                <button class="basket-recommendations-item__button desired-product__button"
-                                        type="button">Добавить
+                                <button class="cart-recommendations-item__button desired-product__button" type="button">
+                                    Добавить
                                 </button>
                             </form>
                         </div>
@@ -142,10 +149,15 @@
                 </li>
             </ul>
         </div>
-        <div class="basket-result basket__result">Предварительный итог: <span class="basket__result-value">0 руб.</span>
+        <div class="cart-result cart__result">
+            Предварительный итог:
+            <div class="cart-result__price">
+                <span class="price-value">0</span>
+                <span class="price-currency">руб</span>.
+            </div>
         </div>
-        <div class="basket__info">Чтобы узнать стоимость доставки, перейдите к оформлению заказа.</div>
-        <a href="#" class="basket__link">Оформить заказ</a>
+        <div class="cart__info">Чтобы узнать стоимость доставки, перейдите к оформлению заказа.</div>
+        <a href="/order" class="cart__link">Оформить заказ</a>
     </div>
 </div>
 <header class="header">
@@ -159,7 +171,7 @@
             <a class="logo header__logo" href="#">
                 <img alt="logo" src="/src/logo/logo.png">
             </a>
-            <nav>
+            <nav class="header__nav">
                 <ul class="header__menu">
                     <li class="header__menu-item header__catalog">
                         <a class="header__link" href="">Каталог</a>
@@ -198,17 +210,242 @@
                 <a class="email header__email" href="mailto:zakaz@loverflower.by">zakaz@loverflower.by</a>
                 <div class="delivery-info header__delivery">Доставка 24/7 по договоренности с оператором</div>
             </div>
-            <a class="header__phone" href="tel:+375291136969">
-                <div class="header__phone-img">
-                    <img alt="phone" src="/src/icons/header/phone.svg">
-                </div>
-                <span>+375 (29) 113-69-69</span>
+            <a href="#" class="header__mobile-logo">
+                <span>lover</span>
+                <span>flower</span>
             </a>
+            <div class="header__addition">
+                <a class="header__phone" href="tel:+375291136969">
+                    <div class="header__phone-img">
+                        <img alt="phone" src="/src/icons/header/phone.svg">
+                    </div>
+                    <span class="header__phone-text">+375 (29) 113-69-69</span>
+                </a>
+                <div class="cart-button-container">
+                    <!--Dynamic generation...!-->
+                </div>
+            </div>
         </div>
     </div>
 </header>
 <main>
-
+    <section class="order header-modification-point">
+        <div class="container">
+            <ul class="pages-links order__links">
+                <li><a href="/index" class="pages-links__link order__link">Главная</a></li>
+                <li><a href="/order" class="pages-links__link order__link">оформление заказа</a></li>
+            </ul>
+            <h1 class="title title-h1-v2 order__title">
+                <span>оформление</span>
+                <span>заказа</span>
+            </h1>
+            <div class="order__wrapper">
+                <div class="order__column-1">
+                    <h2 class="title title-h2-v3 order__subtitle">Оформление заказа</h2>
+                    <form action="#" class="form order-form order__form" id="order-form">
+                        <h3 class="title title-h3-v3 order-form__title">Контактные данные</h3>
+                        <div class="form-block order-form__contact-input">
+                            <label for="order-name">Ваше имя*</label>
+                            <div class="input-wrapper">
+                                <input id="order-name" name="name" placeholder="Введите ваше имя" required type="text"
+                                       class="input">
+                            </div>
+                        </div>
+                        <div class="form-block order-form__contact-input">
+                            <label for="order-phone">Ваш телефон*</label>
+                            <div class="input-wrapper">
+                                <input id="order-phone" name="phone" placeholder="+7 (977) 777-77-77" required
+                                       type="tel" class="input">
+                            </div>
+                        </div>
+                        <div class="form-block order-form__contact-input">
+                            <label for="order-email">Ваш e-mail*</label>
+                            <div class="input-wrapper">
+                                <input id="order-email" name="email" placeholder="Введите вашу почту" required
+                                       type="email" class="input">
+                            </div>
+                        </div>
+                        <div class="form-block order-form__contact-input">
+                            <label for="order-recipient-phone">Телефон получателя (необязательно)</label>
+                            <div class="input-wrapper">
+                                <input id="order-recipient-phone" name="recipient-phone"
+                                       placeholder="+7 (977) 777-77-77" type="tel" class="input">
+                            </div>
+                        </div>
+                        <div class="form-block order-form__contact-input">
+                            <label for="order-recipient-name">Имя получателя (необязательно)</label>
+                            <div class="input-wrapper">
+                                <input id="order-recipient-name" name="recipient-name"
+                                       placeholder="Введите имя получателя" type="text" class="input">
+                            </div>
+                        </div>
+                        <div class="form-block order-form__contact-input">
+                            <label for="order-message">Комментарий к заказу</label>
+                            <div class="input-wrapper">
+                                <textarea id="order-message" name="message"
+                                          placeholder="Примечания к вашеу заказу, особые пожелания отделу доставки"
+                                          rows="1" class="input"></textarea>
+                            </div>
+                        </div>
+                        <h3 class="title title-h3-v3 order-form__title">Доставка</h3>
+                        <div class="form-block order-form__delivery-method-radio" id="order-delivery-method">
+                            <label for="order-delivery-method-1" class="order-custom-radio">
+                                <input id="order-delivery-method-1" type="radio" name="delivery-method"
+                                       value="Самовывоз" checked>
+                                <span class="radio-mark"></span>
+                                Самовывоз
+                            </label>
+                            <label for="order-delivery-method-2" class="order-custom-radio">
+                                <input id="order-delivery-method-2" type="radio" name="delivery-method"
+                                       value="Доставка курьером">
+                                <span class="radio-mark"></span>
+                                Доставка курьером
+                            </label>
+                        </div>
+                        <div class="form-block order-form__delivery-input order-form__delivery-input--big">
+                            <label for="order-city">Город*</label>
+                            <div class="input-wrapper">
+                                <select name="city" id="order-city" required class="input">
+                                    <option value="" disabled selected>Выберите город</option>
+                                    <!--Dynamic generation!-->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-block order-form__delivery-input order-form__delivery-input--big">
+                            <label for="order-street">Улица*</label>
+                            <div class="input-wrapper">
+                                <input id="order-street" name="street" placeholder="Введите улицу" type="text" required
+                                       class="input">
+                            </div>
+                        </div>
+                        <div class="form-block order-form__delivery-input order-form__delivery-input--mini">
+                            <label for="order-building">Корп/стр</label>
+                            <div class="input-wrapper">
+                                <input id="order-building" name="building" placeholder="Корп/стр" type="text"
+                                       inputmode="numeric" class="input">
+                            </div>
+                        </div>
+                        <div class="form-block order-form__delivery-input order-form__delivery-input--mini">
+                            <label for="order-house">Дом</label>
+                            <div class="input-wrapper">
+                                <input id="order-house" name="house" placeholder="Дом" type="text" inputmode="numeric"
+                                       class="input">
+                            </div>
+                        </div>
+                        <div class="form-block order-form__delivery-input order-form__delivery-input--mini">
+                            <label for="order-apartment">Кв/офис</label>
+                            <div class="input-wrapper">
+                                <input id="order-apartment" name="apartment" placeholder="Кв/офис" type="text"
+                                       inputmode="numeric" class="input">
+                            </div>
+                        </div>
+                        <div class="form-block order-form__delivery-input order-form__delivery-input--mini">
+                            <label for="order-time">Время доставки</label>
+                            <div class="input-wrapper">
+                                <input id="order-time" name="time" type="text" placeholder="__/__" class="input">
+                            </div>
+                        </div>
+                        <div class="order-form__delivery-cost">
+                            Стоимость доставки
+                            <div class="order-form__delivery-cost-value">
+                                <span class="price-value">0</span>
+                                <span class="price-currency">₽</span>
+                            </div>
+                        </div>
+                        <h3 class="title title-h3-v3 order-form__title">Оплата</h3>
+                        <div class="form-block order-form__payment-method-radio" id="order-payment-method">
+                            <label for="order-payment-method-1" class="order-custom-radio">
+                                <input id="order-payment-method-1" type="radio" name="payment-method"
+                                       value="Банковская карта" checked>
+                                <span class="radio-mark"></span>
+                                Банковская карта
+                            </label>
+                            <label for="order-payment-method-2" class="order-custom-radio">
+                                <input id="order-payment-method-2" type="radio" name="payment-method" value="Наличными">
+                                <span class="radio-mark"></span>
+                                Наличными
+                            </label>
+                            <label for="order-payment-method-3" class="order-custom-radio">
+                                <input id="order-payment-method-3" type="radio" name="payment-method" value="Apple pay">
+                                <span class="radio-mark"></span>
+                                Apple pay
+                            </label>
+                            <label for="order-payment-method-4" class="order-custom-radio">
+                                <input id="order-payment-method-4" type="radio" name="payment-method"
+                                       value="Google pay">
+                                <span class="radio-mark"></span>
+                                Google pay
+                            </label>
+                            <label for="order-payment-method-5" class="order-custom-radio">
+                                <input id="order-payment-method-5" type="radio" name="payment-method"
+                                       value="Криптовалюта">
+                                <span class="radio-mark"></span>
+                                Криптовалюта
+                            </label>
+                            <label for="order-payment-method-6" class="order-custom-radio">
+                                <input id="order-payment-method-6" type="radio" name="payment-method"
+                                       value="С расчетного счета">
+                                <span class="radio-mark"></span>
+                                С расчетного счета
+                            </label>
+                        </div>
+                        <h3 class="title title-h3-v3 order-form__title">Промокод</h3>
+                        <div class="form-block order-form__promo-code-input">
+                            <div class="input-wrapper">
+                                <input id="order-promo-code" name="promo-code" placeholder="Промокод" type="text"
+                                       class="input">
+                            </div>
+                            <button type="button" class="button-promo-code order-form__promo-code-button">Применить
+                            </button>
+                        </div>
+                        <div class="order-form__cost">
+                            <div class="order-form__cost-total">
+                                <span class="order-form__cost-total-label">Общая сумма заказа</span>
+                                <div class="order-form__cost-total-value">
+                                    <span class="price-value">0</span>
+                                    <span class="price-currency">₽</span>
+                                </div>
+                            </div>
+                            <div class="order-form__cost-discount">
+                                <span class="order-form__cost-discount-label">Скидка =</span>
+                                <div class="order-form__cost-discount-value">
+                                    <span class="price-value">0</span>
+                                    <span class="price-currency">₽</span>
+                                </div>
+                            </div>
+                            <div class="order-form__cost-delivery">
+                                <span class="order-form__cost-delivery-label">Доставка =</span>
+                                <div class="order-form__cost-delivery-value">
+                                    <span class="price-value">0</span>
+                                    <span class="price-currency">₽</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button button-order order-form__button">отправить</button>
+                        <div class="form__info order-form__info">Нажимая на кнопку «К Оплате», я даю свое согласие на
+                            обработку персональных данных, в соответствии с <a href="">Политикой конфиденциальности</a>,
+                            а так же ознакомлен с условиями оплаты и доставки
+                        </div>
+                    </form>
+                </div>
+                <div class="order__column-2">
+                    <div class="order-resume order__resume">
+                        <h2 class="title title-h2-v4 order-resume__title">Ваш заказ:</h2>`
+                        <ul class="cart-items order-resume__items">
+                            <!--Dynamic generation...!-->
+                        </ul>
+                        <div class="cart-result order-resume__result">
+                            Предварительный итог:
+                            <div class="cart-result__price">
+                                <span class="price-value">0</span>
+                                <span class="price-currency">руб</span>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <footer class="footer">
     <div class="container">

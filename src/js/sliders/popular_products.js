@@ -1,8 +1,8 @@
 import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
+import {Navigation} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { getDirection } from "/src/js/sliders/direction.js";
+import DocumentHandler from "../handlers/document_handler";
 
 try {
     const popularProductsSlider = new Swiper(".popular-products__slider", {
@@ -10,10 +10,10 @@ try {
         slidesPerView: 3,
         spaceBetween: 30,
         loop: true,
-        direction: getDirection(320),
+        direction: DocumentHandler.getDirection(320),
         on: {
             resize: () => {
-                popularProductsSlider.changeDirection(getDirection(320));
+                popularProductsSlider.changeDirection(DocumentHandler.getDirection(320));
             },
         },
         navigation: {
@@ -27,8 +27,7 @@ try {
             },
         },
     });
-}
-catch (err) {
-    const message = err.message;
-    console.error("Error during initialization:", message);
+} catch (error) {
+    const errorMessage = error.message;
+    console.error("Popular products slider error:", errorMessage);
 }

@@ -1,0 +1,44 @@
+@mixin custom-radio($size, $border-color, $checked-color, $spacing) {
+  & {
+    cursor: pointer;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .radio-mark {
+    position: relative;
+    display: inline-block;
+    inline-size: $size;
+    block-size: $size;
+    margin-inline-end: $spacing;
+    border-radius: 100%;
+    border: 1px solid $border-color;
+    vertical-align: middle;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      inline-size: calc($size / 2);
+      block-size: calc($size / 2);
+      border-radius: 100%;
+      background-color: transparent;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &:has(input[type="radio"]:checked) {
+    color: $checked-color;
+  }
+
+  input[type="radio"]:checked + .radio-mark {
+    border-color: $checked-color;
+
+    &::after {
+      background-color: $checked-color;
+    }
+  }
+}

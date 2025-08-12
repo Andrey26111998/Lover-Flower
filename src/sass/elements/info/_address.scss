@@ -1,11 +1,11 @@
 @use "/src/sass/basic/variables" as *;
 
 .address {
-    color: $accent-color-1;
-    font-size: 14px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.1em;
-    line-height: 21px;
-    text-transform: uppercase;
+  color: $accent-color-1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.1em;
+  font-style: normal;
+  text-transform: uppercase;
 }

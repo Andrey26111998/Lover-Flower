@@ -1,5 +1,25 @@
 @use "/src/sass/basic/variables" as *;
 
+html {
+  scroll-behavior: smooth;
+  font-family: $font-family;
+}
+
+body {
+  position: relative;
+  background-color: $bg-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 h1,
 h2,
 h3,
@@ -9,82 +29,62 @@ figure,
 p,
 ol,
 ul {
-    margin-block: 0;
-    margin-inline: 0;
+  margin-block: 0;
+  margin-inline: 0;
 }
 
 ol[role="list"],
 ul[role="list"] {
-    list-style: none;
-    padding-inline: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: inherit;
-    font-weight: inherit;
+  padding-inline: 0;
+  list-style: none;
 }
 
 img {
-    display: block;
-    max-inline-size: 100%;
-}
-
-html {
-    font-family: $font-family;
-    scroll-behavior: smooth;
-}
-
-body {
-    position: relative;
-    background-color: $bg-color;
+  display: block;
+  max-inline-size: 100%;
 }
 
 .container {
-    position: relative;
-    inline-size: 100%;
-    max-inline-size: 1110px;
-    margin-block: 0;
-    margin-inline: auto;
+  position: relative;
+  inline-size: 100%;
+  max-inline-size: 1110px;
+  margin-block: 0;
+  margin-inline: auto;
 }
 
 @media screen and (min-width: 1920px) {
-    .container {
-        max-inline-size: 1478px;
-    }
+  .container {
+    max-inline-size: 1478px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-    .container {
-        max-inline-size: 924px;
-    }
+  .container {
+    max-inline-size: 924px;
+  }
 }
 
 @media screen and (max-width: 992px) {
-    .container {
-        max-inline-size: 764px;
-    }
+  .container {
+    max-inline-size: 764px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .container {
-        max-inline-size: 592px;
-    }
+  .container {
+    max-inline-size: 592px;
+  }
 }
 
 @media screen and (max-width: 592px) {
-    .container {
-        max-inline-size: 456px;
-    }
+  .container {
+    max-inline-size: 456px;
+  }
 }
 
 @media screen and (max-width: 320px) {
-    .container {
-        inline-size: 100%;
-        padding-inline: 10px;
-    }
+  .container {
+    inline-size: 100%;
+    padding-inline: 10px;
+  }
 }

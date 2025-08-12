@@ -1,65 +1,65 @@
 @use "/src/sass/basic/variables" as *;
 
 .modal-order-call {
-    background-image: url("/src/img/modals/order_call/bg.png");
-    background-position: 0 0;
-    background-size: auto;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #0f2222;
-    inline-size: 540px;
-    padding-block: 30px;
-    padding-inline: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  inline-size: 540px;
+  padding-block: 30px;
+  padding-inline: 30px;
+  background-color: #0f2222;
+  background-image: url("/src/img/modals/order_call/bg.png");
+  background-position: 0 0;
+  background-size: auto;
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
 
-    &__description {
-        margin-block-start: 30px;
-        max-inline-size: 65%;
-        color: $text-color;
-        font-size: 14px;
-        font-weight: 400;
-        letter-spacing: 0.04em;
-        line-height: 21px;
-        text-transform: uppercase;
+  &__description {
+    margin-block-start: 30px;
+    max-inline-size: 65%;
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__form {
+    margin-block-start: 20px;
+  }
+
+  &__close {
+    top: 10px;
+    right: 10px;
+    inline-size: 30px;
+    block-size: 30px;
+
+    span {
+      inline-size: 17px;
+      block-size: 1px;
+      background-color: $accent-color-1;
     }
-
-    &__form {
-        margin-block-start: 20px;
-    }
-
-    &__close {
-        top: 10px;
-        right: 10px;
-        inline-size: 30px;
-        block-size: 30px;
-
-        span {
-            inline-size: 17px;
-            block-size: 1px;
-            background-color: $accent-color-1;
-        }
-    }
+  }
 }
 
 @media screen and (max-width: 320px) {
-    .modal-order-call {
-        background-image: url("/src/img/modals/order_call/bg_mobile.png");
-        inline-size: 300px;
-        padding-block: 40px;
-        padding-inline: 10px;
+  .modal-order-call {
+    inline-size: 300px;
+    padding-block: 40px;
+    padding-inline: 10px;
+    background-image: url("/src/img/modals/order_call/bg_mobile.png");
 
-        &__description {
-            margin-block-start: 23px;
-            max-inline-size: 95%;
-            font-size: 12px;
-            line-height: 18px;
-        }
-
-        &__close {
-            top: 0;
-            right: 0;
-        }
+    &__description {
+      margin-block-start: 23px;
+      max-inline-size: 95%;
+      font-size: 12px;
+      line-height: 18px;
     }
+
+    &__close {
+      top: 0;
+      right: 0;
+    }
+  }
 }

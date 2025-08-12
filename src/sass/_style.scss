@@ -1,11 +1,11 @@
 //Basic styles
 @use "/src/sass/basic/base";
 
+//Elements
+
 //Elements / Icons
 @use "/src/sass/elements/icons/hamburger";
 @use "/src/sass/elements/icons/close";
-
-//Elements
 
 //Elements / Info
 @use "/src/sass/elements/info/email";
@@ -15,42 +15,55 @@
 
 //Elements / Links
 @use "/src/sass/elements/links/social_links";
+@use "/src/sass/elements/links/pages_links";
+
+//Elements / Buttons
+@use "/src/sass/elements/buttons/buttons";
+@use "/src/sass/elements/buttons/order_call_button";
+@use "/src/sass/elements/buttons/cart_button";
 
 //Elements / General
 @use "/src/sass/elements/general/logo";
 @use "/src/sass/elements/general/search";
 @use "/src/sass/elements/general/titles";
-@use "/src/sass/elements/general/order_call_button";
-@use "/src/sass/elements/general/basket-button";
-@use "/src/sass/elements/general/buttons";
 
 // Elements / Form elements
 @use "/src/sass/elements/form_elements/input";
 @use "/src/sass/elements/form_elements/error";
 @use "/src/sass/elements/form_elements/info";
-@use "/src/sass/elements/form_elements/quantity";
 
 //Blocks
 
 //Blocks / Forms
-@use "/src/sass/blocks/forms/question-form";
-@use "/src/sass/blocks/forms/order-call-form";
+@use "/src/sass/blocks/forms/question_form";
+@use "/src/sass/blocks/forms/order_call_form";
+@use "/src/sass/blocks/forms/order_form";
+
+//Blocks / Cart
+@use "/src/sass/blocks/cart/items";
+@use "/src/sass/blocks/cart/recommendations";
+@use "/src/sass/blocks/cart/result";
 
 //Blocks / Modals
 @use "/src/sass/blocks/modals/overlay";
 @use "/src/sass/blocks/modals/order_call";
-@use "/src/sass/blocks/modals/basket";
+@use "/src/sass/blocks/modals/cart";
 
 //Blocks / General
 @use "/src/sass/blocks/general/menu";
 @use "/src/sass/blocks/general/header";
 @use "/src/sass/blocks/general/footer";
 
-//Blocks / Pages / Home
-@use "/src/sass/blocks/pages/home/promo";
-@use "/src/sass/blocks/pages/home/catalog";
-@use "/src/sass/blocks/pages/home/popular_products";
-@use "/src/sass/blocks/pages/home/order_steps";
-@use "/src/sass/blocks/pages/home/custom_bouquet";
-@use "/src/sass/blocks/pages/home/question";
-@use "/src/sass/blocks/pages/home/social";
+//Pages
+
+//Pages / Home
+@use "/src/sass/pages/home/promo";
+@use "/src/sass/pages/home/catalog";
+@use "/src/sass/pages/home/popular_products";
+@use "/src/sass/pages/home/order_steps";
+@use "/src/sass/pages/home/custom_bouquet";
+@use "/src/sass/pages/home/question";
+@use "/src/sass/pages/home/social";
+
+//Pages / Order
+@use "/src/sass/pages/order/order";

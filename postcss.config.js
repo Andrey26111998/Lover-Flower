@@ -1,13 +1,13 @@
 // postcss.config.js
-const pxtorom = require('@minko-fe/postcss-pxtorem');
+const pxToRem = require("@minko-fe/postcss-pxtorem");
 
 module.exports = {
     plugins: [
-        pxtorom({
+        pxToRem({
             rootValue: 16,
-            selectorBlackList: ['some-class'],
-            propList: ['*'],
-            atRules: ['media'],
+            //selectorBlackList: ["some-class"],
+            propList: ["*"],
+            atRules: ["media"],
             // ...
         }),
     ],
