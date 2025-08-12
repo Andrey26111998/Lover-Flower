@@ -1,0 +1,143 @@
+@use "/src/sass/basic/variables" as *;
+
+.successful-payment {
+  padding-block: 193px 408px;
+  background-image: url("/src/img/pages/successful_payment/successful_payment/bg.png");
+  background-position: center 80px;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  &__title {
+    span {
+
+      &:last-child {
+        display: block;
+        position: relative;
+        margin-block: -14px;
+        padding-inline-start: 505px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 96px;
+          inline-size: 349px;
+          block-size: 1px;
+          background-color: $accent-color-3;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 61px;
+    padding-block-start: 154px;
+    padding-inline: 96px;
+  }
+
+  &__info {
+    position: relative;
+    max-inline-size: 343px;
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -186px;
+      right: -81px;
+      inline-size: 305px;
+      block-size: 140px;
+      background-image: url("/src/img/pages/successful_payment/successful_payment/inscription.png");
+      background-position: center center;
+      background-size: auto;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__order-gratitude {
+    margin-block-start: 20px;
+  }
+
+  &__order-notification--mobile {
+    display: none;
+  }
+
+  &__link {
+    color: $accent-color-1;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .successful-payment {
+    padding-block: 101px 159px;
+    background-image: url("/src/img/pages/successful_payment/successful_payment/bg_mobile.png");
+    background-position: center top;
+
+    &__title {
+      span {
+        &:nth-child(2) {
+          padding-inline-start: 72px;
+        }
+
+        &:last-child {
+          margin-block: 0;
+          padding-inline-start: 51px;
+
+          &::before {
+            left: 0;
+            top: -24px;
+            inline-size: 45px;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+
+    &__wrapper {
+      row-gap: 20px;
+      padding-block-start: 10px;
+      padding-inline: 0;
+    }
+
+    &__info {
+      max-inline-size: 234px;
+
+      &::after {
+        bottom: -157px;
+        right: auto;
+        left: 27px;
+        inline-size: 137px;
+        block-size: 80px;
+        background-image: url("/src/img/pages/successful_payment/successful_payment/inscription_mobile.png");
+      }
+    }
+
+    &__order-gratitude {
+      margin-block-start: 8px;
+    }
+
+    &__order-notification--desktop {
+      display: none;
+    }
+
+    &__order-notification--mobile {
+      display: block;
+    }
+  }
+}
