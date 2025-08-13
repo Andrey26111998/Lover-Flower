@@ -1,0 +1,48 @@
+@use "/src/sass/basic/variables" as *;
+
+.not-found {
+  padding-block: 828px 93px;
+  background-image: url("/src/img/pages/not_found/not_found/bg.png");
+  background-position: center top;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+    padding-inline: 748px 198px;
+  }
+
+  &__info {
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    color: $accent-color-1;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .not-found {
+    padding-block: 432px 33px;
+    background-image: url("/src/img/pages/not_found/not_found/bg_mobile.png");
+
+    &__wrapper {
+      padding-inline: 116px 20px;
+    }
+  }
+}

@@ -67,8 +67,10 @@
     margin-block-start: 20px;
   }
 
-  &__order-notification--mobile {
-    display: none;
+  &__order-notification {
+    &--mobile {
+      display: none;
+    }
   }
 
   &__link {
@@ -132,12 +134,14 @@
       margin-block-start: 8px;
     }
 
-    &__order-notification--desktop {
-      display: none;
-    }
+    &__order-notification {
+      &--desktop {
+        display: none;
+      }
 
-    &__order-notification--mobile {
-      display: block;
+      &--mobile {
+        display: block;
+      }
     }
   }
 }
