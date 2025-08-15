@@ -1,0 +1,362 @@
+@use "/src/sass/basic/variables" as *;
+
+.delivery-payment {
+  padding-block: 115px 200px;
+  background-image: url("/src/img/pages/delivery_payment/delivery_payment/bg.png");
+  background-position: center top;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin-block-start: 60px;
+
+    span {
+      display: block;
+
+      &:last-child {
+        margin-block-start: -14px;
+        padding-inline-start: 95px;
+      }
+    }
+  }
+
+  &__wrapper {
+    margin-block-start: 24px;
+  }
+
+  &-warning,
+  &-additionally {
+    position: relative;
+  }
+
+  &-warning,
+  &-payment-methods,
+  &-delivery-cost,
+  &-delivery-offer,
+  &-additionally {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &-payment-methods,
+  &-delivery-cost,
+  &-delivery-offer {
+    row-gap: 20px;
+  }
+
+  &-payment-methods,
+  &-delivery-cost,
+  &-delivery-offer,
+  &-additionally {
+    margin-block-start: 100px;
+  }
+
+  &-warning {
+    row-gap: 10px;
+    padding-inline: 95px;
+
+    &::before {
+      content: "!";
+      position: absolute;
+      top: -27px;
+      left: 59px;
+      font-family: $second-family;
+      color: $accent-color-3;
+      font-size: 100px;
+      font-weight: 400;
+      line-height: 121px;
+      letter-spacing: 0.02em;
+    }
+
+    &__text {
+      max-inline-size: 570px;
+      color: $text-color;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+
+      &--accent-color-1 {
+        color: $accent-color-1;
+      }
+    }
+  }
+
+  &-payment-methods {
+    &__items {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      column-gap: 30px;
+      row-gap: 20px;
+      padding-inline-start: 0;
+      list-style-type: none;
+    }
+
+    &__item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      inline-size: 255px;
+      min-block-size: 211px;
+      padding-block: 30px;
+      padding-inline: 35px;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(20px);
+      color: $text-color;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 26px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      text-align: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        inline-size: 11px;
+        block-size: 11px;
+        border-radius: 100%;
+        background-color: #6b535f;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &-delivery-cost,
+  &-delivery-offer {
+    &__items {
+      padding-inline-start: 0;
+    }
+
+    &__item {
+      color: $text-color;
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+
+      &--accent-color-1 {
+        color: $accent-color-1;
+      }
+
+      &--font-weight-700 {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-delivery-cost {
+    max-inline-size: 680px;
+    padding-inline-start: 95px;
+
+    &__item {
+      line-height: 26px;
+
+      &:last-child {
+        line-height: 29px;
+      }
+    }
+  }
+
+  &-delivery-offer {
+    max-inline-size: 860px;
+
+    &__item {
+      line-height: 30px;
+    }
+  }
+
+  &-additionally {
+    row-gap: 30px;
+    max-inline-size: 961px;
+    padding-block: 30px;
+    padding-inline: 33px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 20px;
+    }
+
+    &__text,
+    &__item,
+    &__phone {
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+    }
+
+    &__text,
+    &__item {
+      color: $text-color;
+      font-weight: 300;
+    }
+
+    &__text {
+      &--big-gap {
+        margin-block-start: 30px;
+      }
+    }
+
+    &__phone {
+      color: $accent-color-1;
+      font-weight: 400;
+      text-decoration: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -120px;
+      left: 20px;
+      inline-size: 305px;
+      block-size: 140px;
+      background-image: url("/src/img/pages/delivery_payment/delivery_payment/inscription.png");
+      background-position: center center;
+      background-size: auto;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .delivery-payment {
+    padding-block: 100px 190px;
+    background-image: url("/src/img/pages/delivery_payment/delivery_payment/bg_mobile.png");
+
+    &__title {
+      margin-block-start: 20px;
+
+      span {
+        &:last-child {
+          margin-block-start: 0;
+          padding-inline-start: 51px;
+        }
+      }
+    }
+
+    &__wrapper {
+      margin-block-start: 53px;
+    }
+
+    &-payment-methods, {
+      align-items: center;
+      row-gap: 10px;
+    }
+
+    &-payment-methods,
+    &-delivery-cost,
+    &-delivery-offer,
+    &-additionally {
+      margin-block-start: 60px;
+    }
+
+    &-warning {
+      padding-inline: 36px 0;
+
+      &::before {
+        left: 0;
+      }
+
+      &__text {
+        max-inline-size: 100%;
+      }
+    }
+
+    &-payment-methods {
+      &__items {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        column-gap: 0;
+      }
+
+      &__item {
+        inline-size: 197px;
+        min-block-size: 185px;
+        padding-inline: 16px 15px;
+        font-size: 14px;
+      }
+    }
+
+    &-delivery-cost,
+    &-delivery-offer {
+      &__item {
+        font-size: 14px;
+      }
+    }
+
+    &-delivery-cost {
+      max-inline-size: 100%;
+      padding-inline-start: 0;
+
+      &__item {
+        line-height: 21px;
+
+        &:first-child {
+          max-inline-size: 225px;
+        }
+
+        &:nth-child(2) {
+          max-inline-size: 233px;
+        }
+
+        &:last-child {
+          max-inline-size: 247px;
+          line-height: 21px;
+        }
+      }
+    }
+
+    &-delivery-offer {
+      max-inline-size: 299px;
+
+      &__item {
+        line-height: 21px;
+      }
+    }
+
+    &-additionally {
+      row-gap: 60px;
+      max-inline-size: 300px;
+      padding-block: 20px 30px;
+      padding-inline: 10px;
+
+      &__container {
+        row-gap: 5px;
+      }
+
+      &__text,
+      &__item,
+      &__phone {
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      &__text {
+        &--big-gap {
+          margin-block-start: 21px;
+        }
+      }
+
+      &::after {
+        bottom: -60px;
+        left: 16px;
+        inline-size: 116px;
+        block-size: 60px;
+        background-image: url("/src/img/pages/delivery_payment/delivery_payment/inscription__mobile.png");
+      }
+    }
+  }
+}

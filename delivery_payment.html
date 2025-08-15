@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Доставка и оплата</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300..700&family=Oswald:wght@200..700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+<div class="menu">
+    <a class="logo menu__logo" href="#">
+        <img alt="logo" src="/src/logo/logo.png">
+    </a>
+    <div class="close menu__close">
+        <span></span>
+        <span></span>
+    </div>
+    <a class="search menu__search" href="">
+        <img alt="search" class="search__img" src="/src/icons/header/search.svg">
+        <span class="search__text">Поиск</span>
+    </a>
+    <ul class="menu__links">
+        <li><a class="menu__link" href="">Главная</a></li>
+        <li><a class="menu__link" href="">Каталог</a></li>
+        <li><a class="menu__link" href="">Доставка и оплата</a></li>
+        <li><a class="menu__link" href="">О нас</a></li>
+        <li><a class="menu__link" href="">Контакты</a></li>
+        <li><a class="menu__link" href="">FAQ</a></li>
+        <li><a class="menu__link" href="">для корпоративных клиентов</a></li>
+    </ul>
+    <a class="email menu__email" href="mailto:zakaz@loverflower.by">zakaz@loverflower.by</a>
+    <div class="delivery-info menu__delivery">Доставка 24/7 по договоренности с оператором</div>
+    <address class="address menu__address">ул. Тимирязева 67</address>
+    <div class="schedule menu__schedule">
+        <span><time datetime="10:00">10:00</time> до <time datetime="21:00">21:00</time></span>
+        <span>без выходных</span>
+    </div>
+    <ul class="menu__documents">
+        <li><a class="menu__document" href="">Политика конфиденциальности</a></li>
+        <li><a class="menu__document" href="">Обработка персональных данных</a></li>
+    </ul>
+    <a class="menu__phone" href="tel:+375291136969">+375 (29) 113-69-69</a>
+    <ul class="social-links menu__social-links">
+        <li>
+            <a class="social-links__item" href="">
+                <img alt="instagram" src="/src/icons/promo/instagram.svg">
+            </a>
+        </li>
+        <li>
+            <a class="social-links__item" href="">
+                <img alt="whatsapp" src="/src/icons/promo/whatsapp.svg">
+            </a>
+        </li>
+        <li>
+            <a class="social-links__item" href="">
+                <img alt="viber" src="/src/icons/promo/viber.svg">
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="overlay overlay-order-call">
+    <div class="modal-order-call">
+        <h2 class="title title-h2-v2 modal-order-call__title">заказать звонок</h2>
+        <div class="close modal-order-call__close">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="modal-order-call__description">Впишите свои данные, и мы свяжемся с Вами. Ваши данные ни при каких
+            обстоятельствах не будут переданы третьим лицам.
+        </div>
+        <form action="#" class="form modal-order-call-form modal-order-call__form" id="modal-order-call-form">
+            <div class="form-block modal-order-call-form__input">
+                <div class="input-wrapper">
+                    <input class="input" id="call-name" name="name" placeholder="Ваше имя" required type="text">
+                </div>
+            </div>
+            <div class="form-block modal-order-call-form__input">
+                <div class="input-wrapper">
+                    <input class="input" id="call-phone" name="phone" placeholder="+7 (977) 777-77-77" required
+                           type="tel">
+                </div>
+            </div>
+            <button class="button button-call modal-order-call-form__button">отправить</button>
+            <div class="form__info modal-order-call-form__info">Нажимая на кнопку «Отправить», я даю свое согласие на
+                обработку персональных данных, в соответствии с <a href="">Политикой конфиденциальности</a></div>
+        </form>
+    </div>
+</div>
+<div class="overlay overlay-cart">
+    <div class="cart-button-container">
+        <!--Dynamic generation!-->
+    </div>
+    <div class="cart">
+        <h2 class="title title-h2-v3 cart__title">Ваша корзина</h2>
+        <div class="close cart__close">
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="cart-items cart__items">
+            <!--Dynamic generation...!-->
+        </ul>
+        <div class="cart-recommendations cart__recommendations">
+            <div class="cart-recommendations__title">Добавьте к заказу <a href="#">Шары</a>:</div>
+            <ul class="cart-recommendations__items">
+                <li>
+                    <div class="cart-recommendations-item cart-recommendations__item desired-product"
+                         data-id="product-5">
+                        <div class="cart-recommendations-item__img desired-product__img">
+                            <img src="/src/img/modals/basket/img_1.jpg" alt="img 1">
+                        </div>
+                        <div class="cart-recommendations-item__content">
+                            <a href="#" class="cart-recommendations-item__name desired-product__name">ШАР “ЗВЕЗДА”</a>
+                            <div class="cart-recommendations-item__price">
+                                <span class="price-value desired-product__price">11.00</span>
+                                <span class="price-currency">₽</span>
+                            </div>
+                            <form action="">
+                                <button class="cart-recommendations-item__button desired-product__button" type="button">
+                                    Добавить
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="cart-recommendations-item cart-recommendations__item desired-product"
+                         data-id="product-6">
+                        <div class="cart-recommendations-item__img desired-product__img">
+                            <img src="/src/img/modals/basket/img_2.jpg" alt="img 2">
+                        </div>
+                        <div class="cart-recommendations-item__content">
+                            <a href="#" class="cart-recommendations-item__name desired-product__name">ШАР “СЕРДЦЕ”</a>
+                            <div class="cart-recommendations-item__price">
+                                <span class="price-value desired-product__price">11.00</span>
+                                <span class="price-currency">₽</span>
+                            </div>
+                            <form action="">
+                                <button class="cart-recommendations-item__button desired-product__button" type="button">
+                                    Добавить
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="cart-result cart__result">
+            Предварительный итог:
+            <div class="cart-result__price">
+                <span class="price-value">0</span>
+                <span class="price-currency">руб</span>.
+            </div>
+        </div>
+        <div class="cart__info">Чтобы узнать стоимость доставки, перейдите к оформлению заказа.</div>
+        <a href="/order" class="cart__link">Оформить заказ</a>
+    </div>
+</div>
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <div class="hamburger header__hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a class="logo header__logo" href="#">
+                <img alt="logo" src="/src/logo/logo.png">
+            </a>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item header__catalog">
+                        <a class="header__link" href="">Каталог</a>
+                        <nav class="header__submenu">
+                            <ul class="header__submenu-items">
+                                <li class="header__submenu-item"><a href="">Популярное</a></li>
+                                <li class="header__submenu-item"><a href="">Сборны букеты</a></li>
+                                <li class="header__submenu-item"><a href="">монобукеты</a></li>
+                                <li class="header__submenu-item"><a href="">розы</a></li>
+                                <li class="header__submenu-item"><a href="">свадебные</a></li>
+                                <li class="header__submenu-item"><a href="">Композиции из цветов к коробке</a>
+                                </li>
+                                <li class="header__submenu-item"><a href="">интерьерные композиции</a></li>
+                                <li class="header__submenu-item"><a href="">осенние</a></li>
+                                <li class="header__submenu-item"><a href="">индивидуальный букет</a></li>
+                                <li class="header__submenu-item"><a href="">сухоцветы</a></li>
+                                <li class="header__submenu-item"><a href="">горшечные</a></li>
+                                <li class="header__submenu-item"><a href="">дополнительно</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li class="header__menu-item"><a class="header__link" href="">Доставка и оплата</a></li>
+                    <li class="header__menu-item"><a class="header__link" href="">О нас</a></li>
+                    <li class="header__menu-item"><a class="header__link" href="">Контакты</a></li>
+                    <li class="header__menu-item"><a class="header__link" href="">FAQ</a></li>
+                    <li class="header__menu-item">
+                        <a class="search header__search" href="#">
+                            <img alt="search" class="search__img" src="/src/icons/header/search.svg">
+                            <span class="search__text">Поиск</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+            <div class="header__info">
+                <a class="email header__email" href="mailto:zakaz@loverflower.by">zakaz@loverflower.by</a>
+                <div class="delivery-info header__delivery">Доставка 24/7 по договоренности с оператором</div>
+            </div>
+            <a href="#" class="header__mobile-logo">
+                <span>lover</span>
+                <span>flower</span>
+            </a>
+            <div class="header__addition">
+                <a class="header__phone" href="tel:+375291136969">
+                    <div class="header__phone-img">
+                        <img alt="phone" src="/src/icons/header/phone.svg">
+                    </div>
+                    <span class="header__phone-text">+375 (29) 113-69-69</span>
+                </a>
+                <div class="cart-button-container">
+                    <!--Dynamic generation...!-->
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="delivery-payment header-modification-point">
+        <div class="container">
+            <ul class="pages-links delivery-payment__page-links">
+                <li><a href="/index" class="pages-links__link order__link">Главная</a></li>
+                <li><a href="/order" class="pages-links__link order__link">Доставка и оплата</a></li>
+            </ul>
+            <h1 class="title title-h1-v2 delivery-payment__title">
+                <span>доставка</span>
+                <span>и оплата</span>
+            </h1>
+            <div class="delivery-payment__wrapper">
+                <div class="delivery-payment-warning delivery-payment__warning">
+                    <h2 class="title title-h2-v5 delivery-payment-warning__title">Дорогие клиенты!</h2>
+                    <p class="delivery-payment-warning__text">Во время пандемии (COVID-19) компания Lover Flower
+                        призывает всех меньше контактировать с другими людьми для защиты себя и своих близких. Именно
+                        поэтому мы организовали <span class="delivery-payment-warning__text--accent-color-1">БЕСКОНТАКТНУЮ ДОСТАВКУ</span>
+                    </p>
+                </div>
+                <div class="delivery-payment-payment-methods delivery-payment__payment-methods">
+                    <h2 class="title title-h2-v6 delivery-payment-payment-methods__title">Способы оплаты:</h2>
+                    <ul class="delivery-payment-payment-methods__items">
+                        <li>
+                            <div class="delivery-payment-payment-methods__item">БАНКОВСКОЙ КАРТОЙ ПРИ ОФОРМЛЕНИИ ЗАКАЗА
+                                ЧЕРЕЗ САЙТ или по ссылке
+                            </div>
+                        </li>
+                        <li>
+                            <div class="delivery-payment-payment-methods__item">НАЛИЧНЫМИ, БАНКОВСКОЙ КАРТОЙ ПРИ
+                                САМОВЫВОЗЕ или с расчетного счета орагнизации
+                            </div>
+                        </li>
+                        <li>
+                            <div class="delivery-payment-payment-methods__item">НАЛИЧНЫМИ ПРИ ДОСТАВКЕ КУРЬЕРОМ</div>
+                        </li>
+                        <li>
+                            <div class="delivery-payment-payment-methods__item">КРИПТОВАЛЮТОЙ</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="delivery-payment-delivery-cost delivery-payment__delivery-cost">
+                    <h2 class="title title-h2-v6 delivery-payment-delivery-cost__title">стоимость доставки:</h2>
+                    <ul class="delivery-payment-delivery-cost__items">
+                        <li class="delivery-payment-delivery-cost__item"><span
+                                class="delivery-payment-delivery-cost__item--font-weight-700">Бесплатно</span> – при
+                            заказе на сумму <span class="delivery-payment-delivery-cost__item--accent-color-1">от 90 рублей</span>
+                        </li>
+                        <li class="delivery-payment-delivery-cost__item"><span
+                                class="delivery-payment-delivery-cost__item--font-weight-700">10 рублей</span> – при
+                            заказе на сумму <span class="delivery-payment-delivery-cost__item--accent-color-1">менее 90 рублей</span>
+                        </li>
+                        <li class="delivery-payment-delivery-cost__item">Так же вы можете забрать ваш заказ
+                            самостоятельно по адресу:<br><span
+                                    class="delivery-payment-delivery-cost__item--accent-color-1">г. Минск, ул. Тимирязева д. 67, комн. 112 ежедневно с 10.00 до 21.00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="delivery-payment-delivery-offer delivery-payment__delivery-offer">
+                    <h2 class="title title-h2-v6 delivery-payment-delivery-offer__title">Условия доставки:</h2>
+                    <ul class="delivery-payment-delivery-offer__items">
+                        <li class="delivery-payment-delivery-offer__item">Доставка осуществляется по городу Минску в
+                            пределах МКАД <span class="delivery-payment-delivery-offer__item--accent-color-1">в любой день</span>
+                        </li>
+                        <li class="delivery-payment-delivery-offer__item">Возможность, сроки и стоимость доставки за
+                            пределы МКАД, доставки в ночное время, праздники <span
+                                    class="delivery-payment-delivery-offer__item--accent-color-1">оговариваются с менеджером</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="delivery-payment-additionally delivery-payment__additionally">
+                    <div class="delivery-payment-additionally__container">
+                        <h2 class="title title-h2-v6 delivery-payment-addition__title">Дополнительно:</h2>
+                        <div class="delivery-payment-additionally__content">
+                            <p class="delivery-payment-additionally__text">Доставка иному лицу возможна только в случае
+                                оплаты
+                                заказа заказчиком. Доставка осуществляется не ранее чем через 2 часа после оплаты
+                                заказа, но
+                                может быть ранее, если букет есть в наличии либо по договорённости
+                                с менеджером.</p>
+                            <p class="delivery-payment-additionally__text">Время ожидания курьера составляет 15
+                                минут.</p>
+                            <p class="delivery-payment-additionally__text">В случае если на момент доставки цветов
+                                получателя
+                                нет либо нет возможности по иным причинам произвести доставку (указан неточный адрес,
+                                закрытая
+                                входная дверь, контрольно-пропускная система и др.), мы оставляем за собой право по
+                                собственному
+                                выбору:</p>
+                            <ul class="delivery-payment-additionally__items">
+                                <li class="delivery-payment-additionally__item">оставить цветы тому, кто открыл дверь;
+                                </li>
+                                <li class="delivery-payment-additionally__item">с заказчиком согласовать повторную
+                                    доставку, которая дополнительно оплачивается;
+                                </li>
+                                <li class="delivery-payment-additionally__item">отказаться от передачи цветов без
+                                    возврата денежных средств.
+                                </li>
+                            </ul>
+                            <p class="delivery-payment-additionally__text delivery-payment-additionally__text--big-gap">
+                                Если вы либо иной получатель не получили
+                                заказ, вам необходимо сообщить об этом менеджеру по телефону <a href="tel:+375291136969"
+                                                                                                class="delivery-payment-additionally__phone">+375
+                                29 113 69 69</a>.</p>
+                        </div>
+                    </div>
+                    <div class="delivery-payment-additionally__container">
+                        <h2 class="title title-h2-v6 delivery-payment-addition__title">Возврат денег:</h2>
+                        <div class="delivery-payment-additionally__content">
+                            <p class="delivery-payment-additionally__text">При отказе заказчика от заказа в течение двух
+                                часов, если заказ ещё не начал готовиться, средства возвращаются в полном объёме. Если
+                                же флорист начал подготовку, то заказчик имеет право на возврат 50% стоимости, либо,
+                                если ещё не был оплачен, то обязан оплатить 50%</p>
+                            <p class="delivery-payment-additionally__text delivery-payment-additionally__text--big-gap">
+                                Цветы надлежащего качества возврату и обмену
+                                не подлежат, а если имеются какие-либо недостатки в цветах – возврат производится лишь
+                                если эти недостатки не являются природными и естественными изъянами растения.</p>
+                            <p class="delivery-payment-additionally__text">Возврат денежных средств производится
+                                незамедлительно на тот счёт, с которого произошла оплата, их же поступление на счёт
+                                зависит от платёжной системы.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <a class="logo footer__logo" href="">
+                <img alt="logo" src="/src/logo/logo.png">
+            </a>
+            <div class="footer__details">
+                <h4 class="title title-h4-v1 footer__title">реквизиты</h4>
+                <div class="footer__description">ООО «Ловефлове» 220035,
+                    <address>Республика Беларусь, г. Минск, ул. Тимирязева д. 67, комн. 112 (пом.11)</address>
+                    УНП 193263781, р/с BY55MTBK30120001093300096372 ЗАО «МТБанк», БИК MTBKBY22 220007,
+                    <address>г. Минск, улица Толстого</address>
+                </div>
+            </div>
+            <div class="footer__catalog footer__catalog--shop">
+                <a href="">
+                    <h4 class="title title-h4-v1 footer__title">Каталог</h4>
+                </a>
+                <nav>
+                    <ul class="footer__catalog-links">
+                        <li><a class="footer__catalog-link" href="">Популярное</a></li>
+                        <li><a class="footer__catalog-link" href="">Сухоцветы</a></li>
+                        <li><a class="footer__catalog-link" href="">Букеты роз</a></li>
+                        <li><a class="footer__catalog-link" href="">Композиции из цветов</a></li>
+                        <li><a class="footer__catalog-link" href="">Индивидуальный букет</a></li>
+                        <li><a class="footer__catalog-link" href="">Букет на праздник</a></li>
+                        <li><a class="footer__catalog-link" href="">Упаковка подарков</a></li>
+                        <li><a class="footer__catalog-link" href="">Шары</a></li>
+                        <li><a class="footer__catalog-link" href="">Открытки</a></li>
+                        <li><a class="footer__catalog-link" href="">Конверты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__catalog footer__catalog--bouquet">
+                <a href="">
+                    <h4 class="title title-h4-v1 footer__title">Букет</h4>
+                </a>
+                <nav>
+                    <ul class="footer__catalog-links">
+                        <li><a class="footer__catalog-link" href="">Для девушки</a></li>
+                        <li><a class="footer__catalog-link" href="">Для мужчины</a></li>
+                        <li><a class="footer__catalog-link" href="">Для жены</a></li>
+                        <li><a class="footer__catalog-link" href="">Для мамы</a></li>
+                        <li><a class="footer__catalog-link" href="">Для коллеги</a></li>
+                        <li><a class="footer__catalog-link" href="">Для начальника</a></li>
+                        <li><a class="footer__catalog-link" href="">Для дочки</a></li>
+                        <li><a class="footer__catalog-link" href="">Для детей</a></li>
+                        <li><a class="footer__catalog-link" href="">Для женщины</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__pages">
+                <nav>
+                    <ul class="footer__pages-links">
+                        <li><a class="footer__pages-link" href="">Доставка и оплата</a></li>
+                        <li><a class="footer__pages-link" href="">О нас</a></li>
+                        <li><a class="footer__pages-link" href="">FAQ</a></li>
+                        <li><a class="footer__pages-link" href="">Контакты</a></li>
+                        <li><a class="footer__pages-link" href="">для корпоративных клиентов</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__contacts">
+                <a class="email footer__email" href="mailto:zakaz@loverflower.by">zakaz@loverflower.by</a>
+                <div class="delivery-info footer__delivery">Доставка 24/7 по договоренности с оператором</div>
+                <address class="address footer__address">ул. Тимирязева 67</address>
+                <div class="schedule footer__schedule">
+                    <span><time datetime="10:00">10:00</time> до <time datetime="21:00">21:00</time></span>
+                    <span>без выходных</span>
+                </div>
+                <a class="footer__phone" href="tel:+375291136969">+375 (29) 113-69-69</a>
+                <div class="footer__call-info">прием звонков круглосуточно</div>
+                <ul class="social-links footer__social-links">
+                    <li>
+                        <a class="social-links__item" href="">
+                            <img alt="instagram" src="/src/icons/promo/instagram.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social-links__item" href="">
+                            <img alt="whatsapp" src="/src/icons/promo/whatsapp.svg">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social-links__item" href="">
+                            <img alt="viber" src="/src/icons/promo/viber.svg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/src/js/script.js" type="module"></script>
+</body>
+
+</html>
