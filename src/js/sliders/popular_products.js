@@ -8,7 +8,7 @@ try {
     const popularProductsSlider = new Swiper(".popular-products__slider", {
         modules: [Navigation],
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 15,
         loop: true,
         direction: DocumentHandler.getDirection(320),
         on: {
@@ -23,7 +23,7 @@ try {
         breakpoints: {
             320: {
                 slidesPerView: 3,
-                spaceBetween: 40,
+                spaceBetween: 25,
             },
         },
     });

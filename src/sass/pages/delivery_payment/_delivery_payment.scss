@@ -160,6 +160,11 @@
     &__item {
       line-height: 26px;
 
+      address {
+        display: inline;
+        font-style: normal;
+      }
+
       &:last-child {
         line-height: 29px;
       }

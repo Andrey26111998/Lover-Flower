@@ -1,0 +1,242 @@
+@use "/src/sass/basic/variables" as *;
+
+.about {
+  position: relative;
+  padding-block: 115px 200px;
+  background-image: url("/src/img/pages/about/about/bg.png");
+  background-position: center top;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin-block-start: 46px;
+    padding-inline-start: 95px;
+  }
+
+  &-info {
+    position: absolute;
+    top: 398px;
+    left: 0;
+    padding-inline-start: 351px;
+
+    &__title {
+      max-inline-size: 242px;
+
+      span {
+        display: block;
+
+        &:last-child {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -80px;
+            inline-size: 60px;
+            block-size: 1px;
+            background-color: $accent-color-1;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 20px;
+      max-inline-size: 847px;
+      margin-block-start: 18px;
+      margin-inline-start: 242px;
+      padding-block: 40px;
+      padding-inline: 20px 165px;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(20px);
+    }
+
+    &__text {
+      color: $text-color;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 26px;
+      letter-spacing: 0.04em;
+
+      &--uppercase {
+        text-transform: uppercase;
+      }
+
+      &--letter-spacing {
+        letter-spacing: 0.02em;
+      }
+    }
+  }
+
+  &__wrapper {
+    margin-block-start: 626px;
+  }
+
+  &-guarantee {
+    padding-inline-start: 184px;
+    
+    &__title,
+    &__text {
+      max-inline-size: 825px;
+    }
+
+    &__text {
+      margin-block-start: 20px;
+      color: $text-color;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+  }
+
+  &-possibilities {
+    margin-block-start: 100px;
+    padding-inline-start: 184px;
+
+    &__title {
+      max-inline-size: 695px;
+    }
+
+    &__items {
+      margin-block-start: 20px;
+      padding-inline-start: 261px;
+    }
+
+    &__item {
+      color: $text-color;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 34px;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &__promo {
+    margin-block-start: 162px;
+    font-family: $second-family;
+    color: $text-color;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__service-info {
+    max-inline-size: 635px;
+    margin-block-start: 40px;
+    padding-inline-start: 190px;
+    color: $text-color;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .about {
+    padding-block: 100px 110px;
+    background-image: url("/src/img/pages/about/about/bg_mobile.png");
+
+    &__title {
+      margin-block-start: 20px;
+      padding-inline-start: 51px;
+    }
+
+    &-info {
+      top: 275px;
+      padding-inline-start: 10px;
+
+      &__title {
+        max-inline-size: 81px;
+
+        span {
+          &:last-child {
+            &::after {
+              right: -30px;
+              inline-size: 20px;
+            }
+          }
+        }
+      }
+
+      &__content {
+        max-inline-size: 259px;
+        margin-block-start: 0;
+        margin-inline-start: 61px;
+        padding-block: 10px;
+        padding-inline: 10px 10px;
+      }
+
+      &__text {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+    &__wrapper {
+      margin-block-start: 531px;
+    }
+
+    &-guarantee {
+      padding-inline-start: 0;
+
+      &__title,
+      &__text {
+        max-inline-size: 100%;
+      }
+
+      &__text {
+        margin-block-start: 10px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+    &-possibilities {
+      margin-block-start: 60px;
+      padding-inline-start: 0;
+
+      &__title {
+        max-inline-size: 255px;
+      }
+
+      &__items {
+        margin-block-start: 0;
+        padding-inline-start: 0;
+      }
+
+      &__item {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+    &__promo {
+      margin-block-start: 66px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &__service-info {
+      max-inline-size: 182px;
+      margin-block-start: 24px;
+      padding-inline-start: 1px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}

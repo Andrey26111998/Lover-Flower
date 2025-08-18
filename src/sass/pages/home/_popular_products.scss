@@ -32,14 +32,13 @@
     position: relative;
     inline-size: 100%;
     max-inline-size: 1125px;
-    margin-block: 71px 0;
+    margin-block-start: 71px;
     margin-inline: auto;
   }
 
   &__slider {
+    display: block;
     inline-size: 100%;
-    padding-block-start: 15px;
-    padding-inline-end: 15px;
   }
 
   &__card {
@@ -47,6 +46,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-block-start: 15px;
+    margin-inline-end: 15px;
 
     form {
       margin-block-start: 20px;
@@ -220,12 +221,11 @@
 
     &__slider {
       block-size: 100%;
-      padding-block-start: 15px;
-      padding-inline-end: 10px;
     }
 
-    &__slide {
-      inline-size: 100%;
+    &__card {
+      margin-block-start: 15px;
+      margin-inline-end: 10px;
     }
 
     &__new,
