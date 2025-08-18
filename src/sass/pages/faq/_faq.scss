@@ -1,0 +1,150 @@
+@use "/src/sass/basic/variables" as *;
+
+.faq {
+  padding-block: 115px 200px;
+  background-image: url("/src/img/pages/faq/faq/bg.png");
+  background-position: center top;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  &__title {
+    position: relative;
+    margin-block-start: 46px;
+    padding-inline-start: 95px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      inline-size: 65px;
+      block-size: 1px;
+      background-color: $accent-color-1;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__wrapper {
+    margin-block-start: 40px;
+  }
+
+  &-accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    inline-size: 825px;
+
+    &__item {
+      inline-size: 100%;
+      border: 1px solid $accent-color-1;
+    }
+
+    &__button {
+      position: relative;
+      padding-block: 20px;
+      padding-inline: 20px 73px;
+      color: $accent-color-1;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      text-transform: uppercase;
+      cursor: pointer;
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        right: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        block-size: 60px;
+        color: $accent-color-1;
+        font-size: 40px;
+        font-weight: 200;
+        transform: translateY(-50%);
+      }
+    }
+
+    &__text {
+      color: $text-color;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 30px;
+    }
+
+    &__item[open] {
+      padding-block-end: 30px;
+    }
+
+    &__item[open] &__button::after {
+      content: "-";
+      right: 35px;
+    }
+
+    &__item[open] &__text {
+      margin-block-start: 20px;
+      padding-inline: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .faq {
+    padding-block: 100px;
+    background-image: url("/src/img/pages/faq/faq/bg_mobile.png");
+
+    &__title {
+      position: static;
+      margin-block-start: 20px;
+      padding-inline-start: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__wrapper {
+      margin-block-start: 60px;
+    }
+
+    &-accordion {
+      inline-size: 100%;
+
+      &__button {
+        padding-block: 14px 15px;
+        padding-inline: 10px 49px;
+        font-size: 14px;
+        line-height: 21px;
+
+        &::after {
+          right: 10px;
+        }
+      }
+
+      &__text {
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      &__item[open] {
+        padding-block-end: 10px;
+      }
+
+      &__item[open] &__button::after {
+        right: 10px;
+      }
+
+      &__item[open] &__text {
+        margin-block-start: 10px;
+        padding-inline: 10px 23px;
+      }
+    }
+  }
+}
