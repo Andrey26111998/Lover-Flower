@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Andrey26111998/Lover-Flower#readme",
   "devDependencies": {
+    "@kingkongdevs/vite-plugin-html-includes": "^1.0.5",
     "@minko-fe/postcss-pxtorem": "^1.5.0",
     "postcss": "^8.5.5",
     "sass": "^1.89.2",

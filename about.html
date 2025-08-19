@@ -7,388 +7,93 @@
     <title>О нас</title>
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300..700&family=Oswald:wght@200..700&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300..700&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-<div class="menu">
-    <a class="logo menu__logo" href="#">
-        <img alt="logo" src="/src/logo/logo.png">
-    </a>
-    <div class="close menu__close">
-        <span></span>
-        <span></span>
-    </div>
-    <a class="search menu__search" href="">
-        <img alt="search" class="search__img" src="/src/icons/header/search.svg">
-        <span class="search__text">Поиск</span>
-    </a>
-    <ul class="menu__links">
-        <li><a class="menu__link" href="">Главная</a></li>
-        <li><a class="menu__link" href="">Каталог</a></li>
-        <li><a class="menu__link" href="">Доставка и оплата</a></li>
-        <li><a class="menu__link" href="">О нас</a></li>
-        <li><a class="menu__link" href="">Контакты</a></li>
-        <li><a class="menu__link" href="">FAQ</a></li>
-        <li><a class="menu__link" href="">для корпоративных клиентов</a></li>
-    </ul>
-    <a class="email menu__email" href="mailto:zakaz@loverflower.by">zakaz@loverflower.by</a>
-    <div class="delivery-info menu__delivery">Доставка 24/7 по договоренности с оператором</div>
-    <address class="address menu__address">ул. Тимирязева 67</address>
-    <div class="schedule menu__schedule">
-        <span><time datetime="10:00">10:00</time> до <time datetime="21:00">21:00</time></span>
-        <span>без выходных</span>
-    </div>
-    <ul class="menu__documents">
-        <li><a class="menu__document" href="">Политика конфиденциальности</a></li>
-        <li><a class="menu__document" href="">Обработка персональных данных</a></li>
-    </ul>
-    <a class="menu__phone" href="tel:+375291136969">+375 (29) 113-69-69</a>
-    <ul class="social-links menu__social-links">
-        <li>
-            <a class="social-links__item" href="">
-                <img alt="instagram" src="/src/icons/promo/instagram.svg">
-            </a>
-        </li>
-        <li>
-            <a class="social-links__item" href="">
-                <img alt="whatsapp" src="/src/icons/promo/whatsapp.svg">
-            </a>
-        </li>
-        <li>
-            <a class="social-links__item" href="">
-                <img alt="viber" src="/src/icons/promo/viber.svg">
-            </a>
-        </li>
-    </ul>
-</div>
-<div class="overlay overlay-order-call">
-    <div class="modal-order-call">
-        <h2 class="title title-h2-v2 modal-order-call__title">заказать звонок</h2>
-        <div class="close modal-order-call__close">
-            <span></span>
-            <span></span>
-        </div>
-        <div class="modal-order-call__description">Впишите свои данные, и мы свяжемся с Вами. Ваши данные ни при каких
-            обстоятельствах не будут переданы третьим лицам.
-        </div>
-        <form action="#" class="form modal-order-call-form modal-order-call__form" id="modal-order-call-form">
-            <div class="form-block modal-order-call-form__input">
-                <div class="input-wrapper">
-                    <input class="input" id="call-name" name="name" placeholder="Ваше имя" required type="text">
+    <include src="/menu.html">
+    <include src="order-call.html">
+    <include src="cart.html">
+    <include src="header.html">
+    <main>
+        <section class="about header-modification-point">
+            <div class="about-info about__info">
+                <h2 class="title title-h2-v7 about-info__title">
+                    <span>Lover</span>
+                    <span>flower</span>
+                </h2>
+                <div class="about-info__content">
+                    <p class="about-info__text about-info__text--uppercase about-info__text--letter-spacing">молодая
+                        команда
+                        разных людей с одинаковыми ценностями.</p>
+                    <p class="about-info__text">Мы считаем, что удовольствие от качества длится дольше, чем удовольствие
+                        от
+                        низкой цены. И поэтому в создание нашей букетерии мы вложили все, чем располагаем: душу, сердце,
+                        время и мечты! Мы готовы обещать вам только то, что можем сделать. А делаем мы только самое
+                        качественное, самое интересное и обязательно уникальное. Мы всегда честны со своими клиентами во
+                        всем – в нашем каталоге только те букеты, которые вы действительно сможете купить.</p>
                 </div>
             </div>
-            <div class="form-block modal-order-call-form__input">
-                <div class="input-wrapper">
-                    <input class="input" id="call-phone" name="phone" placeholder="+7 (977) 777-77-77" required
-                           type="tel">
-                </div>
-            </div>
-            <button class="button button-call modal-order-call-form__button">отправить</button>
-            <div class="form__info modal-order-call-form__info">Нажимая на кнопку «Отправить», я даю свое согласие на
-                обработку персональных данных, в соответствии с <a href="">Политикой конфиденциальности</a></div>
-        </form>
-    </div>
-</div>
-<div class="overlay overlay-cart">
-    <div class="cart-button-container">
-        <!--Dynamic generation!-->
-    </div>
-    <div class="cart">
-        <h2 class="title title-h2-v3 cart__title">Ваша корзина</h2>
-        <div class="close cart__close">
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="cart-items cart__items">
-            <!--Dynamic generation...!-->
-        </ul>
-        <div class="cart-recommendations cart__recommendations">
-            <div class="cart-recommendations__title">Добавьте к заказу <a href="#">Шары</a>:</div>
-            <ul class="cart-recommendations__items">
-                <li>
-                    <div class="cart-recommendations-item cart-recommendations__item desired-product"
-                         data-id="product-5">
-                        <div class="cart-recommendations-item__img desired-product__img">
-                            <img src="/src/img/modals/basket/img_1.jpg" alt="img 1">
-                        </div>
-                        <div class="cart-recommendations-item__content">
-                            <a href="#" class="cart-recommendations-item__name desired-product__name">ШАР “ЗВЕЗДА”</a>
-                            <div class="cart-recommendations-item__price">
-                                <span class="price-value desired-product__price">11.00</span>
-                                <span class="price-currency">₽</span>
-                            </div>
-                            <form action="">
-                                <button class="cart-recommendations-item__button desired-product__button" type="button">
-                                    Добавить
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="cart-recommendations-item cart-recommendations__item desired-product"
-                         data-id="product-6">
-                        <div class="cart-recommendations-item__img desired-product__img">
-                            <img src="/src/img/modals/basket/img_2.jpg" alt="img 2">
-                        </div>
-                        <div class="cart-recommendations-item__content">
-                            <a href="#" class="cart-recommendations-item__name desired-product__name">ШАР “СЕРДЦЕ”</a>
-                            <div class="cart-recommendations-item__price">
-                                <span class="price-value desired-product__price">11.00</span>
-                                <span class="price-currency">₽</span>
-                            </div>
-                            <form action="">
-                                <button class="cart-recommendations-item__button desired-product__button" type="button">
-                                    Добавить
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="cart-result cart__result">
-            Предварительный итог:
-            <div class="cart-result__price">
-                <span class="price-value">0</span>
-                <span class="price-currency">руб</span>.
-            </div>
-        </div>
-        <div class="cart__info">Чтобы узнать стоимость доставки, перейдите к оформлению заказа.</div>
-        <a href="/order" class="cart__link">Оформить заказ</a>
-    </div>
-</div>
-<header class="header">
-    <div class="container">
-        <div class="header__wrapper">
-            <div class="hamburger header__hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <a class="logo header__logo" href="#">
-                <img alt="logo" src="/src/logo/logo.png">
-            </a>
-            <nav class="header__nav">
-                <ul class="header__menu">
-                    <li class="header__menu-item header__catalog">
-                        <a class="header__link" href="">Каталог</a>
-                        <nav class="header__submenu">
-                            <ul class="header__submenu-items">
-                                <li class="header__submenu-item"><a href="">Популярное</a></li>
-                                <li class="header__submenu-item"><a href="">Сборны букеты</a></li>
-                                <li class="header__submenu-item"><a href="">монобукеты</a></li>
-                                <li class="header__submenu-item"><a href="">розы</a></li>
-                                <li class="header__submenu-item"><a href="">свадебные</a></li>
-                                <li class="header__submenu-item"><a href="">Композиции из цветов к коробке</a>
-                                </li>
-                                <li class="header__submenu-item"><a href="">интерьерные композиции</a></li>
-                                <li class="header__submenu-item"><a href="">осенние</a></li>
-                                <li class="header__submenu-item"><a href="">индивидуальный букет</a></li>
-                                <li class="header__submenu-item"><a href="">сухоцветы</a></li>
-                                <li class="header__submenu-item"><a href="">горшечные</a></li>
-                                <li class="header__submenu-item"><a href="">дополнительно</a></li>
-                            </ul>
-                        </nav>
-                    </li>
-                    <li class="header__menu-item"><a class="header__link" href="">Доставка и оплата</a></li>
-                    <li class="header__menu-item"><a class="header__link" href="">О нас</a></li>
-                    <li class="header__menu-item"><a class="header__link" href="">Контакты</a></li>
-                    <li class="header__menu-item"><a class="header__link" href="">FAQ</a></li>
-                    <li class="header__menu-item">
-                        <a class="search header__search" href="#">
-                            <img alt="search" class="search__img" src="/src/icons/header/search.svg">
-                            <span class="search__text">Поиск</span>
-                        </a>
-                    </li>
-
+            <div class="container">
+                <ul class="pages-links about__page-links">
+                    <li><a href="/index" class="pages-links__link">Главная</a></li>
+                    <li><a href="/about" class="pages-links__link">О нас</a></li>
                 </ul>
-            </nav>
-            <div class="header__info">
-                <a class="email header__email" href="mailto:zakaz@loverflower.by">zakaz@loverflower.by</a>
-                <div class="delivery-info header__delivery">Доставка 24/7 по договоренности с оператором</div>
-            </div>
-            <a href="#" class="header__mobile-logo">
-                <span>lover</span>
-                <span>flower</span>
-            </a>
-            <div class="header__addition">
-                <a class="header__phone" href="tel:+375291136969">
-                    <div class="header__phone-img">
-                        <img alt="phone" src="/src/icons/header/phone.svg">
+                <h1 class="title title-h1-v2 about__title">О нас</h1>
+                <div class="about__wrapper">
+                    <div about="" class="about-guarantee about__guarantee">
+                        <h2 class="title title-h2-v7 about-guarantee__title">гарантии</h2>
+                        <p class="about-guarantee__text">Каждый цветок уникален и чтобы вы были уверены в качестве, мы
+                            пришлем вам фотографию именно вашего букета до его отправки получателю. Вся предоставленная
+                            Вами
+                            информация конфиденциальна и будет известна только нам и курьеру для осуществления доставки.
+                        </p>
                     </div>
-                    <span class="header__phone-text">+375 (29) 113-69-69</span>
-                </a>
-                <div class="cart-button-container">
-                    <!--Dynamic generation...!-->
+                    <div class="about-possibilities about__possibilities">
+                        <h2 class="title title-h2-v7 about-possibilities__title">
+                            <span>Заказ букетов на</span>
+                            <span>сайте компании</span>
+                            <span>Lower Flower – это:</span>
+                        </h2>
+                        <ul class="about-possibilities__items">
+                            <li class="about-possibilities__item">выбор оттенков и сортов цветков в любое время года;
+                            </li>
+                            <li class="about-possibilities__item">отправка фото готовой композиции перед отправкой;</li>
+                            <li class="about-possibilities__item">возможность заказать цветы с доставкой в течение часа;
+                            </li>
+                            <li class="about-possibilities__item">выгодные цены – на сайте только те варианты, что Вы
+                                сможете купить;
+                            </li>
+                            <li class="about-possibilities__item">полная конфиденциальность по заказу;</li>
+                            <li class="about-possibilities__item">мы подбираем открытку, воздушные шар, подарок по
+                                Вашему
+                                желанию;
+                            </li>
+                            <li class="about-possibilities__item">в нашем уютном цветочном магазине цветы, которые
+                                приятно
+                                дарить.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="about-promo about__promo">
+                        <span>Природная гармония цвета, неповторимость бутонов</span>
+                        <span>и Ваши чувства</span>
+                        <span>в нежных лепестках</span>
+                        <span>не оставят никого</span>
+                        <span>равнодушным.</span>
+                    </div>
+                    <div class="about-service-info about__service-info">Вы выбираете и заказываете цветочный сюрприз, а
+                        мы
+                        вкладываем в него душу!
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</header>
-<main>
-    <section class="about header-modification-point">
-        <div class="about-info about__info">
-            <h2 class="title title-h2-v7 about-info__title">
-                <span>Lover</span>
-                <span>flower</span>
-            </h2>
-            <div class="about-info__content">
-                <p class="about-info__text about-info__text--uppercase about-info__text--letter-spacing">молодая команда
-                    разных людей с одинаковыми ценностями.</p>
-                <p class="about-info__text">Мы считаем, что удовольствие от качества длится дольше, чем удовольствие от
-                    низкой цены. И поэтому в создание нашей букетерии мы вложили все, чем располагаем: душу, сердце,
-                    время и мечты! Мы готовы обещать вам только то, что можем сделать. А делаем мы только самое
-                    качественное, самое интересное и обязательно уникальное. Мы всегда честны со своими клиентами во
-                    всем – в нашем каталоге только те букеты, которые вы действительно сможете купить.</p>
-            </div>
-        </div>
-        <div class="container">
-            <ul class="pages-links about__page-links">
-                <li><a href="/index" class="pages-links__link">Главная</a></li>
-                <li><a href="/about" class="pages-links__link">О нас</a></li>
-            </ul>
-            <h1 class="title title-h1-v2 about__title">О нас</h1>
-            <div class="about__wrapper">
-                <div about="" class="about-guarantee about__guarantee">
-                    <h2 class="title title-h2-v7 about-guarantee__title">гарантии</h2>
-                    <p class="about-guarantee__text">Каждый цветок уникален и чтобы вы были уверены в качестве, мы
-                        пришлем вам фотографию именно вашего букета до его отправки получателю. Вся предоставленная Вами
-                        информация конфиденциальна и будет известна только нам и курьеру для осуществления доставки.</p>
-                </div>
-                <div class="about-possibilities about__possibilities">
-                    <h2 class="title title-h2-v7 about-possibilities__title">
-                        <span>Заказ букетов на</span>
-                        <span>сайте компании</span>
-                        <span>Lower Flower – это:</span>
-                    </h2>
-                    <ul class="about-possibilities__items">
-                        <li class="about-possibilities__item">выбор оттенков и сортов цветков в любое время года;</li>
-                        <li class="about-possibilities__item">отправка фото готовой композиции перед отправкой;</li>
-                        <li class="about-possibilities__item">возможность заказать цветы с доставкой в течение часа;
-                        </li>
-                        <li class="about-possibilities__item">выгодные цены – на сайте только те варианты, что Вы
-                            сможете купить;
-                        </li>
-                        <li class="about-possibilities__item">полная конфиденциальность по заказу;</li>
-                        <li class="about-possibilities__item">мы подбираем открытку, воздушные шар, подарок по Вашему
-                            желанию;
-                        </li>
-                        <li class="about-possibilities__item">в нашем уютном цветочном магазине цветы, которые приятно
-                            дарить.
-                        </li>
-                    </ul>
-                </div>
-                <div class="about-promo about__promo">
-                    <span>Природная гармония цвета, неповторимость бутонов</span>
-                    <span>и Ваши чувства</span>
-                    <span>в нежных лепестках</span>
-                    <span>не оставят никого</span>
-                    <span>равнодушным.</span>
-                </div>
-                <div class="about-service-info about__service-info">Вы выбираете и заказываете цветочный сюрприз, а мы
-                    вкладываем в него душу!
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__wrapper">
-            <a class="logo footer__logo" href="">
-                <img alt="logo" src="/src/logo/logo.png">
-            </a>
-            <div class="footer__details">
-                <h4 class="title title-h4-v1 footer__title">реквизиты</h4>
-                <div class="footer__description">ООО «Ловефлове» 220035,
-                    <address>Республика Беларусь, г. Минск, ул. Тимирязева д. 67, комн. 112 (пом.11)</address>
-                    УНП 193263781, р/с BY55MTBK30120001093300096372 ЗАО «МТБанк», БИК MTBKBY22 220007,
-                    <address>г. Минск, улица Толстого</address>
-                </div>
-            </div>
-            <div class="footer__catalog footer__catalog--shop">
-                <a href="">
-                    <h4 class="title title-h4-v1 footer__title">Каталог</h4>
-                </a>
-                <nav>
-                    <ul class="footer__catalog-links">
-                        <li><a class="footer__catalog-link" href="">Популярное</a></li>
-                        <li><a class="footer__catalog-link" href="">Сухоцветы</a></li>
-                        <li><a class="footer__catalog-link" href="">Букеты роз</a></li>
-                        <li><a class="footer__catalog-link" href="">Композиции из цветов</a></li>
-                        <li><a class="footer__catalog-link" href="">Индивидуальный букет</a></li>
-                        <li><a class="footer__catalog-link" href="">Букет на праздник</a></li>
-                        <li><a class="footer__catalog-link" href="">Упаковка подарков</a></li>
-                        <li><a class="footer__catalog-link" href="">Шары</a></li>
-                        <li><a class="footer__catalog-link" href="">Открытки</a></li>
-                        <li><a class="footer__catalog-link" href="">Конверты</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__catalog footer__catalog--bouquet">
-                <a href="">
-                    <h4 class="title title-h4-v1 footer__title">Букет</h4>
-                </a>
-                <nav>
-                    <ul class="footer__catalog-links">
-                        <li><a class="footer__catalog-link" href="">Для девушки</a></li>
-                        <li><a class="footer__catalog-link" href="">Для мужчины</a></li>
-                        <li><a class="footer__catalog-link" href="">Для жены</a></li>
-                        <li><a class="footer__catalog-link" href="">Для мамы</a></li>
-                        <li><a class="footer__catalog-link" href="">Для коллеги</a></li>
-                        <li><a class="footer__catalog-link" href="">Для начальника</a></li>
-                        <li><a class="footer__catalog-link" href="">Для дочки</a></li>
-                        <li><a class="footer__catalog-link" href="">Для детей</a></li>
-                        <li><a class="footer__catalog-link" href="">Для женщины</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__pages">
-                <nav>
-                    <ul class="footer__pages-links">
-                        <li><a class="footer__pages-link" href="">Доставка и оплата</a></li>
-                        <li><a class="footer__pages-link" href="">О нас</a></li>
-                        <li><a class="footer__pages-link" href="">FAQ</a></li>
-                        <li><a class="footer__pages-link" href="">Контакты</a></li>
-                        <li><a class="footer__pages-link" href="">для корпоративных клиентов</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__contacts">
-                <a class="email footer__email" href="mailto:zakaz@loverflower.by">zakaz@loverflower.by</a>
-                <div class="delivery-info footer__delivery">Доставка 24/7 по договоренности с оператором</div>
-                <address class="address footer__address">ул. Тимирязева 67</address>
-                <div class="schedule footer__schedule">
-                    <span><time datetime="10:00">10:00</time> до <time datetime="21:00">21:00</time></span>
-                    <span>без выходных</span>
-                </div>
-                <a class="footer__phone" href="tel:+375291136969">+375 (29) 113-69-69</a>
-                <div class="footer__call-info">прием звонков круглосуточно</div>
-                <ul class="social-links footer__social-links">
-                    <li>
-                        <a class="social-links__item" href="">
-                            <img alt="instagram" src="/src/icons/promo/instagram.svg">
-                        </a>
-                    </li>
-                    <li>
-                        <a class="social-links__item" href="">
-                            <img alt="whatsapp" src="/src/icons/promo/whatsapp.svg">
-                        </a>
-                    </li>
-                    <li>
-                        <a class="social-links__item" href="">
-                            <img alt="viber" src="/src/icons/promo/viber.svg">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
-<script src="/src/js/script.js" type="module"></script>
+        </section>
+    </main>
+    <include src="footer.html">
+    <script src="/src/js/script.js" type="module"></script>
 </body>
 
 </html>
