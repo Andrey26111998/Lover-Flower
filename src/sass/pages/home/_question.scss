@@ -6,28 +6,69 @@
   scroll-margin-block-start: 80px;
   background-color: #0f2222;
   background-image: url("/src/img/pages/home/question/bg.png");
-  background-position: -56px -2px;
+  background-position: 0 -100px;
   background-size: auto;
   background-repeat: no-repeat;
 
-
+  &::before,
   &::after {
     content: "";
     position: absolute;
+    background-position: center center;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
     top: -80px;
     left: 0;
     inline-size: 759px;
     block-size: 1214px;
     background-image: url("/src/img/pages/home/question/flower.png");
-    background-position: 0 0;
-    background-size: auto;
-    background-repeat: no-repeat;
   }
 
-  &__header {
+  &::after {
+    top: 324px;
+    left: 491px;
+    inline-size: 305px;
+    block-size: 120px;
+    background-image: url("/src/img/pages/home/question/inscription.png");
+  }
+
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+  }
+
+  &__column-1 {
+    inline-size: 632px;
+  }
+
+  &__column-2 {
+    inline-size: 445px;
+    padding-block-start: 114px;
+
+    .question-form {
+      inline-size: 100%;
+
+      &__input {
+        input,
+        textarea {
+          border: 1px solid $accent-color-1;
+          background-color: #0f2222;
+
+          &,
+          &::placeholder {
+            color: #395959;
+          }
+
+          &:focus {
+            outline: 1px solid $accent-color-1;
+          }
+        }
+      }
+    }
   }
 
   &__title {
@@ -42,39 +83,6 @@
       }
     }
   }
-
-  &__description {
-    position: relative;
-    max-inline-size: 255px;
-    margin-block-start: 114px;
-    color: $text-color;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -53px;
-      left: 0;
-      inline-size: 255px;
-      block-size: 1px;
-      background-color: $accent-color-1;
-    }
-  }
-
-  &__wrapper {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    margin-block-start: 5px;
-  }
-
-  &__form {
-    inline-size: 445px;
-  }
 }
 
 @media screen and (min-width: 1920px) {
@@ -87,22 +95,40 @@
 
 @media screen and (max-width: 320px) {
   .question {
+    padding-block: 30px 34px;
     background-image: url("/src/img/pages/home/question/bg_mobile.png");
-    background-position: center 34px;
-    padding-block: 30px 52px;
+    background-position: center top;
 
-    &::after {
-      top: -109px;
+    &::before {
+      top: -70px;
       left: auto;
       right: 0;
-      inline-size: 243px;
-      block-size: 448px;
+      inline-size: 252px;
+      block-size: 378px;
       background-image: url("/src/img/pages/home/question/flower_mobile.png");
     }
 
-    &__header {
+    &::after {
+      top: 125px;
+      left: 89px;
+      inline-size: 133px;
+      block-size: 40px;
+      background-image: url("/src/img/pages/home/question/inscription_mobile.png");
+    }
+
+    &__wrapper {
       flex-direction: column;
       justify-content: flex-start;
+      row-gap: 135px;
+    }
+
+    &__column-1,
+    &__column-2  {
+      inline-size: 100%;
+    }
+
+    &__column-2 {
+      padding-block-start: 0;
     }
 
     &__title {
@@ -114,24 +140,6 @@
           padding-inline-start: 0;
         }
       }
-    }
-
-    &__description {
-      margin-block-start: 135px;
-
-      &::before {
-        top: -20px;
-        inline-size: 96px;
-      }
-    }
-
-    &__wrapper {
-      justify-content: center;
-      margin-block-start: 30px;
-    }
-
-    &__form {
-      inline-size: 100%;
     }
   }
 }

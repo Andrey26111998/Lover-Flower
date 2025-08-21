@@ -18,6 +18,7 @@ export default defineConfig({
                 faq: "faq.html",
                 paymentError: "payment_error.html",
                 successfulPayment: "successful_payment.html",
+                contacts: "contacts.html",
             },
         },
     },

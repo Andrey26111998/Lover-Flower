@@ -332,45 +332,16 @@
         </section>
         <section id="question" class="question">
             <div class="container">
-                <div class="question__header">
-                    <h2 class="title title-h2-v1 question__title">
-                        <span>остались</span>
-                        <span>вопросы?</span>
-                    </h2>
-                    <div class="question__description">Отправьте ваш вопрос, заказ, предложение или жалобу
-                        через
-                        форму
-                        обратной связи, и наш специалист свяжется с вами в течение 15 минут.
-                    </div>
-                </div>
                 <div class="question__wrapper">
-                    <form action="#" class="form question-form question__form" id="question-form">
-                        <div class="form-block question-form__input">
-                            <div class="input-wrapper">
-                                <input class="input" id="question-name" name="name" placeholder="Ваше имя" required
-                                    type="text">
-                            </div>
-                        </div>
-                        <div class="form-block question-form__input">
-                            <div class="input-wrapper">
-                                <input class="input" id="question-phone" name="phone" placeholder="+7 (977) 777-77-77"
-                                    required type="tel">
-                            </div>
-                        </div>
-                        <div class="form-block question-form__input">
-                            <div class="input-wrapper">
-                                <textarea class="input" id="question-message" name="question"
-                                    placeholder="Ваш комментарий" required></textarea>
-                            </div>
-                        </div>
-                        <button class="button button-question question-form__button">отправить</button>
-                        <div class="form__info question-form__info">Нажимая на кнопку «Отправить», я даю
-                            свое
-                            согласие на
-                            обработку персональных данных, в соответствии с <a href="">Политикой
-                                конфиденциальности</a>
-                        </div>
-                    </form>
+                    <div class="question__column-1">
+                        <h2 class="title title-h2-v1 question__title">
+                            <span>остались</span>
+                            <span>вопросы?</span>
+                        </h2>
+                    </div>
+                    <div class="question__column-2">
+                        <include src="question-form.html">
+                    </div>
                 </div>
             </div>
         </section>
@@ -412,7 +383,7 @@
             </div>
         </section>
     </main>
-    <include src="footer.html">
+    <include src="footer.html"></include>
     <script src="/src/js/script.js" type="module"></script>
 </body>
 

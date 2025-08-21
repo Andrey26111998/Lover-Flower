@@ -1,0 +1,259 @@
+@use "/src/sass/basic/variables" as *;
+
+.contacts {
+  padding-block: 115px 200px;
+  background-image: url("/src/img/pages/contacts/contacts/bg.png");
+  background-position: center top;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin-block-start: 46px;
+    padding-inline-start: 95px;
+  }
+  
+  &__wrapper {
+    margin-block-start: 40px;
+  }
+
+  &-info {
+    &__items {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      column-gap: 30px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 30px;
+      inline-size: 255px;
+      min-block-size: 255px;
+      padding-block: 27px;
+      padding-inline: 27px;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(20px);
+      text-align: center;
+
+      dt,
+      dd {
+        font-size: 20px;
+      }
+
+      dt {
+        color: $accent-color-1;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      dd {
+        margin-inline-start: 0;
+        color: $text-color;
+        font-weight: 300;
+        line-height: 26px;
+        letter-spacing: 0.02em;
+
+        address {
+          font-style: normal;
+        }
+
+        a {
+          color: $text-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &-cta {
+    margin-block-start: 146px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__column-1 {
+      inline-size: 604px;
+    }
+
+    &__column-2 {
+      inline-size: 445px;
+      padding-block-start: 114px;
+
+      .question-form {
+        inline-size: 100%;
+
+        &__input {
+
+          input,
+          textarea {
+            border: 1px solid #555;
+            background-color: transparent;
+
+            &,
+            &::placeholder {
+              color: #555;
+            }
+
+            &:focus {
+              outline: 1px solid #555;
+            }
+          }
+        }
+      }
+    }
+
+    &__text {
+      font-family: $second-family;
+      color: $text-color;
+      font-size: 100px;
+      font-weight: 400;
+      line-height: 121px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+
+      span {
+        display: block;
+
+        &:last-child {
+          position: relative;
+          margin-block-start: -19px;
+          padding-inline-start: 363px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -189px;
+            right: 24px;
+            inline-size: 305px;
+            block-size: 120px;
+            background-image: url("/src/img/pages/contacts/contacts/inscriptiom.png");
+            background-position: center center;
+            background-size: auto;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+
+  &-map {
+    margin-block-start: 100px;
+
+    &__container {
+      margin-block-start: 20px;
+
+      iframe {
+        inline-size: 100%;
+        block-size: 430px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px){
+  .contacts {
+    padding-block: 100px 151px;
+    background-image: url("/src/img/pages/contacts/contacts/bg_mobile.png");
+
+    &__title {
+      margin-block-start: 20px;
+      padding-inline-start: 0;
+    }
+
+    &__wrapper {
+      margin-block-start: 20px;
+    }
+
+    &-info {
+      &__items {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        column-gap: 0;
+        row-gap: 20px;
+      }
+
+      &__item {
+        justify-content: flex-start;
+        align-items: flex-start;
+        row-gap: 0;
+        inline-size: 100%;
+        min-block-size: auto;
+        padding-block: 0;
+        padding-inline: 0;
+        border-radius: 0;
+        background: transparent;
+        backdrop-filter: none;
+        text-align: left;
+
+        &:nth-child(1) {
+          inline-size: 100px;
+        }
+
+        dt,
+        dd {
+          font-size: 14px;
+        }
+
+        dt {
+          line-height: 21px;
+        }
+      }
+    }
+
+    &-cta {
+      margin-block-start: 60px;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      &__column-1,
+      &__column-2 {
+        inline-size: 100%;
+      }
+
+      &__column-2 {
+        padding-block-start: 65px;
+      }
+
+      &__text {
+        font-size: 40px;
+        line-height: 48px;
+
+        span {
+
+          &:last-child {
+            margin-block-start: 0;
+            padding-inline-start: 0;
+
+            &::after {
+              bottom: auto;
+              top: 30px;
+              right: 27px;
+              inline-size: 133px;
+              block-size: 40px;
+              background-image: url("/src/img/pages/contacts/contacts/inscription_mobile.png");;
+            }
+          }
+        }
+      }
+    }
+
+    &-map {
+      margin-block-start: 60px;
+
+      &__container {
+        margin-block-start: 10px;
+
+        iframe {
+          block-size: 300px;
+        }
+      }
+    }
+  }
+}

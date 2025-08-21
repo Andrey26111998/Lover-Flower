@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Контакты</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300..700&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <include src="/menu.html">
+    <include src="order-call.html">
+    <include src="cart.html">
+    <include src="header.html">
+    <main>
+        <section class="contacts header-modification-point">
+            <div class="container">
+                <ul class="pages-links contacts__page-links">
+                    <li><a href="/index" class="pages-links__link">Главная</a></li>
+                    <li><a href="/contacts" class="pages-links__link">Контакты</a></li>
+                </ul>
+                <h1 class="title title-h1-v2 contacts__title">контакты</h1>
+                <div class="contacts__wrapper">
+                    <div class="contacts-info contacts__info">
+                        <dl class="contacts-info__items">
+                            <div class="contacts-info__item">
+                                <dt>время работы</dt>
+                                <dd>с
+                                    <time datetime="10:00">10:00</time>
+                                    до
+                                    <time datetime="21:00">21:00</time>
+                                    без выходных
+                                </dd>
+                            </div>
+                            <div class="contacts-info__item">
+                                <dt>Адрес</dt>
+                                <dd>
+                                    <address>г. Минск, ул. Тимирязева 67, комн. 112</address>
+                                </dd>
+                            </div>
+                            <div class="contacts-info__item">
+                                <dt>Телефон</dt>
+                                <dd><a href="tel:+375291136969">+375 (29) 113-69-69</a></dd>
+                            </div>
+                            <div class="contacts-info__item">
+                                <dt>E-mail</dt>
+                                <dd><a href="mailto:zakaz@loverflower.by">zakaz@loverflower.by</a></dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <div class="contacts-cta contacts__cta">
+                        <div class="contacts-cta__column-1">
+                            <div class="contacts-cta__text">
+                                <span>напишите</span>
+                                <span>нам</span>
+                            </div>
+                        </div>
+                        <div class="contacts-cta__column-2">
+                            <include src="question-form.html">
+                        </div>
+                    </div>
+                    <div class="contacts-map contacts__map">
+                        <h2 class="title title-h2-v8 contacts-map__title">Мы на карте</h2>
+                        <div class="contacts-map__container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5573.569261410258!2d27.50725063381451!3d53.925666997873904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc56c6b46c34f%3A0xb4592a0d073badb1!2z0YPQuy4g0KLQuNC80LjRgNGP0LfQtdCy0LAgNjcsINCc0LjQvdGB0LosINCc0LjQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMIDIyMDAzNSwg0JHQtdC70LDRgNGD0YHRjA!5e1!3m2!1sru!2sua!4v1755775680372!5m2!1sru!2sua"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <include src="footer.html"></include>
+    <script src="/src/js/script.js" type="module"></script>
+</body>
+
+</html>
