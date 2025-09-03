@@ -1,0 +1,121 @@
+@use "/src/sass/basic/variables" as *;
+
+.bid-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+    inline-size: 540px;
+
+    &:nth-child(2) {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 45px;
+        right: 15px;
+        inline-size: 305px;
+        block-size: 140px;
+        background-image: url("/src/img/pages/corporate_information/corporate_information/inscription.png");
+        background-position: center center;
+        background-size: auto;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 4px;
+    inline-size: 100%;
+  }
+
+  &__label {
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.06em;
+  }
+
+  &__input {
+    inline-size: 100%;
+
+    input {
+      inline-size: 100%;
+      padding-block: 19px 20px;
+      padding-inline: 20px;
+      border: 1px solid #555;
+      background-color: transparent;
+
+      &,
+      &::placeholder {
+        color: #555;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0.04em;
+      }
+
+      &:focus {
+        border: none;
+        outline: 1px solid #555;
+      }
+    }
+  }
+
+  &__button {
+    margin-block-start: 40px;
+  }
+
+  &__info {
+    margin-block-start: 10px;
+    padding-inline-end: 768px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .bid-form {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+
+    &__column {
+      inline-size: 100%;
+
+      &:nth-child(2) {
+        margin-block-start: 20px;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &__label {
+      display: block;
+      inline-size: calc(100% + 10px);
+
+      &--font-size-12 {
+        font-size: 12px;
+      }
+    }
+
+    &__button {
+      margin-block-start: 30px;
+    }
+
+    &__info {
+      padding-inline-end: 60px;
+    }
+  }
+}

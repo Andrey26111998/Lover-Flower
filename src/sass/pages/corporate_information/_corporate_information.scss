@@ -1,0 +1,324 @@
+@use "/src/sass/basic/variables" as *;
+
+.corporate-information {
+  padding-block: 115px 130px;
+  background-image: url("/src/img/pages/corporate_information/corporate_information/bg.png");
+  background-position: center top;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  &__title {
+    margin-block-start: 46px;
+    padding-inline-start: 95px;
+  }
+
+  &__congratulation-explanation,
+  &__bouquet-style-explanation,
+  &__single-order-explanation {
+    font-family: $second-family;
+    color: $text-color;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: $text-color;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+
+    &--uppercase {
+      text-transform: uppercase;
+    }
+
+    &--accent-color-1 {
+      color: $accent-color-1;
+    }
+
+    &--font-weight-400 {
+      font-weight: 400;
+    }
+  }
+
+  &__congratulation {
+    &-explanation {
+      padding-inline-start: 95px;
+
+      span {
+        display: block;
+
+        &:last-child {
+          padding-inline-start: 115px;
+        }
+      }
+    }
+
+    &-info {
+      max-inline-size: 831px;
+      margin-block-start: 100px;
+
+      p {
+        &:first-child {
+          max-inline-size: 765px;
+        }
+
+        &:not(:first-child) {
+          padding-inline-start: 95px;
+        }
+
+        &:nth-child(2) {
+          margin-block-start: 100px;
+        }
+
+        &:nth-child(n + 3) {
+          margin-block-start: 20px;
+        }
+      }
+    }
+  }
+
+  &__bouquet-style-explanation {
+    max-inline-size: 1101px;
+    margin-block-start: 100px;
+  }
+
+  &__minimum-price {
+    margin-block-start: 19px;
+    color: $accent-color-1;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &-bonus {
+    margin-block-start: 75px;
+
+    &__table {
+      inline-size: 100%;
+      table-layout: fixed;
+      border-collapse: separate;
+      border-spacing: 30px 10px;
+
+      tr {
+        th,
+        td {
+          background: rgba(0, 0, 0, 0.2);
+          backdrop-filter: blur(20px);
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 30px;
+          letter-spacing: 0.04em;
+        }
+
+        th {
+          padding-block: 30px;
+          padding-inline: 30px;
+          color: $accent-color-1;
+          text-transform: uppercase;
+        }
+
+        td {
+          padding-block: 10px;
+          padding-inline: 20px;
+          color: $text-color;
+
+          &:first-child {
+            text-align: center;
+          }
+
+          ul {
+            padding-inline-start: 0;
+            list-style-type: none;
+          }
+        }
+      }
+    }
+  }
+
+  &-steps {
+    margin-block-start: 100px;
+    padding-inline-start: 570px;
+
+    &__title {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -41px;
+        left: 0;
+        inline-size: 60px;
+        block-size: 1px;
+        background-color: $accent-color-1;
+      }
+    }
+
+    &__items {
+      margin-block-start: 61px;
+      padding-inline-start: 22px;
+    }
+
+    &__item {
+      color: $text-color;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+  }
+
+  &__single-order-explanation {
+    inline-size: 1157px;
+    margin-block-start: 184px;
+  }
+
+  &-bid {
+    margin-block-start: 60px;
+  }
+
+  &__form {
+    margin-block-start: 20px;
+    inline-size: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .corporate-information {
+    padding-block: 100px 110px;
+    background-image: url("/src/img/pages/corporate_information/corporate_information/bg_mobile.png");
+
+    &__title {
+      margin-block-start: 20px;
+      padding-inline-start: 0;
+    }
+
+    &__congratulation-explanation,
+    &__bouquet-style-explanation {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &__single-order-explanation {
+      font-family: inherit;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &__congratulation {
+      &-explanation {
+        padding-inline-start: 51px;
+
+        span {
+          &:last-child {
+            padding-inline-start: 31px;
+          }
+        }
+      }
+
+      &-info {
+        max-inline-size: 100%;
+        margin-block-start: 40px;
+
+        p {
+          &:first-child {
+            max-inline-size: 100%;
+          }
+
+          &:not(:first-child) {
+            padding-inline-start: 0;
+          }
+
+          &:nth-child(2) {
+            margin-block-start: 40px;
+          }
+
+          &:nth-child(n + 3) {
+            margin-block-start: 20px;
+          }
+        }
+      }
+    }
+
+    &__bouquet-style-explanation {
+      max-inline-size: 255px;
+      margin-block-start: 40px;
+      margin-inline-start: 51px;
+    }
+
+    &__minimum-price {
+      margin-block-start: 20px;
+      margin-inline-start: 51px;
+      max-inline-size: 182px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &-bonus {
+      margin-block-start: 20px;
+
+      &__table {
+        border-spacing: 6px 10px;
+
+        tr {
+          th,
+          td {
+            font-size: 14px;
+            line-height: 21px;
+          }
+
+          th {
+            padding-block: 9px;
+            padding-inline: 15px;
+          }
+
+          td {
+            padding-inline: 7px 6px;
+          }
+        }
+      }
+    }
+
+    &-steps {
+      margin-block-start: 60px;
+      padding-inline-start: 0;
+
+      &__title {
+        &::after {
+          bottom: -21px;
+          inline-size: 45px;
+        }
+      }
+
+      &__items {
+        margin-block-start: 30px;
+        padding-inline-start: 10px;
+      }
+
+      &__item {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+    &__single-order-explanation {
+      inline-size: 100%;
+      margin-block-start: 60px;
+    }
+
+    &-bid {
+      margin-block-start: 60px;
+    }
+  }
+}

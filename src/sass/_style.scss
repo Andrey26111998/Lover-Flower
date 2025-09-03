@@ -38,6 +38,7 @@
 @use "/src/sass/blocks/forms/question_form";
 @use "/src/sass/blocks/forms/order_call_form";
 @use "/src/sass/blocks/forms/order_form";
+@use "/src/sass/blocks/forms/bid_form";
 
 //Blocks / Cart
 @use "/src/sass/blocks/cart/items";
@@ -88,3 +89,6 @@
 
 //Pages / Contacts
 @use "/src/sass/pages/contacts/contacts";
+
+//Pages / Corporate Information
+@use "/src/sass/pages/corporate_information/corporate_information";

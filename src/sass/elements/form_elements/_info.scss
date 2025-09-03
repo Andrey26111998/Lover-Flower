@@ -1,6 +1,7 @@
 @use "/src/sass/basic/variables" as *;
 
 .form__info {
+  inline-size: 100%;
   color: $text-color;
   font-size: 10px;
   font-weight: 400;

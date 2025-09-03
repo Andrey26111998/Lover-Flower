@@ -7,6 +7,7 @@ import "/src/js/forms/cities.js";
 import "/src/js/forms/question_form_validator.js";
 import "/src/js/forms/order_call_form_validator.js";
 import "/src/js/forms/order_form_validator.js";
+import "/src/js/forms/bid_form_validator.js";
 import "/src/js/forms/form.js";
 import "/src/js/sliders/popular_products.js";
 import "/src/js/modals/order_call.js";
