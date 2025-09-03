@@ -21,6 +21,7 @@ export default defineConfig({
                 successfulPayment: resolve(__dirname, "successful_payment.html"),
                 contacts: resolve(__dirname, "contacts.html"),
                 corporateInformation: resolve(__dirname, "corporate_information.html"),
+                searchError: resolve(__dirname, "search_error.html"),
             },
         },
     },

@@ -1,0 +1,38 @@
+@use "/src/sass/basic/variables" as *;
+
+.search-error {
+  padding-block: 140px 688px;
+  background-image: url("/src/img/pages/search_error/search_error/bg.png");
+  background-position: center top;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  &__wrapper {
+    margin-block-start: 40px;
+  }
+
+  &__text {
+    max-inline-size: 295px;
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__button-catalog {
+    margin-block-start: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search-error {
+    padding-block: 120px 295px;
+    background-image: url("/src/img/pages/search_error/search_error/bg_mobile.png");
+
+    &__wrapper {
+      margin-block-start: 20px;
+    }
+  }
+}
