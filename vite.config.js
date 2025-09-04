@@ -1,12 +1,10 @@
 import {defineConfig} from "vite";
 import {resolve} from "path";
-import viteHTMLIncludes from "@kingkongdevs/vite-plugin-html-includes";
+import {ViteEjsPlugin} from "vite-plugin-ejs";
 
 export default defineConfig({
     plugins: [
-        viteHTMLIncludes({
-            componentsDir: "/components/",
-        })
+        ViteEjsPlugin(),
     ],
     build: {
         rollupOptions: {

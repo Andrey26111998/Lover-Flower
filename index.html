@@ -13,10 +13,10 @@
 </head>
 
 <body>
-    <include src="/menu.html">
-    <include src="order-call.html">
-    <include src="cart.html">
-    <include src="header.html">
+    <%- include("src/templates/menu.ejs") %>
+    <%- include("src/templates/order-call.ejs") %>
+    <%- include("src/templates/cart.ejs") %>
+    <%- include("src/templates/header.ejs") %>
     <main>
         <section class="promo">
             <div class="container">
@@ -340,7 +340,7 @@
                         </h2>
                     </div>
                     <div class="question__column-2">
-                        <include src="question-form.html">
+                        <%- include("src/templates/question-form.ejs") %>
                     </div>
                 </div>
             </div>
@@ -383,7 +383,7 @@
             </div>
         </section>
     </main>
-    <include src="footer.html"></include>
+    <%- include("src/templates/footer.ejs") %>
     <script src="/src/js/script.js" type="module"></script>
 </body>
 
