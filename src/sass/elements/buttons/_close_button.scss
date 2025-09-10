@@ -1,7 +1,8 @@
 @use "/src/sass/basic/variables" as *;
 
 .close {
-  position: absolute;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
 
   span {

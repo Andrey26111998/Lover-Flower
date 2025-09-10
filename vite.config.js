@@ -1,10 +1,18 @@
 import {defineConfig} from "vite";
 import {resolve} from "path";
 import {ViteEjsPlugin} from "vite-plugin-ejs";
+import {createHtmlPlugin} from "vite-plugin-html";
 
 export default defineConfig({
     plugins: [
-        ViteEjsPlugin(),
+        ViteEjsPlugin({}, {
+            ejs: {
+                beautify: true,
+                views: [
+                    resolve(__dirname, "src/templates"),
+                ],
+            },
+        }),
     ],
     build: {
         rollupOptions: {
@@ -20,6 +28,7 @@ export default defineConfig({
                 contacts: resolve(__dirname, "contacts.html"),
                 corporateInformation: resolve(__dirname, "corporate_information.html"),
                 searchError: resolve(__dirname, "search_error.html"),
+                searchResult: resolve(__dirname, "search_result.html"),
             },
         },
     },

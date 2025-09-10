@@ -1,8 +1,8 @@
 try {
-    const hamburgerButton = document.querySelector(".hamburger");
-    const menuCloseButton = document.querySelector(".menu__close");
-    const menu = document.querySelector(".menu");
     const body = document.body;
+    const hamburgerButton = document.querySelector(".header .hamburger");
+    const menu = document.querySelector(".menu");
+    const menuCloseButton = menu.querySelector(".close");
 
     hamburgerButton.addEventListener("click", () => {
         body.style.overflow = "hidden";

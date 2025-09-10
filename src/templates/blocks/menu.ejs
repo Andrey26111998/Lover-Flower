@@ -2,14 +2,8 @@
     <a class="logo menu__logo" href="/index">
         <img alt="logo" src="/src/logo/logo.png">
     </a>
-    <div class="close menu__close">
-        <span></span>
-        <span></span>
-    </div>
-    <a class="search menu__search" href="">
-        <img alt="search" class="search__img" src="/src/icons/header/search.svg">
-        <span class="search__text">Поиск</span>
-    </a>
+    <%- include("buttons/close_button.ejs") %>
+    <%- include("buttons/search_button.ejs") %>
     <ul class="menu__links">
         <li><a class="menu__link" href="/index">Главная</a></li>
         <li><a class="menu__link" href="">Каталог</a></li>
@@ -34,17 +28,17 @@
     <ul class="social-links menu__social-links">
         <li>
             <a class="social-links__item" href="">
-                <img alt="instagram" src="/src/icons/promo/instagram.svg">
+                <img alt="instagram" src="/src/icons/social/instagram.svg">
             </a>
         </li>
         <li>
             <a class="social-links__item" href="">
-                <img alt="whatsapp" src="/src/icons/promo/whatsapp.svg">
+                <img alt="whatsapp" src="/src/icons/social/whatsapp.svg">
             </a>
         </li>
         <li>
             <a class="social-links__item" href="">
-                <img alt="viber" src="/src/icons/promo/viber.svg">
+                <img alt="viber" src="/src/icons/social/viber.svg">
             </a>
         </li>
     </ul>

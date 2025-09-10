@@ -3,10 +3,6 @@
 
 //Elements
 
-//Elements / Icons
-@use "/src/sass/elements/icons/hamburger";
-@use "/src/sass/elements/icons/close";
-
 //Elements / Info
 @use "/src/sass/elements/info/email";
 @use "/src/sass/elements/info/delivery_info";
@@ -18,13 +14,15 @@
 @use "/src/sass/elements/links/pages_links";
 
 //Elements / Buttons
+@use "/src/sass/elements/buttons/hamburger_button";
+@use "/src/sass/elements/buttons/close_button";
 @use "/src/sass/elements/buttons/buttons";
+@use "/src/sass/elements/buttons/search_button";
 @use "/src/sass/elements/buttons/order_call_button";
 @use "/src/sass/elements/buttons/cart_button";
 
 //Elements / General
 @use "/src/sass/elements/general/logo";
-@use "/src/sass/elements/general/search";
 @use "/src/sass/elements/general/titles";
 
 // Elements / Form elements
@@ -46,11 +44,13 @@
 @use "/src/sass/blocks/cart/result";
 
 //Blocks / Modals
+//@use "/src/sass/blocks/modals/mobile_search";
 @use "/src/sass/blocks/modals/overlay";
 @use "/src/sass/blocks/modals/order_call";
 @use "/src/sass/blocks/modals/cart";
 
 //Blocks / General
+@use "/src/sass/blocks/general/search";
 @use "/src/sass/blocks/general/menu";
 @use "/src/sass/blocks/general/header";
 @use "/src/sass/blocks/general/footer";
@@ -95,3 +95,6 @@
 
 //Pages / Search Error
 @use "/src/sass/pages/search_error/search_error";
+
+//Pages / Search Result
+@use "/src/sass/pages/search_result/search_result";

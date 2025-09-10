@@ -94,6 +94,20 @@
     }
   }
 
+  &__search-button {
+    &.hidden {
+      display: none;
+    }
+  }
+
+  &__search-block {
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
@@ -152,6 +166,10 @@
     &-img {
       inline-size: 18px;
       block-size: 18px;
+    }
+
+    &.hidden {
+      display: none;
     }
   }
 

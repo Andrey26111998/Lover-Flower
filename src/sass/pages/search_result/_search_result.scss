@@ -1,0 +1,24 @@
+@use "/src/sass/basic/variables" as *;
+
+.search-result {
+  padding-block: 140px 314px;
+  background-image: url("/src/img/pages/search_result/search_result/bg.png");
+  background-position: center top;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  &__wrapper {
+    margin-block-start: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search-result {
+    padding-block: 146px 100px;
+    background-image: url("/src/img/pages/search_result/search_result/bg_mobile.png");
+
+    &__wrapper {
+      margin-block-start: 20px;
+    }
+  }
+}

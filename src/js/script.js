@@ -3,6 +3,8 @@ import "/src/sass/_style.scss";
 import "/src/js/header/header_submenu.js";
 import "/src/js/header/header_modifier.js";
 import "/src/js/menu/menu.js";
+import "/src/js/search/header_search.js";
+import "/src/js/search/mobile_search.js";
 import "/src/js/forms/cities.js";
 import "/src/js/forms/question_form_validator.js";
 import "/src/js/forms/order_call_form_validator.js";

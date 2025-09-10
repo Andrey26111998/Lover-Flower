@@ -1,8 +1,8 @@
 try {
-    const orderCallButton = document.querySelector(".order-call-button");
-    const orderCallCloseButton = document.querySelector(".modal-order-call__close");
-    const overlayOrderCall = document.querySelector(".overlay-order-call");
     const body = document.body;
+    const overlayOrderCall = document.querySelector(".overlay-order-call");
+    const orderCallButton = document.querySelector(".order-call-button");
+    const orderCallCloseButton = overlayOrderCall.querySelector(".close");
 
     orderCallButton.addEventListener("click", (event) => {
         body.style.overflow = "hidden";

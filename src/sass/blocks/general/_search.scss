@@ -1,0 +1,93 @@
+@use "/src/sass/basic/variables" as *;
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  inline-size: 366px;
+  padding-block-end: 3px;
+  border-bottom: 1px solid #555;
+
+  &__magnifier {
+    inline-size: 18px;
+    block-size: 18px;
+  }
+
+  &-form {
+    inline-size: 314px;
+
+    &__input {
+      inline-size: 100%;
+
+      input {
+        inline-size: 100%;
+        padding-block: 0;
+        padding-inline: 0;
+        border: none;
+        background-color: transparent;
+
+        &,
+        &::placeholder {
+          color: #7c7c7c;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 21px;
+          letter-spacing: 0.02em;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      input.input.filled {
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .close {
+    position: relative;
+    inline-size: 18px;
+    block-size: 18px;
+
+    span {
+      inline-size: 10px;
+      block-size: 1px;
+      background-color: #7C7C7C;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search {
+    inline-size: 366px;
+    padding-block-end: 4px;
+    border-bottom: 1px solid $text-color;
+
+    &-form {
+      inline-size: 242px;
+
+      &__input {
+
+        input {
+
+          &,
+          &::placeholder {
+            color: $text-color;
+          }
+        }
+      }
+    }
+
+    .close {
+      span {
+        background-color: $text-color;
+      }
+    }
+  }
+}

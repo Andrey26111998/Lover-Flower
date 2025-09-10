@@ -3,12 +3,13 @@ import DocumentHandler from "/src/js/handlers/document_handler.js";
 
 try {
     const header = document.querySelector(".header");
+    const headerMobileLogo = header.querySelector(".header__mobile-logo");
+    const headerSearchBlock = header.querySelector(".header__search-block");
+    const headerInfo = header.querySelector(".header__info");
+    const headerAddition = header.querySelector(".header__addition");
+    const headerAdditionCartButtonContainer = header.querySelector(".header .container .header__addition .cart-button-container");
     const headerModificationPoint = document.querySelector(".header-modification-point");
-    const headerMobileLogo = document.querySelector(".header__mobile-logo");
-    const headerInfo = document.querySelector(".header__info");
-    const headerAddition = document.querySelector(".header__addition");
     const promoCartButtonContainer = document.querySelector(".promo .container .cart-button-container");
-    const headerAdditionCartButtonContainer = document.querySelector(".header .container .header__addition .cart-button-container");
     let cartButton = null;
 
     const modifyHeader = () => {
@@ -19,13 +20,20 @@ try {
             headerInfo.classList.add("hidden");
             headerAddition.classList.add("active");
             headerAdditionCartButtonContainer.appendChild(cartButton);
-        } else {
+        }
+
+        if (!reachedBoundary) {
             header.classList.remove("dark");
             headerMobileLogo.classList.remove("active");
-            headerInfo.classList.remove("hidden");
             promoCartButtonContainer.appendChild(cartButton);
             headerAddition.classList.remove("active");
         }
+
+        const headerSearchBlockIsActive = headerSearchBlock.classList.contains("active");
+        if (!reachedBoundary && !headerSearchBlockIsActive) {
+            headerInfo.classList.remove("hidden");
+        }
+
     }
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -37,7 +45,7 @@ try {
                 ElementHandler.createElement("img", {
                     attributes: {
                         alt: "cart",
-                        src: "/src/icons/basket/basket.svg",
+                        src: "/src/icons/ui/cart.svg",
                     },
                 }),
                 ElementHandler.createElement("span", {

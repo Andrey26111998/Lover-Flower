@@ -1,12 +1,15 @@
 @use "/src/sass/basic/variables" as *;
 
 .hamburger {
-  z-index: 100;
   display: none;
   flex-direction: column;
   row-gap: 3px;
   inline-size: 20px;
   block-size: 9px;
+  padding-block: 0;
+  padding-inline: 0;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
 
   span {

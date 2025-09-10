@@ -1,11 +1,7 @@
 <header class="header">
     <div class="container">
         <div class="header__wrapper">
-            <div class="hamburger header__hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <%- include("buttons/hamburger_button.ejs") %>
             <a class="logo header__logo" href="/index">
                 <img alt="logo" src="/src/logo/logo.png">
             </a>
@@ -36,11 +32,11 @@
                     <li class="header__menu-item"><a class="header__link" href="/about">О нас</a></li>
                     <li class="header__menu-item"><a class="header__link" href="/contacts">Контакты</a></li>
                     <li class="header__menu-item"><a class="header__link" href="/faq">FAQ</a></li>
-                    <li class="header__menu-item">
-                        <a class="search header__search" href="#">
-                            <img alt="search" class="search__img" src="/src/icons/header/search.svg">
-                            <span class="search__text">Поиск</span>
-                        </a>
+                    <li class="header__menu-item header__search-button">
+                        <%- include("buttons/search_button.ejs") %>
+                    </li>
+                    <li class="header__menu-item header__search-block">
+                        <%- include("blocks/search.ejs") %>
                     </li>
                 </ul>
             </nav>
@@ -55,7 +51,7 @@
             <div class="header__addition">
                 <a class="header__phone" href="tel:+375291136969">
                     <div class="header__phone-img">
-                        <img alt="phone" src="/src/icons/header/phone.svg">
+                        <img alt="phone" src="/src/icons/ui/handset.svg">
                     </div>
                     <span class="header__phone-text">+375 (29) 113-69-69</span>
                 </a>

@@ -13,7 +13,7 @@
   padding-block: 20px;
   padding-inline: 30px;
   background-color: #000;
-  background-image: url("/src/img/modals/basket/bg.png");
+  background-image: url("/src/img/modals/cart/bg.png");
   background-position: right top;
   background-size: auto;
   background-repeat: no-repeat;
@@ -23,7 +23,8 @@
     @include cart-line(-17px);
   }
 
-  &__close {
+  .close {
+    position: absolute;
     top: 31px;
     right: 30px;
     inline-size: 30px;
@@ -98,7 +99,7 @@
       @include cart-line(-12px);
     }
 
-    &__close {
+    .close {
       top: 10px;
       right: 10px;
       inline-size: 18px;

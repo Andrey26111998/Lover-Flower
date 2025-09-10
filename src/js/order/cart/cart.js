@@ -13,7 +13,7 @@ try {
     const body = document.body;
     const overlayCart = document.querySelector(".overlay-cart");
     const overlayCartButtonContainer = document.querySelector(".overlay-cart .cart-button-container");
-    const cartCloseButton = document.querySelector(".cart__close");
+    const cartCloseButton = overlayCart.querySelector(".close");
     const cartItemsBlocks = document.querySelectorAll(".cart-items");
     const cartResultPrices = document.querySelectorAll(".cart-result__price");
 

@@ -13,10 +13,10 @@
 </head>
 
 <body>
-    <%- include("src/templates/menu.ejs") %>
-    <%- include("src/templates/order-call.ejs") %>
-    <%- include("src/templates/cart.ejs") %>
-    <%- include("src/templates/header.ejs") %>
+    <%- include("blocks/menu.ejs") %>
+    <%- include("blocks/order_call.ejs") %>
+    <%- include("blocks/cart.ejs") %>
+    <%- include("blocks/header.ejs") %>
     <main>
         <section class="contacts header-modification-point">
             <div class="container">
@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div class="contacts-cta__column-2">
-                            <%- include("src/templates/question-form.ejs") %>
+                            <%- include("blocks/question_form.ejs") %>
                         </div>
                     </div>
                     <div class="contacts-map contacts__map">
@@ -77,7 +77,7 @@
             </div>
         </section>
     </main>
-    <%- include("src/templates/footer.ejs") %>
+    <%- include("blocks/footer.ejs") %>
     <script src="/src/js/script.js" type="module"></script>
 </body>
 

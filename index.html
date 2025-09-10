@@ -13,10 +13,10 @@
 </head>
 
 <body>
-    <%- include("src/templates/menu.ejs") %>
-    <%- include("src/templates/order-call.ejs") %>
-    <%- include("src/templates/cart.ejs") %>
-    <%- include("src/templates/header.ejs") %>
+    <%- include("blocks/menu.ejs") %>
+    <%- include("blocks/order_call.ejs") %>
+    <%- include("blocks/cart.ejs") %>
+    <%- include("blocks/header.ejs") %>
     <main>
         <section class="promo">
             <div class="container">
@@ -34,23 +34,23 @@
                 <ul class="social-links promo__social-links">
                     <li>
                         <a class="social-links__item" href="">
-                            <img alt="instagram" src="/src/icons/promo/instagram.svg">
+                            <img alt="instagram" src="/src/icons/social/instagram.svg">
                         </a>
                     </li>
                     <li>
                         <a class="social-links__item" href="">
-                            <img alt="whatsapp" src="/src/icons/promo/whatsapp.svg">
+                            <img alt="whatsapp" src="/src/icons/social/whatsapp.svg">
                         </a>
                     </li>
                     <li>
                         <a class="social-links__item" href="">
-                            <img alt="viber" src="/src/icons/promo/viber.svg">
+                            <img alt="viber" src="/src/icons/social/viber.svg">
                         </a>
                     </li>
                 </ul>
                 <a class="promo__phone" href="tel:+375291136969">+375 (29) 113-69-69</a>
                 <button class="order-call-button promo__button-call">
-                    <img alt="phone" src="/src/icons/promo/phone.svg">
+                    <img alt="phone" src="/src/icons/ui/handset.svg">
                     <span>заказать звонок</span>
                 </button>
                 <div class="cart-button-container">
@@ -205,16 +205,16 @@
                     </div>
                 </div>
                 <div class="popular-products__prev">
-                    <img alt="prev" src="/src/icons/popular_products/prev.svg">
+                    <img alt="prev" src="/src/icons/ui/prev_arrow.svg">
                 </div>
                 <div class="popular-products__next">
-                    <img alt="next" src="/src/icons/popular_products/next.svg">
+                    <img alt="next" src="/src/icons/ui/next_arrow.svg">
                 </div>
             </div>
             <div class="container">
                 <a class="popular-products__link" href="">
                     <span>смотреть весь каталог</span>
-                    <img alt="more" src="/src/icons/popular_products/more.svg">
+                    <img alt="more" src="/src/icons/ui/straight_arrow.svg">
                 </a>
             </div>
         </section>
@@ -340,7 +340,7 @@
                         </h2>
                     </div>
                     <div class="question__column-2">
-                        <%- include("src/templates/question-form.ejs") %>
+                        <%- include("blocks/question_form.ejs") %>
                     </div>
                 </div>
             </div>
@@ -365,17 +365,17 @@
                     <ul class="social-links social__links">
                         <li>
                             <a class="social-links__item social__link" href="">
-                                <img alt="instagram" src="/src/icons/promo/instagram.svg">
+                                <img alt="instagram" src="/src/icons/social/instagram.svg">
                             </a>
                         </li>
                         <li>
                             <a class="social-links__item social__link" href="">
-                                <img alt="whatsapp" src="/src/icons/promo/whatsapp.svg">
+                                <img alt="whatsapp" src="/src/icons/social/whatsapp.svg">
                             </a>
                         </li>
                         <li>
                             <a class="social-links__item social__link" href="">
-                                <img alt="viber" src="/src/icons/promo/viber.svg">
+                                <img alt="viber" src="/src/icons/social/viber.svg">
                             </a>
                         </li>
                     </ul>
@@ -383,7 +383,7 @@
             </div>
         </section>
     </main>
-    <%- include("src/templates/footer.ejs") %>
+    <%- include("blocks/footer.ejs") %>
     <script src="/src/js/script.js" type="module"></script>
 </body>
 

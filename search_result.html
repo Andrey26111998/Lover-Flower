@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Ошибка оплаты</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300..700&family=Oswald:wght@200..700&display=swap"
+            rel="stylesheet">
+</head>
+
+<body>
+<%- include("menu.ejs") %>
+<%- include("order-call.ejs") %>
+<%- include("cart.ejs") %>
+<%- include("header.ejs") %>
+<main>
+    <section class="search-result header-modification-point">
+        <div class="container">
+            <h1 class="title title-h1-v4 search-result-title search-result__title">
+                <span>Результат поиска:</span>
+                <span class="search-result-title__result">розы</span>
+            </h1>
+            <div class="search-result__wrapper">
+
+            </div>
+        </div>
+    </section>
+</main>
+<%- include("footer.ejs") %>
+<script src="/src/js/script.js" type="module"></script>
+</body>
+
+</html>

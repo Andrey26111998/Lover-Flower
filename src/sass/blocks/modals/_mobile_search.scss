@@ -1,0 +1,15 @@
+@use "/src/sass/basic/variables.scss" as *;
+
+.mobile-search {
+  z-index: 100;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  inline-size: 100%;
+  block-size: 488px;
+  background-color:  $bg-color;
+  background-image: url("/src/img/modals/mobile_search/bg.png");
+  background-position: left top;
+  background-size: auto;
+  background-repeat: no-repeat;
+}

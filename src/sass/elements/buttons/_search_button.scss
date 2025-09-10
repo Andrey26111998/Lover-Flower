@@ -1,11 +1,21 @@
 @use "/src/sass/basic/variables" as *;
 
-.search {
+.search-button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   column-gap: 10px;
-  text-decoration: none;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &.hidden {
+    display: none;
+  }
 
   &__img {
     inline-size: 18px;
